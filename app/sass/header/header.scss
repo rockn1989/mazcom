@@ -1,0 +1,371 @@
+/*______ Start Header ______*/
+.header {
+	&__top {
+		border-bottom: 2px solid #d2d9df;
+	}
+	&__top-inner {
+		padding: 7px 0 14px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+	&__bottom {
+		border-bottom: 2px solid #d2d9df;
+		&>.uk-container {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			.search-form {
+				position: absolute;
+				top: 0;
+				left: 100%;
+				padding: 20px 0;
+				background-color: #ffffff;
+				z-index: 500;
+				width: 0;
+				opacity: 0;
+				transition: all .45s ease-out;
+				z-index: -1;
+				&.visible {
+					left: 0;
+					width: 100%;
+					opacity: 1;
+					z-index: 120;
+				}
+				input[type="text"] {
+					padding: 2px 65px 2px 10px;
+					width: 100%;
+					font-size: 16px;
+					font-weight: 600;
+					border: none;
+					outline: none;
+				}
+				&__btn {
+					position: absolute;
+					top: 50%;
+					right: 12px;
+					padding: 3px;
+					width: 24px;
+					height: 24px;
+					font-size: 18px; 
+					border: none;
+					background-color: #ffffff;
+					transform: translateY(-50%);
+					cursor: pointer;
+					outline: none;
+					&:hover {
+						&:before {
+							color: $blue;
+						}
+					}
+				}
+			}
+		}
+	}
+	.uk-dropdown {
+		padding: 0;
+		z-index: 400;
+		box-shadow: 0 5px 21px -2px rgba(0, 0, 0, 0.06);
+		overflow: hidden;
+	}
+}
+
+.logo-wrapper {
+	width: 15%;
+}
+
+.top-navbar {
+	@include list-reset;
+	width: 40.625%;
+	display: flex;
+	li {
+		margin-right: 6.92%;
+		display: inline-block;
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			color: #666666;
+			font-size: 11px;
+			letter-spacing: .5px;
+			text-transform: uppercase;
+			&:hover {
+				color: #272d37;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.header-contacts {
+	width: 27%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__tel {
+		display: flex;
+		flex-wrap: wrap;
+		flex-basis: 150px;
+		a.tel {
+			font-size: 20px;
+			color: #262626;
+			text-decoration: none;
+		}
+	}
+	.product-link {
+		flex-basis: 160px;
+	}
+}
+
+.basket {
+	width: 10%;
+	a {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	&__value {
+		margin-left: 16px;
+		width: 24px; 
+		height: 24px;
+		color: #ffffff;
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 24px;
+		text-align: center;
+		background-color: #768b9c;
+		border-radius: 50%;
+	}
+}
+
+.main-nav-wrapper {
+	width: 73%;
+	.uk-container {
+		padding: 0 15px;
+	}
+}
+
+.main-nav {
+	ul {
+		@include list-reset;
+	}
+	&>ul {
+		font-size: 0;
+		li.parent {
+			margin-right: 5%;
+			display: inline-block;
+			&:last-child {
+				margin-right: 0;
+				&>a {
+					position: relative;
+					padding-right: 35px;
+					font-family: $mainFont !important;
+					line-height: 28px;
+					&:before {
+						position: absolute;
+						top: 24px;
+						right: 0;
+						font-family: 'icomoon' !important;
+						font-size: 4px;
+					}
+				}
+
+			}
+			&>a {
+				position: relative;
+				padding: 20px 0;
+				display: inline-block;
+				color: #272d37;
+				font-size: 16px;
+				font-weight: 600;
+				&:hover,&.uk-open {
+					&:after {
+						transform: scale(1);
+					}
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -4px;
+					left: 0;
+					display: block;
+					width: 100%;
+					height: 4px;
+					background-color: $red;
+					transform: scale(0);
+					transition: transform .3s ease-out;
+					z-index: 500;
+				}
+			}
+		}
+	}
+	.category-nav {
+		/* padding-right: 28px; */
+		&>li {
+			border-bottom: 1px solid #d2d9df;
+			&.active {
+				a {
+					filter: grayscale(0%);
+					opacity: 1;
+				}
+			}
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+		&__img {
+			width: 74px;
+			height: 68px;
+			img {
+				max-width: 100%;
+			}
+		}
+		&__name {
+			margin-left: 22px;
+			color: #272d37;
+			font-size: 18px;
+			line-height: 24px;
+			font-family: $secondFont;
+			font-weight: 500;
+		}
+		a {
+			padding: 15px 0;
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			filter: grayscale(100%);
+			opacity: .5;
+			transition: filter .3s, opacity .3s ease-out;
+			&:hover {
+				filter: grayscale(0%);
+				opacity: 1;
+			}
+		}
+	}
+	.category-subnav {
+		position: relative;
+		padding: 0;
+		width: 0;
+		height: 0;
+		min-height: 0;
+		background-color: #f4f8fa;
+		display: block;
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 100%;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: #f4f8fa;
+		}
+		&.visible {
+			padding: 36px 52px;
+			opacity: 1;
+			visibility: visible;
+			z-index: 500;
+			display: block;
+			width: 100%;
+			height: 100%;
+			min-height: 512px;
+			.category-subnav__bg-img {
+				&:after {
+					transform: translateX(100%);
+				}
+			}
+		}
+		&__list {
+			&>li {
+				&>a {
+					position: relative;
+					margin-bottom: 14px;
+					display: inline-block;
+					color: #272d37;
+					font-size: 16px;
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						display: block;
+						width: 100%;
+						height: 1px;
+						background-color: #2e60b8;
+						opacity: .31;
+					}
+				}
+				ul {
+					li {
+						a {
+							font-size: 14px;
+							line-height: 20px;
+							color: #666666;	
+						}
+					}
+				}
+			}
+		}
+		&__bg-img {
+			position: absolute;
+			top: 38px;
+			right: 0;
+			display: block;
+			min-height: 100px;
+			min-width: 100px;
+			max-width: 600px;
+			max-height: 400px;
+			filter: grayscale(100%);
+			opacity: .5;
+			overflow: hidden;
+			transition: width .25s ease;
+			img {
+				max-width: 100%;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: #f4f8fa;
+				transition: transform .3s ease;
+				transition-duration: 1s;
+				z-index: 300;
+			}
+		}
+	}
+}
+
+.category-subnav__bg-img {
+
+}
+
+.toolbar {
+	padding-left: 3%;
+	width: 27%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.products-count {
+		width: 40%;
+	}
+	.product-compare {
+		width: 43%;
+		a {
+			padding-left: 15px;
+		}
+	}
+}
+
+
+
+/*______ End Header ______*/

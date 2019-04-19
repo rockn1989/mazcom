@@ -1,0 +1,227 @@
+/*______ Start Main Content ______*/
+
+.promo-catalog {
+	padding: 46px 0 56px;
+	background-color: #f4f8fa;
+	.card {
+		margin-bottom: 25px !important;
+	}
+}
+
+.about-company {
+	margin: 77px 0 83px;
+	&__desc {
+		padding: 43px 30px 45px 45px;
+		background-color: #f4f8fa;
+	}
+}
+
+.about-company-advantages-list {
+	@include list-reset;
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	li {
+		padding: 34px 0;
+		width: 45%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #d2d9df;
+		&:nth-last-child(-n+2) {
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+		&:hover {
+			.text {
+				color: #272d37;
+			}
+		}
+		.img {
+			margin-right: 15px;
+			min-width: 80px;
+		}
+		.text {
+			font-size: 18px;
+			font-weight: 500;
+			color: #666666;
+			transition: color .3s ease-out;
+		}
+	}
+}
+
+.advantages-list {
+	margin-top: 63px;
+	.list {
+		@include list-reset;
+		margin-top: 60px;
+		display: flex;
+		justify-content: space-between;
+		counter-reset: list;
+		li {
+			position: relative;
+			width: 21%;
+			&:before {
+				counter-increment: list;
+				content: "0"counter(list);
+				font-size: 59px;
+				font-weight: 700;
+				font-family: $secondFont;
+				letter-spacing: 4px;
+				color: #d2d9df;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 24px;
+				left: 0;
+				width: 100%;
+				height: 24px;
+				background-color: #ffffff;
+			}
+		}
+		&__title {
+			margin: 3px 0 30px;
+			min-height: 57px;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 30px;
+			font-family: $secondFont;
+			color: #272d37;
+		}
+		&__text {
+			color: #666666;
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+}
+
+
+/*______ Offers ______*/
+
+.offers {
+	margin-bottom: 70px;
+}
+
+.offer {
+	width: 100%;
+	height: 455px;
+	background-size: cover, cover;
+	a {
+		position: relative;
+		padding: 50px 10px 55px 45px;
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: #ffffff;
+	}
+	&__title {
+		margin-bottom: 55px;
+		max-width: 80%;
+		font-size: 40px;
+		line-height: 48px;
+		font-weight: 700;
+		font-family: $secondFont;
+	}
+	&__text {
+		margin-bottom: 40px;
+		max-height: 145px;
+		overflow: hidden;
+	}
+	.read-more {
+		position: absolute;
+		left: 45px;
+		bottom: 45px;
+	}
+}
+
+/*______ End Offers ______*/
+
+
+
+/*______ News Block ______*/
+
+.news-block {
+	margin-bottom: 94px;
+}
+
+.news {
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		background-color: #f4f8fa;
+		z-index: 25;
+		transition: background-color .3s ease-out;
+	}
+	&:hover {
+		&:before {
+			background-color: rgba(46%, 55%, 61%, .52);
+		}
+		.news__date,
+		.news__short-text,
+		.read-more {
+			color: #ffffff;
+			&:before {
+				color: #ffffff;	
+			}
+		}
+	}
+	&-inner {
+		height: 100%;
+		a {
+			position: relative;
+			display: block;
+			padding: 45px;
+			height: 100%;
+			z-index: 35;
+		}
+	}
+	&__date {
+		margin-bottom: 26px;
+		font-family: $secondFont;
+		color: #d3d8dc;
+		font-weight: 700;
+		transition: color .3s ease-out;
+	}
+	&__day {
+		font-size: 40px;
+		line-height: 46px;
+	}
+	&__month {
+		font-size: 18px;
+	}
+	&__short-text {
+		margin-bottom: 50px;
+		max-height: 175px;
+		color: #666666;
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: 500;
+		font-family: $secondFont;
+		overflow: hidden;
+		transition: color .3s ease-out;
+	}
+	.read-more {
+		position: absolute;
+		bottom: 45px;
+		left: 45px;
+		color: #272d37;
+		font-weight: 600;
+		z-index: 125;
+		transition: color .3s ease-out;
+	}
+}
+
+/*______ End News Block ______*/
+
+/*______ End Main Content ______*/

@@ -1,0 +1,173 @@
+{% set menu = ["Грузовая техника",'Прицепная техника','Пассажирская техника','Спецтехника','Еще']%}
+
+{% block content %}
+
+<!-- begin preload -->
+<div class="preload">
+	<div class="truck">
+		<img src="img/icon-svg/delivery-truck.svg" width="40" height="40" alt="">
+	</div>
+	<div class="road"></div>
+</div><!-- end preload -->
+
+<!-- begin header -->
+<header class="header">
+	<div class="header-desktop uk-visible@l">
+		<!-- begin header__top -->
+		<div class="header__top">
+			<div class="uk-container">
+				<div class="header__top-inner">
+					<div class="logo-wrapper">
+						<a href="/" class="logo">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+					<ul class="top-navbar">
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Лизинг</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">Сервис</a></li>
+						<li><a href="#">Новости</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+					<div class="header-contacts">
+						<a href="" class="product-link icon-window">Тракторы Беларусь</a>
+						<div class="header-contacts__tel">
+							<a href="tel:+78009214106" class="tel">8 800 921 41 06</a>
+							<a href="#" class="callback-link icon-phone" uk-toggle="target: #callback">Обратный звонок</a>
+						</div>
+					</div>
+					<div class="basket">
+						<a href="/order">
+							<div class="basket__img">
+								<svg width="42px" height="45px" class="garage">
+								  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#garage"></use>
+								</svg>
+							</div>
+							<div class="basket__value">0</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end header__top -->
+
+		<!-- begin header__bottom -->
+		<div id="header__bottom" class="header__bottom">
+
+			<div class="uk-container">
+				<!-- begin main-nav-wrapper -->
+				<div class="main-nav-wrapper">
+					<nav class="main-nav">
+						<ul>
+							{% for i in 0..4 %}
+							<li class="parent">
+								{% if loop.last == false %}
+									<a href="">{{ menu[i] }}</a>
+								{% else %}
+									<a href="" class="icon-add">{{ menu[i] }}</a>
+								{% endif %}
+								<div class="dropdown-menu" uk-dropdown="pos: bottom-justify; offset: 0; boundary: #header__bottom; boundary-align: true">
+									<div class="uk-container">
+										<div class="uk-grid">
+											<div class="uk-width-1-4">
+												<ul class="category-nav" uk-scrollspy="target: > li; cls:uk-animation-fade; delay: 100; repeat: true">
+													<li>
+														<a href="">
+															<span class="category-nav__img">
+																<img src="img/dropdown-img-1.png" alt="">
+															</span>
+															<span class="category-nav__name">Седельные тягочи</span>
+														</a>
+													</li>
+													<li>
+														<a href="">
+															<span class="category-nav__img">
+																<img src="img/dropdown-img-2.png" alt="">
+															</span>
+															<span class="category-nav__name">Бортовые грузовики</span>
+														</a>
+													</li>
+													<li>
+														<a href="">
+															<span class="category-nav__img">
+																<img src="img/dropdown-img-3.png" alt="">
+															</span>
+															<span class="category-nav__name">Самосвалы</span>
+														</a>
+													</li>
+													<li>
+														<a href="">
+															<span class="category-nav__img">
+																<img src="img/dropdown-img-4.png" alt="">
+															</span>
+															<span class="category-nav__name">Грузовые шасси</span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="uk-width-3-4">
+												{% for i in 0..3 %}
+												<div class="category-subnav">
+													<ul class="category-subnav__list">
+														<li>
+															<a href="">2х осные</a>
+															<ul>
+																<li><a href="#">С межколесным дифференциалом</a></li>
+																<li><a href="#">С вискомуфтой</a></li>
+															</ul>
+														</li>
+														<li><a href="#">3х осные</a></li>
+														<li><a href="#">4х осные</a></li>
+													</ul>
+													<div class="category-subnav__bg-img">
+														<img src="img/dropdown-bg.png" alt="">
+													</div>
+												</div>
+												{% endfor %}
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							{% endfor %}
+						</ul>
+					</nav>
+				</div><!-- end main-nav-wrapper -->
+				
+				<div class="toolbar">
+
+					<div class="products-count">
+						<a href="">
+							<span class="products-count__value">42</span>
+							<span class="products-count__text">В наличии</span>
+						</a>
+					</div>
+
+					<div class="product-compare">
+						<a href="">
+							<i class="icon-compare"></i>
+							<div class="product-compare__text">
+								<div class="added">Сравнение</div>
+								<div class="count">(<span>3</span>)</div>
+								<!-- <div class="add uk-hidden">Добавить 	<a href="">в сравнение</a></div> -->
+							</div>
+						</a>
+					</div>
+					
+					<a href="" class="btn-search icon-search js__toggle-form"></a>
+
+				</div>
+				<form action="" class="search-form">
+					<input type="text" placeholder="Введите поисковый запрос">
+					<button type="button" class="search-form__btn icon-search"></button>
+				</form>
+			</div>
+
+		</div><!-- end header__bottom -->
+
+	</div>
+	<div class="header-mobile uk-hidden@l"></div>
+</header><!-- end header -->
+
+{% endblock %}

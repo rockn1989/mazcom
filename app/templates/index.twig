@@ -1,0 +1,421 @@
+{% extends "layouts/default.twig" %}
+{% set title="Главная" %}
+{% set preload ="loading" %}
+{% block content %}
+	<!-- begin main-slider -->
+	<div class="main-slider">
+		<div class="slider">
+			{% for item in 0..2 %}
+			<div class="slide" style="background-image: url('../img/sliders-img/main-slider-img.png')">
+				<div class="uk-container">
+					<div class="slide__desc">
+						<div class="slide__title">Ралли дакар 2019</div>
+						<div class="slide__text">
+							Официальный дилер ОАО «МАЗ» по Москве и Московской области — компания «МАЗКОМ» 
+							является ведущим поставщиком автомобилей МАЗ различной комплектации и назначения.
+						</div>
+						<a href="" class="btn">Узнать больше</a>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="main-slider-arrows-wrapper">
+			<div class="uk-container">
+				<div class="slider__arrows">
+					<div class="slide-prev"><i class="icon-arrow-left"></i></div>
+					<div class="slide-next"><i class="icon-arrow-right"></i></div>
+				</div>
+			</div>
+		</div>
+	</div><!-- end main-slider -->
+
+	<!-- begin promo-catalog -->
+	<div class="promo-catalog">
+		<div class="uk-container">
+			<div class="small-title">Техника в наличии</div>
+			<div class="tab">
+				<ul class="tabs" uk-switcher="swiping: false">
+					<li>
+						<a href="#">
+							<span class="tab__img">
+								<img src="img/catalog-tab-img-1.png" alt="">
+							</span>
+							<span class="tab__title">Акционная техника</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="tab__img">
+								<img src="img/catalog-tab-img-2.png" alt="">
+							</span>
+							<span class="tab__title">Техника со скидкой</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="tab__img">
+								<img src="img/catalog-tab-img-3.png" alt="">
+							</span>
+							<span class="tab__title">Самосвалы</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="tab__img">
+								<img src="img/catalog-tab-img-4.png" alt="">
+							</span>
+							<span class="tab__title">Борты</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="tab__img">
+								<img src="img/catalog-tab-img-5.png" alt="">
+							</span>
+							<span class="tab__title">Прицеп</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="tab__img">
+								<img src="img/catalog-tab-img-6.png" alt="">
+							</span>
+							<span class="tab__title">Автобусы</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="tab__img">
+								<img src="img/catalog-tab-img-7.png" alt="">
+							</span>
+							<span class="tab__title">Спецтехника</span>
+						</a>
+					</li>
+				</ul>
+			<ul class="uk-switcher"  uk-scrollspy="target: .card; cls:uk-animation-fade; delay: 0; repeat: false">
+					{% for i in 0..7 %}
+					    <li>
+					    	<div class="uk-grid uk-grid-match">
+					    	{% for tabInsert in 1..8 %}
+					    	  <div class="uk-width-1-2@s uk-width-1-3@m uk-width-1-4@l">
+					    	  	<div class="card">
+					    	  		<div class="card__img">
+					    	  			<a href="">
+					    	  				<img class="lazy" data-src="img/card-img-{{tabInsert}}.png" alt="">
+					    	  			</a>
+					    	  		</div>
+					    	  		<div class="card__product-name">
+					    	  			<a href="">МАЗ 5440A9-1320-031P1</a>
+					    	  		</div>
+											{% if tabInsert == 2 %}
+					    	  		<a href="" class="card-btn">
+					    	  			<span class="prices">
+					    	  				<span class="old-price">2 350 000 р.</span>
+					    	  				<span class="current-price">4 679 000 р.</span>
+					    	  			</span>
+												<span class="text">Купить</span>
+					    	  		</a>
+											{% elseif tabInsert == 3 %}
+					    	  		<a href="" class="card-btn card-btn--discount">
+					    	  			<span class="prices">
+					    	  				<span class="old-price">2 350 000 р.</span>
+					    	  				<span class="current-price">4 679 000 р.</span>
+					    	  			</span>
+												<span class="text">Заказать</span>
+					    	  		</a>
+											{% else %}
+					    	  		<a href="" class="card-btn card-btn--call">
+					    	  			<span class="prices">
+					    	  				<span class="old-price">2 350 000 р.</span>
+					    	  				<span class="current-price">4 679 000 р.</span>
+					    	  			</span>
+												<span class="text">Запросить цену</span>
+					    	  		</a>
+											{% endif %}
+											
+											<ul class="options-list">
+												<li>
+													<span class="options-list__type">Производитель</span>
+													<span class="separate"></span>
+													<span class="options-list__value">КАМАЗ</span>
+												</li>
+												<li>
+													<span class="options-list__type">Полная масса прицепа, кг </span>
+													<span class="separate"></span>
+													<span class="options-list__value">14000</span>
+												</li>
+												<li>
+													<span class="options-list__type">Габаритные размеры. Длина, мм</span>
+													<span class="separate"></span>
+													<span class="options-list__value">7920</span>
+												</li>
+												<li>
+													<span class="options-list__type">Мощность двигателя, л.с.</span>
+													<span class="separate"></span>
+													<span class="options-list__value">300</span>
+												</li>
+												<li>
+													<span class="options-list__type">Колесная формула</span>
+													<span class="separate"></span>
+													<span class="options-list__value">6х4</span>
+												</li>
+											</ul>
+
+											<div class="card__status">
+												<div class="product-availability icon-check">В наличии</div>
+												
+												<div class="product-compare">
+													<a href="" class="icon-compare" uk-tooltip="title:Добавить в сравнение; pos: right"></a>
+												</div>
+											</div>
+
+											<div class="stocks">
+												<div class="discount">-7%</div>
+												<div class="new">Новинка</div>
+											</div>
+
+					    	  	</div>
+					    	  </div>
+					    	{% endfor %}
+					    	</div>
+					    </li>
+					{% endfor %}
+				</ul>
+			</div>
+			<a href="/catalog" class="btn btn--catalog icon-menu">Перейти в каталог</a>
+		</div>
+	</div><!-- end promo-catalog -->
+	
+	<!-- begin about-company -->
+	<div class="about-company">
+		<div class="uk-container">
+			<div class="uk-grid uk-grid-match">
+				<div class="uk-width-1-2@m">
+					<div class="about-company-slider">
+						<div class="slider">
+							<div class="slide">
+								<img data-lazy="img/sliders-img/about-comapny-img-626x626.png" alt="">
+							</div>
+							<div class="slide">
+								<img data-lazy="img/sliders-img/about-comapny-img-626x626.png" alt="">
+							</div>
+						</div>
+						<div class="slider__arrows">
+							<div class="slide-prev"><i class="icon-arrow-left"></i></div>
+							<div class="slide-next"><i class="icon-arrow-right"></i></div>
+						</div>
+					</div>
+				</div>
+				<div class="uk-width-1-2@m">
+					<div class="about-company__desc">
+						<div class="small-title">Клиентам</div>
+						<div class="title-h2">Компания «МАЗКОМ»</div>
+						<p>
+							Официальный дилер ОАО «МАЗ» по Москве и Московской области — компания «МАЗКОМ» является ведущим поставщиком автомобилей МАЗ различной комплектации и назначения.
+						</p>
+						<ul class="about-company-advantages-list">
+							<li>
+								<div class="img">
+									<svg width="80px" height="64px" class="">
+									  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#certificate"></use>
+									</svg>
+								</div>
+								<div class="text">
+									Сертификат дилера
+								</div>
+							</li>
+							<li>
+								<div class="img">
+									<svg width="64px" height="64px" class="">
+									  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#calendar"></use>
+									</svg>
+								</div>
+								<div class="text">
+									Лизинговая программа
+								</div>
+							</li>
+							<li>
+								<div class="img">
+									<svg width="64px" height="72px" class="">
+									  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#pin-big"></use>
+									</svg>
+								</div>
+								<div class="text">
+									Региональные стоянки
+								</div>
+							</li>
+							<li>
+								<div class="img">
+									<svg width="65px" height="64px" class="">
+									  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#bank"></use>
+									</svg>
+								</div>
+								<div class="text">
+									Кредитные программы
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- begin advantages-list -->
+			<div class="advantages-list">
+				<div class="small-title">Наши реальные преимущества</div>
+				<ul class="list">
+					<li>
+						<div class="list__title">
+							Широкий ассортимент
+						</div>
+						<div class="list__text">
+							На наших стоянках всегда представлен широкий ассортимент автомобилей МАЗ различных модификаций и комплектаций.
+						</div>
+					</li>
+					<li>
+						<div class="list__title">
+							Собственное производство
+						</div>
+						<div class="list__text">
+							Выполним дооборудование автомобилей МАЗ под ваши нужды.
+						</div>
+					</li>
+					<li>
+						<div class="list__title">
+							Сервисный центр
+						</div>
+						<div class="list__text">
+							Сертифицированный сервисный центр, оснащенный всем необходимым оборудованием для гарантийного и постгарантийного обслуживания автомобилей МАЗ.
+						</div>
+					</li>
+					<li>
+						<div class="list__title">
+							Финансовые услуги
+						</div>
+						<div class="list__text">
+							Компания МАЗКОМ предлагает продажу автомобилей МАЗ в кредит и лизинг юридическим и физическим лицам, при этом от вас требуется минимальный пакет документов и потраченного времени.
+						</div>
+					</li>
+				</ul>
+			</div><!-- end advantages-list -->
+
+		</div>
+	</div><!-- end about-company -->
+
+	<!-- begin offers -->
+	<div class="offers">
+		<div class="uk-container">
+			<div class="small-title">Выгодные предложения</div>
+			<div class="offers-slider">
+				<div class="slider">
+					<div class="slide">
+						<div class="offer" style="background-image:url('../img/offer-img-2.png'), linear-gradient(135deg, #f06570 0%, #dd353d 100%);">
+							<a href="">
+								<div class="offer__title">
+									Последний шанс! Купи МАЗ Евро-4
+								</div>
+								<div class="offer__text" >
+									В конце 2017 г. ОАО «МАЗ» перешел на выпуск Евро-5. Что привело к повышению цен на технику МАЗ. Только у нас вы можете приобрести последние позиции МАЗ Евро-4 по старой, выгодной цене!
+								</div>
+								<div class="read-more icon-arrow-right">Узнать больше</div>
+							</a>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="offer" style="background-image:url('../img/offer-img-2.png'), linear-gradient(135deg, #5a99dd 0%, #2e60b8 100%);">
+							<a href="">
+								<div class="offer__title">
+									Выгодные кредитные программы
+								</div>
+								<div class="offer__text" >
+									Рады предложить Вашему вниманию лизинговые и кредитные программы с наиболее выгодными условиями и минимальным пакетом документов от ряда ведущих банков и лизинговых компаний. Наши партнёры имеют филиалы и представительства практически во всех регионах России.
+								</div>
+								<div class="read-more icon-arrow-right">Узнать больше</div>
+							</a>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="offer" style="background-image:url('../img/offer-img-1.png'),linear-gradient(135deg, #36cd58 0%, #669f19 100%);">
+							<a href="">
+								<div class="offer__title">
+									Выгодные кредитные программы
+								</div>
+								<div class="offer__text" >
+									Кредит Сбербанка под 7% годовых
+								</div>
+								<div class="offer__logo">
+									<img src="img/offer-logo.png" alt="">
+								</div>
+								<div class="read-more icon-arrow-right">Узнать больше</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="slider__arrows">
+					<div class="slide-prev"><i class="icon-arrow-left"></i></div>
+					<div class="slide-next"><i class="icon-arrow-right"></i></div>
+				</div>
+			</div>
+		</div>
+	</div><!-- end offers -->
+
+	<!-- begin news-block -->
+	<div class="news-block">
+		<div class="uk-container">
+			<div class="small-title">Новости</div>
+			<div class="news-list">
+				<div class="uk-grid uk-grid-match">
+					<div class="uk-width-1-2@s uk-width-1-3@m">
+						<div class="news" style="background-image:url('img/news-img.png')">
+							<div class="news-inner">
+								<a href="">
+									<div class="news__date">
+										<div class="news__day">02</div>
+										<div class="news__month">Апреля 2019</div>
+									</div>
+									<div class="news__short-text">
+										Белорусские гонщики впервые примут участие в марокканском ралли-рейде Desert Challenge
+									</div>
+									<div class="read-more icon-arrow-right">Подробнее</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="uk-width-1-2@s uk-width-1-3@m">
+						<div class="news" style="background-image:url('img/news-img.png')">
+							<div class="news-inner">
+								<a href="">
+									<div class="news__date">
+										<div class="news__day">16</div>
+										<div class="news__month">марта 2019</div>
+									</div>
+									<div class="news__short-text">
+										Челябинское УФАС России выдало предупреждение ООО «Миравтотехники»
+									</div>
+									<div class="read-more icon-arrow-right">Подробнее</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="uk-width-1-2@s uk-width-1-3@m">
+						<div class="news" style="background-image:url('img/news-img.png')">
+							<div class="news-inner">
+								<a href="">
+									<div class="news__date">
+										<div class="news__day">31</div>
+										<div class="news__month">января 2019</div>
+									</div>
+									<div class="news__short-text">
+										Соглашение о намерениях подписано сегодня в Минске между компанией «Дана Астра» и Минским автомобильным заводом.
+									</div>
+									<div class="read-more icon-arrow-right">Подробнее</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- end news-block -->
+
+{% endblock %}

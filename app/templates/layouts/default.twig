@@ -1,0 +1,16 @@
+{% include "../includes/head.twig" %}
+<body class="{{preload}}">
+{% include "../includes/header.twig" %}
+	
+<section class="page-content">
+{% block content %}{% endblock %}
+</section>
+
+{% include "../includes/footer.twig" %}
+
+{% include "../includes/modals.twig" %}
+
+{% include "../includes/scripts.twig" %}
+
+</body>
+</html>
