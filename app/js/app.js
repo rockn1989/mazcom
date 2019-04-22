@@ -1,7 +1,7 @@
 'use strict';
 
 $(document).ready(function () {
-	var preloader = $('.preload'),
+/*	var preloader = $('.preload'),
 			truck = preloader.find('.truck'),
 			road = preloader.find('.road'),
 			timer;
@@ -29,7 +29,7 @@ $(document).ready(function () {
 			});
 		});
 	});
-	clearInterval(timer);
+	clearInterval(timer);*/
 });
 
 $(function () {
@@ -120,5 +120,17 @@ $(function () {
 	};
 
 	App.init();
+
+	/*______ Lazy Load ______*/
+
+	$('.lazy').lazy({
+		scrollDirection: 'vertical',
+		effect: 'fadeIn',
+		visibleOnly: true,
+		placeholder: "../img/ajax-loader.gif",
+		onError: function(element) {
+				console.log('error loading ' + element.data('src'));
+		}
+	});
 
 });

@@ -1,0 +1,126 @@
+/*______ Filter ______*/
+
+.filter {
+	background-color: #ffffff;
+	box-shadow: 0 5px 21px -2px rgba(0, 0, 0, 0.06);
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: none;
+		padding: 23px 21px;
+		border-bottom: 1px solid #d2d9df;
+	}
+	.group-title {
+		position: relative;
+		padding-right: 16px;
+		color: #272d37;
+		font-size: 18px;
+		font-weight: 500;
+		font-family: $secondFont;
+		cursor: pointer;
+		&.open-title {
+			&:after {
+				transform: rotateX(180deg);
+			}
+		}
+		&:after {
+			content: "\e906";
+			position: absolute;
+			top: 13px;
+			right: 0;
+			@include icomoon;
+			font-size: 8px;
+			color: #5f5e6b;
+			transition: transform .3s ease-out;
+		}
+		&.no-arrow {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	.group-list {
+		padding-top: 27px;
+		display: none;
+		&.open-list {
+			display: block;
+		}
+	}
+	.btn-wrapper {
+		padding: 9px 0;
+		.btn {
+			margin-bottom: 24px;
+			padding: 18px 38px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+label.custom-label {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	font-size: 0;
+	input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+		&:checked ~ .custom-checkbox {
+			background-color: #2e60b8;
+			border-color: #2e60b8;
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+	.custom-checkbox {
+		position: relative;
+		margin-right: 11px;
+		display: inline-block;
+		vertical-align: top;
+		width: 16px;
+		height: 16px;
+		line-height: 16px;
+		text-align: center;
+		background-color: #f4f8fa;
+		border: 1px solid #95a4b0;
+		border-radius: 1px;
+		transition: background-color .3s, border-color .3s ease-out;
+		&:before {
+			content: "\e90d";
+			position: absolute;
+			top: 2.5px;
+			left: 1px;
+			color: #ffffff;
+			font-size: 9px;
+			opacity: 0;
+			@include icomoon;
+			transition: opacity .3s ease-out;
+		}
+	}
+	.custom-label {
+		display: inline-block;
+		vertical-align: top;
+		color: #666666;
+		font-size: 12px;
+		line-height: 18px;
+		transition: color .3s ease-out;
+	}
+	&.font-label {
+		line-height: 18px;
+		.custom-label {
+			color: #272d37;
+			font-size: 18px;
+			line-height: 18px;
+			font-weight: 500;
+			font-family: $secondFont;
+		}
+	}
+}
+
+/*______ End Filter ______*/

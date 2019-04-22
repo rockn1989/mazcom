@@ -1,6 +1,6 @@
 {% extends "layouts/default.twig" %}
 {% set title="Главная" %}
-{% set preload ="loading" %}
+{% set preload ="" %}
 {% block content %}
 	<!-- begin main-slider -->
 	<div class="main-slider">
@@ -188,7 +188,7 @@
 	</div><!-- end promo-catalog -->
 	
 	<!-- begin about-company -->
-	<div class="about-company">
+	<div class="about-company" uk-scrollspy="cls:slide-up; delay: 0; repeat: false">
 		<div class="uk-container">
 			<div class="uk-grid uk-grid-match">
 				<div class="uk-width-1-2@m">
@@ -303,7 +303,7 @@
 	</div><!-- end about-company -->
 
 	<!-- begin offers -->
-	<div class="offers">
+	<div class="offers" uk-scrollspy="cls:slide-up; delay: 0; repeat: false">
 		<div class="uk-container">
 			<div class="small-title">Выгодные предложения</div>
 			<div class="offers-slider">
@@ -360,13 +360,13 @@
 	</div><!-- end offers -->
 
 	<!-- begin news-block -->
-	<div class="news-block">
+	<div class="news-block" uk-scrollspy="target: .news-list>.uk-grid>div; cls:slide-left; delay: 0; repeat: false">
 		<div class="uk-container">
 			<div class="small-title">Новости</div>
 			<div class="news-list">
 				<div class="uk-grid uk-grid-match">
 					<div class="uk-width-1-2@s uk-width-1-3@m">
-						<div class="news" style="background-image:url('img/news-img.png')">
+						<div class="news lazy" data-src="img/news-img.png">
 							<div class="news-inner">
 								<a href="">
 									<div class="news__date">
@@ -382,7 +382,7 @@
 						</div>
 					</div>
 					<div class="uk-width-1-2@s uk-width-1-3@m">
-						<div class="news" style="background-image:url('img/news-img.png')">
+						<div class="news lazy" data-src="img/news-img.png">
 							<div class="news-inner">
 								<a href="">
 									<div class="news__date">
@@ -398,7 +398,7 @@
 						</div>
 					</div>
 					<div class="uk-width-1-2@s uk-width-1-3@m">
-						<div class="news" style="background-image:url('img/news-img.png')">
+						<div class="news lazy" data-src="img/news-img.png">
 							<div class="news-inner">
 								<a href="">
 									<div class="news__date">

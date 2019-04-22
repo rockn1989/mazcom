@@ -9,7 +9,8 @@
 }
 
 .about-company {
-	margin: 77px 0 83px;
+	padding: 77px 0 83px;
+	background-color: #ffffff;
 	&__desc {
 		padding: 43px 30px 45px 45px;
 		background-color: #f4f8fa;
@@ -102,7 +103,8 @@
 /*______ Offers ______*/
 
 .offers {
-	margin-bottom: 70px;
+	padding-bottom: 70px;
+	background-color: #ffffff;
 }
 
 .offer {
@@ -144,7 +146,32 @@
 /*______ News Block ______*/
 
 .news-block {
-	margin-bottom: 94px;
+	padding-bottom: 94px;
+	background-color: #ffffff;
+}
+
+.news-list {
+	&>.uk-grid {
+		&>div {
+			position: relative;
+			opacity: 0;
+			&:nth-child(1) {
+				z-index: 100;
+				transform: translateX(-100%);
+				animation-delay: .5s;
+			}
+			&:nth-child(2) {
+				z-index: 99;
+				transform: translateX(-125%);
+				animation-delay: .25s;
+			}
+			&:nth-child(3) {
+				z-index: 98;
+				transform: translateX(-150%);
+				animation-delay: 0;
+			}
+		}
+	}
 }
 
 .news {
@@ -223,5 +250,19 @@
 }
 
 /*______ End News Block ______*/
+
+
+
+/*______ SEO Block ______*/
+
+.seo-block {
+	margin-bottom: 95px;
+	color: #666666;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+/*______ End SEO Block ______*/
+
 
 /*______ End Main Content ______*/
