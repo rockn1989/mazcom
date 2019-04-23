@@ -182,9 +182,6 @@
 	}
 }
 
-
-/*______ Offers slider ______*/
-
 .offers-slider {
 	position: relative;
 	margin-top: 65px;
@@ -201,7 +198,27 @@
 	}
 }
 
-/*______ End slider ______*/
-
+.detail-slider {
+	position: relative;
+	.slide {
+		position: relative;
+		padding: 20px 0;
+		text-align: center;
+		img {
+			display: inline;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	.slider__arrows {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		.slide-prev,
+		.slide-next {
+			background-color: #f4f8fa;
+		}
+	}
+}
 
 /*______ End Sliders ______*/

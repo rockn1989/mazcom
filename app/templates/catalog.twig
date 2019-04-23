@@ -7,7 +7,7 @@
 
 	<!-- begin catalog-header -->
 	<div class="catalog-header" style="background-image: url('../img/catalog-header-bg.png')">
-	  <div class="uk-container">
+		<div class="uk-container">
 			<div class="catalog-header__inner">
 				<div class="breadcrumbs-wrapper">
 					{% include "includes/breadcrumbs.twig" %}
@@ -17,7 +17,7 @@
 					Тягачи МАЗ широко известен надежностью и безотказностью. Такой спецтранспорт используется при организации автопоездов, позволяющих осуществлять доставку различного вида грузов. Белорусский производитель выпускает спецтехнику различной грузоподъемности и предлагает разные комплектации. Поэтому выбрать для решения определенных задач оптимальный тягач несложно.
 				</div>
 			</div>
-	  </div>
+		</div>
 	</div><!-- end catalog-header -->
 
 	<!-- begin catalog -->
@@ -30,7 +30,25 @@
 						<div class="filter-form-wrapper">
 							<form action="">
 								<fieldset>
-										<div class="group-title no-arrow">Мощность</div>
+									<div class="group-title no-arrow">Мощность</div>
+									<div class="ui-slider-box">
+										<div class="input-box">
+											<div class="input-section">
+												<label for="min">от</label>
+												<input type="number" id="min" class="power-input-min js__ui-slider">
+											</div>
+											<div class="input-section">
+												<label for="max">до</label>
+												<input type="number" id="max" class="power-input-max js__ui-slider">
+												<span class="input-type-values">л.с.</span>
+											</div>
+										</div>
+										<div class="ui-slider-wrapper">
+											<div id="ui-slider" class="ui-slider"></div>
+											<div class="ui-slider-min"></div>
+											<div class="ui-slider-max"></div>
+										</div>
+									</div>
 								</fieldset>
 								{% for item in 0..4 %}
 								<fieldset>
@@ -104,42 +122,42 @@
 					
 					<!-- begin catalog-body -->
 					<div class="catalog-body">
-			    	<div class="uk-grid uk-grid-match">
-			    	{% for tabInsert in 1..6 %}
-			    	  <div class="uk-width-1-2@s uk-width-1-3@m">
-			    	  	<div class="card">
-			    	  		<div class="card__img">
-			    	  			<a href="">
-			    	  				<img class="lazy" data-src="img/catalog-img-{{tabInsert}}.png" alt="">
-			    	  			</a>
-			    	  		</div>
-			    	  		<div class="card__product-name">
-			    	  			<a href="">МАЗ 5440A9-1320-031P1</a>
-			    	  		</div>
+						<div class="uk-grid uk-grid-match">
+						{% for tabInsert in 1..6 %}
+							<div class="uk-width-1-2@s uk-width-1-3@m">
+								<div class="card">
+									<div class="card__img">
+										<a href="">
+											<img class="lazy" data-src="img/catalog-img-{{tabInsert}}.png" alt="">
+										</a>
+									</div>
+									<div class="card__product-name">
+										<a href="">МАЗ 5440A9-1320-031P1</a>
+									</div>
 									{% if tabInsert == 2 %}
-			    	  		<a href="" class="card-btn">
-			    	  			<span class="prices">
-			    	  				<span class="old-price">2 350 000 р.</span>
-			    	  				<span class="current-price">4 679 000 р.</span>
-			    	  			</span>
+									<a href="" class="card-btn">
+										<span class="prices">
+											<span class="old-price">2 350 000 р.</span>
+											<span class="current-price">4 679 000 р.</span>
+										</span>
 										<span class="text">Купить</span>
-			    	  		</a>
+									</a>
 									{% elseif tabInsert == 3 %}
-			    	  		<a href="" class="card-btn card-btn--discount">
-			    	  			<span class="prices">
-			    	  				<span class="old-price">2 350 000 р.</span>
-			    	  				<span class="current-price">4 679 000 р.</span>
-			    	  			</span>
+									<a href="" class="card-btn card-btn--discount">
+										<span class="prices">
+											<span class="old-price">2 350 000 р.</span>
+											<span class="current-price">4 679 000 р.</span>
+										</span>
 										<span class="text">Заказать</span>
-			    	  		</a>
+									</a>
 									{% else %}
-			    	  		<a href="" class="card-btn card-btn--call">
-			    	  			<span class="prices">
-			    	  				<span class="old-price">2 350 000 р.</span>
-			    	  				<span class="current-price">4 679 000 р.</span>
-			    	  			</span>
+									<a href="" class="card-btn card-btn--call">
+										<span class="prices">
+											<span class="old-price">2 350 000 р.</span>
+											<span class="current-price">4 679 000 р.</span>
+										</span>
 										<span class="text">Запросить цену</span>
-			    	  		</a>
+									</a>
 									{% endif %}
 									
 									<ul class="options-list">
@@ -183,10 +201,10 @@
 										<div class="new">Новинка</div>
 									</div>
 
-			    	  	</div>
-			    	  </div>
-			    	{% endfor %}
-			    	</div>
+								</div>
+							</div>
+						{% endfor %}
+						</div>
 					</div><!-- end catalog-body -->
 	
 					<ul class="uk-pagination uk-flex-center">

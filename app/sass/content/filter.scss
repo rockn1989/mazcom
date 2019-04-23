@@ -123,4 +123,83 @@ label.custom-label {
 	}
 }
 
+.ui-slider-box {
+	padding-bottom: 20px;
+	.ui-slider {
+		background-color: #d2d9df;
+		border: none;
+		border-radius: 1px;
+		height: 4px;
+		.ui-slider-handle {
+			top: -5px;
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+			background-color: #5f5e6b;
+			cursor: pointer;
+		}
+		.ui-widget-header {
+			background: $red;
+		}
+	}
+}
+
+.ui-slider-wrapper {
+	position: relative;
+	margin: 0 5px;
+	padding: 0 5px;
+	.ui-slider-min,
+	.ui-slider-max {
+		position: absolute;
+		bottom: -35px;
+		color: #666666;
+		font-size: 11px;
+		text-transform: uppercase;
+	}
+	.ui-slider-min {
+		left: -5px
+	}
+	.ui-slider-max {
+		right: -5px;
+	}
+}
+
+.input-box {
+	margin: 22px 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	label {
+		margin-right: 14px;
+		color: #666666;
+		font-size: 12px;
+		line-height: 14px;
+	}
+	input.js__ui-slider {
+		padding: 9px 15px;
+		width: 82px;
+		height: 34px;
+		color: #272d37;
+		font-size: 12px;
+		border-radius: 1px;
+		border: 1px solid #95a4b0;
+		background-color: #f4f8fa;
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+		    -webkit-appearance: none;
+		}
+	}
+	.input-section {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		align-items: center;
+		span {
+			margin-left: 6px;
+			font-size: 12px;
+		}
+	}
+}
+
 /*______ End Filter ______*/
