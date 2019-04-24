@@ -1,7 +1,7 @@
 'use strict';
 
 $(document).ready(function () {
-/*	var preloader = $('.preload'),
+	var preloader = $('.preload'),
 			truck = preloader.find('.truck'),
 			road = preloader.find('.road'),
 			timer;
@@ -29,7 +29,7 @@ $(document).ready(function () {
 			});
 		});
 	});
-	clearInterval(timer);*/
+	clearInterval(timer);
 });
 
 $(function () {
@@ -131,6 +131,18 @@ $(function () {
 		onError: function(element) {
 				console.log('error loading ' + element.data('src'));
 		}
+	});
+
+
+	/*______ Right sidebar Nav ______*/
+
+	$('.scroll-nav').on('click', 'li', function (e) {
+		e.preventDefault();
+		$(this)
+			.siblings('li')
+			.removeClass('active')
+			.end()
+			.addClass('active');
 	});
 
 });

@@ -28,15 +28,6 @@
 
 <body class="">
 
-
-  <!-- begin preload -->
-  <div class="preload" style="display: none;">
-    <div class="truck">
-      <img src="img/icon-svg/delivery-truck.svg" width="40" height="40" alt="">
-    </div>
-    <div class="road"></div>
-  </div><!-- end preload -->
-
   <!-- begin header -->
   <header class="header">
     <div class="header-desktop uk-visible@l">
@@ -739,7 +730,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="slider__arrows">
+                  <div class="slider__arrows slider__arrows--fill">
                     <div class="slide-prev"><i class="icon-arrow-left"></i></div>
                     <div class="slide-next"><i class="icon-arrow-right"></i></div>
                   </div>
@@ -748,7 +739,7 @@
                 <!-- begin detail-desc -->
                 <div class="detail-desc">
                   <div class="detail-desc__inner">
-                    <div class="detail-title">Характеристики</div>
+                    <div class="medium-title">Характеристики</div>
                     <ul class="options-list">
                       <li>
                         <span class="options-list__type">Собственный вес</span>
@@ -804,7 +795,7 @@
 
               <!-- begin scroll-nav -->
               <ul class="scroll-nav uk-visible@l" uk-sticky="media: @m;bottom: .detail-content">
-                <li><a href="#desc" uk-scroll>Описание</a></li>
+                <li class="active"><a href="#desc" uk-scroll>Описание</a></li>
                 <li><a href="#options" uk-scroll>Характеристики</a></li>
                 <li><a href="#modifi" uk-scroll>Модификации</a></li>
                 <li><a href="#stocks" uk-scroll>Акции</a></li>
@@ -816,7 +807,7 @@
         </div><!-- end detail-card -->
 
         <!-- begin detail-options -->
-        <div id="options" class="detail-section">
+        <div id="options" class="detail-section" uk-scrollspy="cls:slide-up; delay: 0; repeat: false">
           <div class="uk-grid">
             <div class="uk-width-5-6@m">
               <div class="white-wrapper">
@@ -899,17 +890,652 @@
         </div><!-- end detail-options -->
 
         <!-- begin detail-modifi -->
-        <div id="modifi" class="detail-section">
+        <div id="modifi" class="detail-section" uk-scrollspy="cls:slide-up; delay: 0; repeat: false">
           <div class="uk-grid">
             <div class="uk-width-5-6@m">
               <div class="white-wrapper">
-                <div class="detail-title border-bottom">Модицикации</div>
-
-
+                <div class="medium-title border-bottom">Модификации</div>
+                <ul class="modifi-list">
+                  <li><a href="#">МАЗ 6312С5-8525-012 с КМУ Dong Yang SS1956</a></li>
+                  <li><a href="#">МАЗ 5440B3-1480-030</a></li>
+                  <li><a href="#">МАЗ 5440С5-8520-031</a></li>
+                  <li><a href="#">МАЗ-544029-1420-031</a></li>
+                  <li><a href="#">МАЗ-5440B9-8479-013</a></li>
+                  <li><a href="#">МАЗ-5440E9-520-031</a></li>
+                  <li><a href="#">МАЗ 6312С5-8525-012 с КМУ Dong Yang SS1956</a></li>
+                  <li><a href="#">МАЗ 5440B3-1480-030</a></li>
+                  <li><a href="#">МАЗ 5440С5-8520-031</a></li>
+                  <li><a href="#">МАЗ-544029-1420-031</a></li>
+                  <li><a href="#">МАЗ-5440B9-8479-013</a></li>
+                  <li><a href="#">МАЗ-5440E9-520-031</a></li>
+                </ul>
               </div>
             </div>
           </div>
         </div><!-- end detail-modifi -->
+
+        <!-- begin detail-stocks -->
+        <div id="stocks" class="detail-section" uk-scrollspy="cls:slide-up; delay: 0; repeat: false">
+          <div class="uk-grid">
+            <div class="uk-width-5-6@m">
+              <div class="white-wrapper">
+                <div class="medium-title border-bottom">Акции</div>
+                <!-- begin offers -->
+                <div class="offers-slider">
+                  <div class="slider">
+                    <div class="slide">
+                      <div class="offer" style="background-image:url('../img/offer-img-2.png'), linear-gradient(135deg, #f06570 0%, #dd353d 100%);">
+                        <a href="">
+                          <div class="offer__title">
+                            Последний шанс! Купи МАЗ Евро-4
+                          </div>
+                          <div class="offer__text">
+                            В конце 2017 г. ОАО «МАЗ» перешел на выпуск Евро-5. Что привело к повышению цен на технику МАЗ. Только у нас вы можете приобрести последние позиции МАЗ Евро-4 по старой, выгодной цене!
+                          </div>
+                          <div class="read-more icon-arrow-right">Узнать больше</div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="offer" style="background-image:url('../img/offer-img-2.png'), linear-gradient(135deg, #5a99dd 0%, #2e60b8 100%);">
+                        <a href="">
+                          <div class="offer__title">
+                            Выгодные кредитные программы
+                          </div>
+                          <div class="offer__text">
+                            Рады предложить Вашему вниманию лизинговые и кредитные программы с наиболее выгодными условиями и минимальным пакетом документов от ряда ведущих банков и лизинговых компаний. Наши партнёры имеют филиалы и представительства практически во всех регионах России.
+                          </div>
+                          <div class="read-more icon-arrow-right">Узнать больше</div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="offer" style="background-image:url('../img/offer-img-1.png'),linear-gradient(135deg, #36cd58 0%, #669f19 100%);">
+                        <a href="">
+                          <div class="offer__title">
+                            Выгодные кредитные программы
+                          </div>
+                          <div class="offer__text">
+                            Кредит Сбербанка под 7% годовых
+                          </div>
+                          <div class="offer__logo">
+                            <img src="img/offer-logo.png" alt="">
+                          </div>
+                          <div class="read-more icon-arrow-right">Узнать больше</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider__arrows slider__arrows--fill">
+                    <div class="slide-prev"><i class="icon-arrow-left"></i></div>
+                    <div class="slide-next"><i class="icon-arrow-right"></i></div>
+                  </div>
+                </div><!-- end offers -->
+              </div>
+            </div>
+          </div>
+        </div><!-- end detail-stocks -->
+
+        <!-- begin analogs -->
+        <div id="analogs" class="detail-section" uk-scrollspy="cls:slide-up; delay: 0; repeat: false">
+          <div class="uk-grid">
+            <div class="uk-width-5-6@m">
+              <div class="white-wrapper">
+                <div class="medium-title border-bottom">Аналоги</div>
+
+                <!-- begin products-slider -->
+                <div class="products-slider">
+                  <div class="slider">
+                    <div class="slide">
+                      <div class="card">
+                        <div class="card__img">
+                          <a href="">
+                            <img class="lazy" alt="" data-src="img/card-img-2.png">
+                          </a>
+                        </div>
+                        <div class="card__text">
+                          <div class="card__product-name">
+                            <a href="">МАЗ 5440A9-1320-031P1</a>
+                          </div>
+                          <a href="" class="card-btn card-btn--call">
+                            <span class="prices">
+																	<span class="old-price">2 350 000 р.</span>
+                            <span class="current-price">4 679 000 р.</span>
+                            </span>
+                            <span class="text">Запросить цену</span>
+                          </a>
+
+                          <ul class="options-list">
+                            <li>
+                              <span class="options-list__type">Производитель</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">КАМАЗ</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Полная масса прицепа, кг </span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">14000</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Габаритные размеры. Длина, мм</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">7920</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Мощность двигателя, л.с.</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">300</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Колесная формула</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">6х4</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="card__status">
+                          <div class="product-availability icon-check">В наличии</div>
+
+                          <div class="product-compare">
+                            <a href="" class="icon-compare" uk-tooltip="title:Добавить в сравнение; pos: right"></a>
+                          </div>
+                        </div>
+
+                        <div class="stocks">
+                          <div class="discount">-7%</div>
+                          <div class="new">Новинка</div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="card">
+                        <div class="card__img">
+                          <a href="">
+                            <img class="lazy" alt="" data-src="img/card-img-3.png">
+                          </a>
+                        </div>
+                        <div class="card__text">
+                          <div class="card__product-name">
+                            <a href="">МАЗ 5440A9-1320-031P1</a>
+                          </div>
+                          <a href="" class="card-btn card-btn--discount">
+                            <span class="prices">
+																	<span class="old-price">2 350 000 р.</span>
+                            <span class="current-price">4 679 000 р.</span>
+                            </span>
+                            <span class="text">Заказать</span>
+                          </a>
+
+                          <ul class="options-list">
+                            <li>
+                              <span class="options-list__type">Производитель</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">КАМАЗ</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Полная масса прицепа, кг </span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">14000</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Габаритные размеры. Длина, мм</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">7920</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Мощность двигателя, л.с.</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">300</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Колесная формула</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">6х4</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="card__status">
+                          <div class="product-availability icon-check">В наличии</div>
+
+                          <div class="product-compare">
+                            <a href="" class="icon-compare" uk-tooltip="title:Добавить в сравнение; pos: right"></a>
+                          </div>
+                        </div>
+
+                        <div class="stocks">
+                          <div class="discount">-7%</div>
+                          <div class="new">Новинка</div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="card">
+                        <div class="card__img">
+                          <a href="">
+                            <img class="lazy" alt="" data-src="img/card-img-4.png">
+                          </a>
+                        </div>
+                        <div class="card__text">
+                          <div class="card__product-name">
+                            <a href="">МАЗ 5440A9-1320-031P1</a>
+                          </div>
+                          <a href="" class="card-btn card-btn--call">
+                            <span class="prices">
+																	<span class="old-price">2 350 000 р.</span>
+                            <span class="current-price">4 679 000 р.</span>
+                            </span>
+                            <span class="text">Запросить цену</span>
+                          </a>
+
+                          <ul class="options-list">
+                            <li>
+                              <span class="options-list__type">Производитель</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">КАМАЗ</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Полная масса прицепа, кг </span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">14000</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Габаритные размеры. Длина, мм</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">7920</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Мощность двигателя, л.с.</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">300</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Колесная формула</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">6х4</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="card__status">
+                          <div class="product-availability icon-check">В наличии</div>
+
+                          <div class="product-compare">
+                            <a href="" class="icon-compare" uk-tooltip="title:Добавить в сравнение; pos: right"></a>
+                          </div>
+                        </div>
+
+                        <div class="stocks">
+                          <div class="discount">-7%</div>
+                          <div class="new">Новинка</div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="card">
+                        <div class="card__img">
+                          <a href="">
+                            <img class="lazy" alt="" data-src="img/card-img-5.png">
+                          </a>
+                        </div>
+                        <div class="card__text">
+                          <div class="card__product-name">
+                            <a href="">МАЗ 5440A9-1320-031P1</a>
+                          </div>
+                          <a href="" class="card-btn card-btn--call">
+                            <span class="prices">
+																	<span class="old-price">2 350 000 р.</span>
+                            <span class="current-price">4 679 000 р.</span>
+                            </span>
+                            <span class="text">Запросить цену</span>
+                          </a>
+
+                          <ul class="options-list">
+                            <li>
+                              <span class="options-list__type">Производитель</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">КАМАЗ</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Полная масса прицепа, кг </span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">14000</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Габаритные размеры. Длина, мм</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">7920</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Мощность двигателя, л.с.</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">300</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Колесная формула</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">6х4</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="card__status">
+                          <div class="product-availability icon-check">В наличии</div>
+
+                          <div class="product-compare">
+                            <a href="" class="icon-compare" uk-tooltip="title:Добавить в сравнение; pos: right"></a>
+                          </div>
+                        </div>
+
+                        <div class="stocks">
+                          <div class="discount">-7%</div>
+                          <div class="new">Новинка</div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider__arrows slider__arrows--fill">
+                    <div class="slide-prev"><i class="icon-arrow-left"></i></div>
+                    <div class="slide-next"><i class="icon-arrow-right"></i></div>
+                  </div>
+                </div><!-- end products-slider -->
+
+              </div>
+            </div>
+          </div>
+        </div><!-- end analogs -->
+
+        <!-- begin compatible-tech -->
+        <div id="compatible-tech" class="detail-section" uk-scrollspy="cls:slide-up; delay: 0; repeat: false">
+          <div class="uk-grid">
+            <div class="uk-width-5-6@m">
+              <div class="white-wrapper">
+                <div class="detail-section__header">
+                  <div class="medium-title">Совместимая техника</div>
+                  <div class="text">Здесь можно разместить поясняющий текст про совместимую технику , по какому принципу она показывается</div>
+                </div>
+                <!-- begin products-slider -->
+                <div class="products-slider">
+                  <div class="slider">
+                    <div class="slide">
+                      <div class="card">
+                        <div class="card__img">
+                          <a href="">
+                            <img class="lazy" alt="" data-src="img/card-img-9.png">
+                          </a>
+                        </div>
+                        <div class="card__text">
+                          <div class="card__product-name">
+                            <a href="">МАЗ 5440A9-1320-031P1</a>
+                          </div>
+                          <a href="" class="card-btn card-btn--call">
+                            <span class="prices">
+																	<span class="old-price">2 350 000 р.</span>
+                            <span class="current-price">4 679 000 р.</span>
+                            </span>
+                            <span class="text">Запросить цену</span>
+                          </a>
+
+                          <ul class="options-list">
+                            <li>
+                              <span class="options-list__type">Производитель</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">КАМАЗ</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Полная масса прицепа, кг </span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">14000</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Габаритные размеры. Длина, мм</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">7920</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Мощность двигателя, л.с.</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">300</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Колесная формула</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">6х4</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="card__status">
+                          <div class="product-availability icon-check">В наличии</div>
+
+                          <div class="product-compare">
+                            <a href="" class="icon-compare" uk-tooltip="title:Добавить в сравнение; pos: right"></a>
+                          </div>
+                        </div>
+
+                        <div class="stocks">
+                          <div class="discount">-7%</div>
+                          <div class="new">Новинка</div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="card">
+                        <div class="card__img">
+                          <a href="">
+                            <img class="lazy" alt="" data-src="img/card-img-10.png">
+                          </a>
+                        </div>
+                        <div class="card__text">
+                          <div class="card__product-name">
+                            <a href="">МАЗ 5440A9-1320-031P1</a>
+                          </div>
+                          <a href="" class="card-btn card-btn--discount">
+                            <span class="prices">
+																	<span class="old-price">2 350 000 р.</span>
+                            <span class="current-price">4 679 000 р.</span>
+                            </span>
+                            <span class="text">Заказать</span>
+                          </a>
+
+                          <ul class="options-list">
+                            <li>
+                              <span class="options-list__type">Производитель</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">КАМАЗ</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Полная масса прицепа, кг </span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">14000</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Габаритные размеры. Длина, мм</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">7920</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Мощность двигателя, л.с.</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">300</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Колесная формула</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">6х4</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="card__status">
+                          <div class="product-availability icon-check">В наличии</div>
+
+                          <div class="product-compare">
+                            <a href="" class="icon-compare" uk-tooltip="title:Добавить в сравнение; pos: right"></a>
+                          </div>
+                        </div>
+
+                        <div class="stocks">
+                          <div class="discount">-7%</div>
+                          <div class="new">Новинка</div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="card">
+                        <div class="card__img">
+                          <a href="">
+                            <img class="lazy" alt="" data-src="img/card-img-11.png">
+                          </a>
+                        </div>
+                        <div class="card__text">
+                          <div class="card__product-name">
+                            <a href="">МАЗ 5440A9-1320-031P1</a>
+                          </div>
+                          <a href="" class="card-btn card-btn--call">
+                            <span class="prices">
+																	<span class="old-price">2 350 000 р.</span>
+                            <span class="current-price">4 679 000 р.</span>
+                            </span>
+                            <span class="text">Запросить цену</span>
+                          </a>
+
+                          <ul class="options-list">
+                            <li>
+                              <span class="options-list__type">Производитель</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">КАМАЗ</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Полная масса прицепа, кг </span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">14000</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Габаритные размеры. Длина, мм</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">7920</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Мощность двигателя, л.с.</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">300</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Колесная формула</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">6х4</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="card__status">
+                          <div class="product-availability icon-check">В наличии</div>
+
+                          <div class="product-compare">
+                            <a href="" class="icon-compare" uk-tooltip="title:Добавить в сравнение; pos: right"></a>
+                          </div>
+                        </div>
+
+                        <div class="stocks">
+                          <div class="discount">-7%</div>
+                          <div class="new">Новинка</div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="slide">
+                      <div class="card">
+                        <div class="card__img">
+                          <a href="">
+                            <img class="lazy" alt="" data-src="img/card-img-5.png">
+                          </a>
+                        </div>
+                        <div class="card__text">
+                          <div class="card__product-name">
+                            <a href="">МАЗ 5440A9-1320-031P1</a>
+                          </div>
+                          <a href="" class="card-btn card-btn--call">
+                            <span class="prices">
+																	<span class="old-price">2 350 000 р.</span>
+                            <span class="current-price">4 679 000 р.</span>
+                            </span>
+                            <span class="text">Запросить цену</span>
+                          </a>
+
+                          <ul class="options-list">
+                            <li>
+                              <span class="options-list__type">Производитель</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">КАМАЗ</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Полная масса прицепа, кг </span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">14000</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Габаритные размеры. Длина, мм</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">7920</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Мощность двигателя, л.с.</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">300</span>
+                            </li>
+                            <li>
+                              <span class="options-list__type">Колесная формула</span>
+                              <span class="separate"></span>
+                              <span class="options-list__value">6х4</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="card__status">
+                          <div class="product-availability icon-check">В наличии</div>
+
+                          <div class="product-compare">
+                            <a href="" class="icon-compare" uk-tooltip="title:Добавить в сравнение; pos: right"></a>
+                          </div>
+                        </div>
+
+                        <div class="stocks">
+                          <div class="discount">-7%</div>
+                          <div class="new">Новинка</div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider__arrows slider__arrows--fill">
+                    <div class="slide-prev"><i class="icon-arrow-left"></i></div>
+                    <div class="slide-next"><i class="icon-arrow-right"></i></div>
+                  </div>
+                </div><!-- end products-slider -->
+              </div>
+            </div>
+          </div>
+        </div><!-- end compatible-tech -->
+
+        <!-- begin seo-block -->
+        <div class="seo-block">
+          <div class="uk-grid">
+            <div class="uk-width-5-6@m">
+              <h3 class="title-h3">Компания «МАЗКОМ»</h3>
+              <div class="text">
+                Тягачи МАЗ широко известен надежностью и безотказностью. Такой спецтранспорт используется при организации автопоездов, позволяющих осуществлять доставку различного вида грузов. Белорусский производитель выпускает спецтехнику различной грузоподъемности и предлагает разные комплектации. Поэтому выбрать для решения определенных задач оптимальный тягач несложно.
+              </div>
+            </div>
+          </div>
+        </div><!-- end seo-block -->
 
       </div><!-- end detail-content -->
     </div>

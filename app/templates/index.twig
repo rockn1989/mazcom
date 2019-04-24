@@ -1,12 +1,12 @@
 {% extends "layouts/default.twig" %}
 {% set title="Главная" %}
-{% set preload ="" %}
+{% set preload ="true" %}
 {% block content %}
 	<!-- begin main-slider -->
 	<div class="main-slider">
 		<div class="slider">
 			{% for item in 0..2 %}
-			<div class="slide" style="background-image: url('../img/sliders-img/main-slider-img.png')">
+			<div class="slide" style="background-image: url('img/sliders-img/main-slider-img.png')">
 				<div class="uk-container">
 					<div class="slide__desc">
 						<div class="slide__title">Ралли дакар 2019</div>
@@ -105,63 +105,64 @@
 					    	  				<img class="lazy" data-src="img/card-img-{{tabInsert}}.png" alt="">
 					    	  			</a>
 					    	  		</div>
-					    	  		<div class="card__product-name">
-					    	  			<a href="">МАЗ 5440A9-1320-031P1</a>
-					    	  		</div>
-											{% if tabInsert == 2 %}
-					    	  		<a href="" class="card-btn">
-					    	  			<span class="prices">
-					    	  				<span class="old-price">2 350 000 р.</span>
-					    	  				<span class="current-price">4 679 000 р.</span>
-					    	  			</span>
-												<span class="text">Купить</span>
-					    	  		</a>
-											{% elseif tabInsert == 3 %}
-					    	  		<a href="" class="card-btn card-btn--discount">
-					    	  			<span class="prices">
-					    	  				<span class="old-price">2 350 000 р.</span>
-					    	  				<span class="current-price">4 679 000 р.</span>
-					    	  			</span>
-												<span class="text">Заказать</span>
-					    	  		</a>
-											{% else %}
-					    	  		<a href="" class="card-btn card-btn--call">
-					    	  			<span class="prices">
-					    	  				<span class="old-price">2 350 000 р.</span>
-					    	  				<span class="current-price">4 679 000 р.</span>
-					    	  			</span>
-												<span class="text">Запросить цену</span>
-					    	  		</a>
-											{% endif %}
-											
-											<ul class="options-list">
-												<li>
-													<span class="options-list__type">Производитель</span>
-													<span class="separate"></span>
-													<span class="options-list__value">КАМАЗ</span>
-												</li>
-												<li>
-													<span class="options-list__type">Полная масса прицепа, кг </span>
-													<span class="separate"></span>
-													<span class="options-list__value">14000</span>
-												</li>
-												<li>
-													<span class="options-list__type">Габаритные размеры. Длина, мм</span>
-													<span class="separate"></span>
-													<span class="options-list__value">7920</span>
-												</li>
-												<li>
-													<span class="options-list__type">Мощность двигателя, л.с.</span>
-													<span class="separate"></span>
-													<span class="options-list__value">300</span>
-												</li>
-												<li>
-													<span class="options-list__type">Колесная формула</span>
-													<span class="separate"></span>
-													<span class="options-list__value">6х4</span>
-												</li>
-											</ul>
-
+					    	  		<div class="card__text">
+						    	  		<div class="card__product-name">
+						    	  			<a href="">МАЗ 5440A9-1320-031P1</a>
+						    	  		</div>
+												{% if tabInsert == 2 %}
+						    	  		<a href="" class="card-btn">
+						    	  			<span class="prices">
+						    	  				<span class="old-price">2 350 000 р.</span>
+						    	  				<span class="current-price">4 679 000 р.</span>
+						    	  			</span>
+													<span class="text">Купить</span>
+						    	  		</a>
+												{% elseif tabInsert == 3 %}
+						    	  		<a href="" class="card-btn card-btn--discount">
+						    	  			<span class="prices">
+						    	  				<span class="old-price">2 350 000 р.</span>
+						    	  				<span class="current-price">4 679 000 р.</span>
+						    	  			</span>
+													<span class="text">Заказать</span>
+						    	  		</a>
+												{% else %}
+						    	  		<a href="" class="card-btn card-btn--call">
+						    	  			<span class="prices">
+						    	  				<span class="old-price">2 350 000 р.</span>
+						    	  				<span class="current-price">4 679 000 р.</span>
+						    	  			</span>
+													<span class="text">Запросить цену</span>
+						    	  		</a>
+												{% endif %}
+												
+												<ul class="options-list">
+													<li>
+														<span class="options-list__type">Производитель</span>
+														<span class="separate"></span>
+														<span class="options-list__value">КАМАЗ</span>
+													</li>
+													<li>
+														<span class="options-list__type">Полная масса прицепа, кг </span>
+														<span class="separate"></span>
+														<span class="options-list__value">14000</span>
+													</li>
+													<li>
+														<span class="options-list__type">Габаритные размеры. Длина, мм</span>
+														<span class="separate"></span>
+														<span class="options-list__value">7920</span>
+													</li>
+													<li>
+														<span class="options-list__type">Мощность двигателя, л.с.</span>
+														<span class="separate"></span>
+														<span class="options-list__value">300</span>
+													</li>
+													<li>
+														<span class="options-list__type">Колесная формула</span>
+														<span class="separate"></span>
+														<span class="options-list__value">6х4</span>
+													</li>
+												</ul>
+											</div>
 											<div class="card__status">
 												<div class="product-availability icon-check">В наличии</div>
 												
@@ -309,7 +310,7 @@
 			<div class="offers-slider">
 				<div class="slider">
 					<div class="slide">
-						<div class="offer" style="background-image:url('../img/offer-img-2.png'), linear-gradient(135deg, #f06570 0%, #dd353d 100%);">
+						<div class="offer" style="background-image:url('img/offer-img-2.png'), linear-gradient(135deg, #f06570 0%, #dd353d 100%);">
 							<a href="">
 								<div class="offer__title">
 									Последний шанс! Купи МАЗ Евро-4
@@ -322,7 +323,7 @@
 						</div>
 					</div>
 					<div class="slide">
-						<div class="offer" style="background-image:url('../img/offer-img-2.png'), linear-gradient(135deg, #5a99dd 0%, #2e60b8 100%);">
+						<div class="offer" style="background-image:url('img/offer-img-2.png'), linear-gradient(135deg, #5a99dd 0%, #2e60b8 100%);">
 							<a href="">
 								<div class="offer__title">
 									Выгодные кредитные программы
@@ -335,7 +336,7 @@
 						</div>
 					</div>
 					<div class="slide">
-						<div class="offer" style="background-image:url('../img/offer-img-1.png'),linear-gradient(135deg, #36cd58 0%, #669f19 100%);">
+						<div class="offer" style="background-image:url('img/offer-img-1.png'),linear-gradient(135deg, #36cd58 0%, #669f19 100%);">
 							<a href="">
 								<div class="offer__title">
 									Выгодные кредитные программы

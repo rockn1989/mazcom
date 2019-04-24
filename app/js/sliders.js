@@ -77,6 +77,30 @@ $(function () {
 		slidesToScroll: 1,
 		prevArrow: $('.offers-slider').find('.slide-prev'),
 		nextArrow: $('.offers-slider').find('.slide-next'),
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					infinite: true,
+				}
+			},
+			{
+				breakpoint: 940,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
 	});
 
 	/*______ Detail slider ______*/
@@ -94,6 +118,51 @@ $(function () {
 		slidesToScroll: 1,
 		prevArrow: $('.detail-slider').find('.slide-prev'),
 		nextArrow: $('.detail-slider').find('.slide-next'),
+	});
+
+
+	/*______ Products slider ______*/
+
+	$('.products-slider').each(function (i, el) {
+		var slider = $(el).find('.slider');
+		slider.slick({
+			arrows: true,
+			dots: false,
+			infinity: true,
+			lazyLoad: 'ondemand',
+			autoplay: true,
+			fade: false,
+			autoplaySpeed: 4000,
+			speed: 400,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			prevArrow: $(this).find('.slide-prev'),
+			nextArrow: $(this).find('.slide-next'),
+			responsive: [
+				{
+					breakpoint: 1025,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						infinite: true,
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		})
 	});
 
 });

@@ -120,12 +120,21 @@
 		color: #ffffff;
 	}
 	&__title {
-		margin-bottom: 55px;
+		
 		max-width: 80%;
-		font-size: 40px;
-		line-height: 48px;
+
 		font-weight: 700;
 		font-family: $secondFont;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 30px;
+			font-size: 30px;
+			line-height: 36px;
+		};
+		@media (min-width: $desk-w) {
+			margin-bottom: 55px;
+			font-size: 40px;
+			line-height: 48px;
+		};
 	}
 	&__text {
 		margin-bottom: 40px;

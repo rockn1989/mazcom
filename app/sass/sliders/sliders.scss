@@ -1,7 +1,8 @@
 /*______ Start Sliders ______*/
 
 .slider__arrows {
-	width: 160px;
+	/* width: 160px; */
+	width: auto;
 	font-size: 0;
 	&:hover {
 		.slide-prev,
@@ -11,16 +12,24 @@
 	}
 	.slide-prev,
 	.slide-next {
-		width: 80px;
-		height: 80px;
-		line-height: 80px;
-		font-size: 16px;
 		display: inline-block !important;
 		vertical-align: top;
 		text-align: center;
 		background-color: transparent;
 		cursor: pointer;
 		transition: background-color .35s ease-out;
+		@media (min-width: $mob-xs) {
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 12px;
+		};
+		@media (min-width: $tablet-w) {
+			width: 80px;
+			height: 80px;
+			line-height: 80px;
+			font-size: 16px;
+		};
 		i {
 			&:before {
 				transition: color .35s ease-out;
@@ -39,11 +48,23 @@
 		&:after {
 			content: '';
 			position: absolute;
-			top: 23px;
 			right: 0;
 			width: 1px;
-			height: 36px;
 			background-color: #d2d9df;
+			@media (min-width: $mob-xs) {
+				top: 15px;
+				height: 20px;
+			};
+			@media (min-width: $tablet-w) {
+				top: 23px;
+				height: 36px;
+			};
+		}
+	}
+	&--fill {
+		.slide-prev,
+		.slide-next {
+			background-color: #f4f8fa;
 		}
 	}
 }
@@ -184,7 +205,15 @@
 
 .offers-slider {
 	position: relative;
-	margin-top: 65px;
+	margin-top: 60px;
+	.slider {
+		height: 400px;
+		overflow: hidden;
+		&.slick-initialized  {
+			height: auto;
+			overflow: visible;
+		}
+	}
 	.slick-list {
 		margin: 0 -15px;
 	}
@@ -193,13 +222,21 @@
 	}
 	.slider__arrows {
 		position: absolute;
-		top: -117px;
+		top: -112px;
 		right: 0;
 	}
 }
 
 .detail-slider {
 	position: relative;
+	.slider {
+		height: 400px;
+		overflow: hidden;
+		&.slick-initialized  {
+			height: auto;
+			overflow: visible;
+		}
+	}
 	.slide {
 		position: relative;
 		padding: 20px 0;
@@ -214,10 +251,37 @@
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		.slide-prev,
-		.slide-next {
-			background-color: #f4f8fa;
+	}
+}
+
+.products-slider {
+	position: relative;
+	.slider {
+		height: 570px;
+		overflow: hidden;
+		&.slick-initialized  {
+			height: auto;
+			overflow: visible;
 		}
+	}
+	.slick-list {
+		margin: 0 -15px;
+	}
+	.slide {
+		margin: 0 15px;
+	}
+	.slider__arrows {
+		position: absolute;
+		right: 0;
+		@media (min-width: $mob-xs) {
+			top: -82px;
+		};
+		@media (min-width: $tablet-w) {
+			top: -112px;
+		};
+	}
+	.card__text {
+		background-color: #f4f8fa;
 	}
 }
 
