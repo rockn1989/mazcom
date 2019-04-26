@@ -161,6 +161,7 @@
 	@include list-reset;
 	li {
 		a {
+			position: relative;
 			padding: 16px 17px;
 			background-color: #ffffff;
 			border-bottom: 1px solid #d2d9df;
@@ -170,6 +171,30 @@
 			line-height: 24px;
 			font-weight: 500;
 			font-family: $secondFont;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -12px;
+				display: block;
+				width: 12px;
+				height: 50%;
+				background: linear-gradient(to right bottom, transparent 50%, #768b9c 50%);
+				opacity: 0;
+				transition: opacity .35s ease-out;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: -12px;
+				display: block;
+				width: 12px;
+				height: 50%;
+				opacity: 0;
+				background: linear-gradient(to right top, transparent 50%, #768b9c 50%);
+				transition: opacity .35s ease-out;
+			}
 		}
 		&:last-child {
 			a {
@@ -178,8 +203,67 @@
 		}
 		&.active {
 			a {
-				background-color: $blue;
+				background-color: #768b9c;
 				color: #ffffff;
+				&:before,&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.sidebar-nav {
+	@include list-reset;
+	li {
+		a {
+			position: relative;
+			padding: 16px 17px;
+			background-color: #ffffff;
+			border-bottom: 1px solid #d2d9df;
+			display: block;
+			color: #666666;
+			font-size: 18px;
+			line-height: 24px;
+			font-weight: 500;
+			font-family: $secondFont;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: -12px;
+				display: block;
+				width: 12px;
+				height: 50%;
+				background: linear-gradient(to right top, #768b9c 50%, transparent 50%);
+				opacity: 0;
+				transition: opacity .35s ease-out;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: -12px;
+				display: block;
+				width: 12px;
+				height: 50%;
+				opacity: 0;
+				background: linear-gradient(to right bottom, #768b9c 50%, transparent 50%);
+				transition: opacity .35s ease-out;
+			}
+		}
+		&:last-child {
+			a {
+				border-bottom: none;
+			}
+		}
+		&.active {
+			a {
+				background-color: #768b9c;
+				color: #ffffff;
+				&:before,&:after {
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -200,7 +284,12 @@
 	}
 	ul.tabs {
 		justify-content: normal;
-		overflow-x: auto;
+		@media (min-width: $mob-xs) {
+			overflow-x: auto;	
+		};
+		@media (min-width: $tablet-w) {
+			overflow-x: visible;
+		};
 		li {
 			margin-right: 5.6%;
 			&:last-child {
@@ -258,6 +347,9 @@
 		a {
 			color: #272d37;
 			font-size: 20px;
+			&:hover {
+				color: #666666;
+			}
 		}
 	}
 }

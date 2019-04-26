@@ -1,0 +1,25 @@
+{% extends "layouts/default.twig" %}
+{% set title="Лизинг" %}
+{% set bread = ["Главная", "Лизинг"] %}
+{% set activePosition = "2" %}
+{% block content %}
+	<div class="uk-container">
+		<div class="breadcrumbs-wrapper">
+			{% include "includes/breadcrumbs.twig" %}
+		</div>
+		<div class="uk-grid">
+			<div class="uk-width-1-6@m">
+				{% include 'includes/sidebar-nav.twig' %}
+			</div>
+			<div class="uk-width-5-6@m">
+				<!-- begin content -->
+				<div class="content">
+					<!-- begin leasing -->
+					<div class="leasing">
+						<h1 class="title-h1">Льготный кредит/лизинг</h1>
+					</div><!-- end leasing -->
+				</div><!-- end content -->
+			</div>
+		</div>
+	</div>
+{% endblock %}

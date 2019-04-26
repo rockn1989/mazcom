@@ -5,239 +5,240 @@
 {% set val =["168 л.с.", "170 л.с.", "286 л.с."] %}
 {% block content %}
 
-	<!-- begin catalog-header -->
-	<div class="catalog-header" style="background-image: url('img/catalog-header-bg.png')">
-		<div class="uk-container">
-			<div class="catalog-header__inner">
-				<div class="breadcrumbs-wrapper">
-					{% include "includes/breadcrumbs.twig" %}
-				</div>
-				<div class="catalog-header__title">тягачи маз</div>
-				<div class="catalog-header__desc">
-					Тягачи МАЗ широко известен надежностью и безотказностью. Такой спецтранспорт используется при организации автопоездов, позволяющих осуществлять доставку различного вида грузов. Белорусский производитель выпускает спецтехнику различной грузоподъемности и предлагает разные комплектации. Поэтому выбрать для решения определенных задач оптимальный тягач несложно.
+	<section class="page-content">
+		<!-- begin catalog-header -->
+		<div class="catalog-header" style="background-image: url('img/catalog-header-bg.png')">
+			<div class="uk-container">
+				<div class="catalog-header__inner">
+					<div class="breadcrumbs-wrapper">
+						{% include "includes/breadcrumbs.twig" %}
+					</div>
+					<div class="catalog-header__title">тягачи маз</div>
+					<div class="catalog-header__desc">
+						Тягачи МАЗ широко известен надежностью и безотказностью. Такой спецтранспорт используется при организации автопоездов, позволяющих осуществлять доставку различного вида грузов. Белорусский производитель выпускает спецтехнику различной грузоподъемности и предлагает разные комплектации. Поэтому выбрать для решения определенных задач оптимальный тягач несложно.
+					</div>
 				</div>
 			</div>
-		</div>
-	</div><!-- end catalog-header -->
+		</div><!-- end catalog-header -->
 
-	<!-- begin catalog -->
-	<div class="catalog">
-		<div class="uk-container">
-			<div class="uk-grid">
-				<div class="uk-width-1-4@m">
-					<!-- begin filter -->
-					<div class="filter">
-						<div class="filter-form-wrapper">
-							<form action="">
-								<fieldset>
-									<div class="group-title no-arrow">Мощность</div>
-									<div class="ui-slider-box">
-										<div class="input-box">
-											<div class="input-section">
-												<label for="min">от</label>
-												<input type="number" id="min" class="power-input-min js__ui-slider">
+		<!-- begin catalog -->
+		<div class="catalog">
+			<div class="uk-container">
+				<div class="uk-grid">
+					<div class="uk-width-1-4@m">
+						<!-- begin filter -->
+						<div class="filter">
+							<div class="filter-form-wrapper">
+								<form action="">
+									<fieldset>
+										<div class="group-title no-arrow">Мощность</div>
+										<div class="ui-slider-box">
+											<div class="input-box">
+												<div class="input-section">
+													<label for="min">от</label>
+													<input type="number" id="min" class="power-input-min js__ui-slider">
+												</div>
+												<div class="input-section">
+													<label for="max">до</label>
+													<input type="number" id="max" class="power-input-max js__ui-slider">
+													<span class="input-type-values">л.с.</span>
+												</div>
 											</div>
-											<div class="input-section">
-												<label for="max">до</label>
-												<input type="number" id="max" class="power-input-max js__ui-slider">
-												<span class="input-type-values">л.с.</span>
+											<div class="ui-slider-wrapper">
+												<div id="ui-slider" class="ui-slider"></div>
+												<div class="ui-slider-min"></div>
+												<div class="ui-slider-max"></div>
 											</div>
 										</div>
-										<div class="ui-slider-wrapper">
-											<div id="ui-slider" class="ui-slider"></div>
-											<div class="ui-slider-min"></div>
-											<div class="ui-slider-max"></div>
+									</fieldset>
+									{% for item in 0..4 %}
+									<fieldset>
+										{% if item == 0 %}
+										<div class="group-title js__toggle-group-list open-title">{{titleArray[item]}}</div>
+										<div class="group-list open-list">
+											{% for j in 0..2 %}
+												<label for="type-{{item}}{{j}}" class="custom-label">
+													<input type="checkbox" id="type-{{item}}{{j}}">
+													<span class="custom-checkbox"></span>
+													<span class="custom-label">{{val[j]}}</span>
+												</label>
+											{% endfor %}
 										</div>
-									</div>
-								</fieldset>
-								{% for item in 0..4 %}
-								<fieldset>
-									{% if item == 0 %}
-									<div class="group-title js__toggle-group-list open-title">{{titleArray[item]}}</div>
-									<div class="group-list open-list">
-										{% for j in 0..2 %}
-											<label for="type-{{item}}{{j}}" class="custom-label">
-												<input type="checkbox" id="type-{{item}}{{j}}">
-												<span class="custom-checkbox"></span>
-												<span class="custom-label">{{val[j]}}</span>
-											</label>
-										{% endfor %}
-									</div>
-									{% else %}
-									<div class="group-title js__toggle-group-list">{{titleArray[item]}}</div>
-									<div class="group-list">
-										{% for j in 0..2 %}
-											<label for="type-{{item}}{{j}}" class="custom-label">
-												<input type="checkbox" id="type-{{item}}{{j}}">
-												<span class="custom-checkbox"></span>
-												<span class="custom-label">{{val[j]}}</span>
-											</label>
-										{% endfor %}
-									</div>
-									{% endif %}
-								</fieldset>
-								{% endfor %}
-								<fieldset>
-									<label for="enabled" class="custom-label font-label">
-										<input type="checkbox" id="enabled" checked>
-										<span class="custom-checkbox"></span>
-										<span class="custom-label">В наличии</span>
-									</label>
-								</fieldset>
-								<fieldset>
-									<div class="btn-wrapper">
-										<button type="submit" class="btn btn--form">Применить</button>
-										<button type="reset" class="btn btn--form-gray">Сбросить фильтр</button>
-									</div>
-								</fieldset>
-							</form>
-						</div>
-					</div><!-- end filter -->
-				</div>
-				<div class="uk-width-3-4@m">
-
-					<!-- begin catalog-bar -->
-					<div class="catalog-bar">
-						
-						<!-- begin tags-list -->
-						<ul class="tags-list">
-							<li class="active"><a href="#">6х4</a></li>
-							<li><a href="#">4х2</a></li>
-							<li><a href="#">2х2</a></li>
-						</ul><!-- end tags-list -->
-
-						<!-- begin catalog-sort -->
-						<div class="catalog-sort">
-							<div class="custom-select">
-								<div class="custom-select__label uk-visible@l">Сортировать </div>
-								<select name="" id="" class="js__custom-select" data-theme="default">
-									<option value="">По умолчанию</option>
-									<option value="">По убыванию</option>
-									<option value="">По популярности</option>
-								</select>
-							</div>
-						</div><!-- begin catalog-sort -->
-
-					</div><!-- end catalog-bar -->
-					
-					<!-- begin catalog-body -->
-					<div class="catalog-body">
-						<div class="uk-grid uk-grid-match">
-						{% for tabInsert in 1..6 %}
-							<div class="uk-width-1-2@s uk-width-1-3@m">
-								<div class="card">
-									<div class="card__img">
-										<a href="">
-											<img class="lazy" data-src="img/catalog-img-{{tabInsert}}.png" alt="">
-										</a>
-									</div>
-									<div class="card__text">
-										<div class="card__product-name">
-											<a href="">МАЗ 5440A9-1320-031P1</a>
-										</div>
-										{% if tabInsert == 2 %}
-										<a href="" class="card-btn">
-											<span class="prices">
-												<span class="old-price">2 350 000 р.</span>
-												<span class="current-price">4 679 000 р.</span>
-											</span>
-											<span class="text">Купить</span>
-										</a>
-										{% elseif tabInsert == 3 %}
-										<a href="" class="card-btn card-btn--discount">
-											<span class="prices">
-												<span class="old-price">2 350 000 р.</span>
-												<span class="current-price">4 679 000 р.</span>
-											</span>
-											<span class="text">Заказать</span>
-										</a>
 										{% else %}
-										<a href="" class="card-btn card-btn--call">
-											<span class="prices">
-												<span class="old-price">2 350 000 р.</span>
-												<span class="current-price">4 679 000 р.</span>
-											</span>
-											<span class="text">Запросить цену</span>
-										</a>
-										{% endif %}
-										
-										<ul class="options-list">
-											<li>
-												<span class="options-list__type">Производитель</span>
-												<span class="separate"></span>
-												<span class="options-list__value">КАМАЗ</span>
-											</li>
-											<li>
-												<span class="options-list__type">Полная масса прицепа, кг </span>
-												<span class="separate"></span>
-												<span class="options-list__value">14000</span>
-											</li>
-											<li>
-												<span class="options-list__type">Габаритные размеры. Длина, мм</span>
-												<span class="separate"></span>
-												<span class="options-list__value">7920</span>
-											</li>
-											<li>
-												<span class="options-list__type">Мощность двигателя, л.с.</span>
-												<span class="separate"></span>
-												<span class="options-list__value">300</span>
-											</li>
-											<li>
-												<span class="options-list__type">Колесная формула</span>
-												<span class="separate"></span>
-												<span class="options-list__value">6х4</span>
-											</li>
-										</ul>
-									</div>
-									<div class="card__status">
-										<div class="product-availability icon-check">В наличии</div>
-										
-										<div class="product-compare">
-											<a href="" class="icon-compare" uk-tooltip="title:Добавить в сравнение; pos: right"></a>
+										<div class="group-title js__toggle-group-list">{{titleArray[item]}}</div>
+										<div class="group-list">
+											{% for j in 0..2 %}
+												<label for="type-{{item}}{{j}}" class="custom-label">
+													<input type="checkbox" id="type-{{item}}{{j}}">
+													<span class="custom-checkbox"></span>
+													<span class="custom-label">{{val[j]}}</span>
+												</label>
+											{% endfor %}
 										</div>
-									</div>
-
-									<div class="stocks">
-										<div class="discount">-7%</div>
-										<div class="new">Новинка</div>
-									</div>
-
-								</div>
+										{% endif %}
+									</fieldset>
+									{% endfor %}
+									<fieldset>
+										<label for="enabled" class="custom-label font-label">
+											<input type="checkbox" id="enabled" checked>
+											<span class="custom-checkbox"></span>
+											<span class="custom-label">В наличии</span>
+										</label>
+									</fieldset>
+									<fieldset>
+										<div class="btn-wrapper">
+											<button type="submit" class="btn btn--form">Применить</button>
+											<button type="reset" class="btn btn--form-gray">Сбросить фильтр</button>
+										</div>
+									</fieldset>
+								</form>
 							</div>
-						{% endfor %}
-						</div>
-					</div><!-- end catalog-body -->
-	
-					<ul class="uk-pagination uk-flex-center">
-						<li class="uk-pagination-prev">
-							<a href="">
-								Предыдущая
-							</a>
-						 </li>
-						<li class="uk-active"><span>1</span></li>
-						<li><a href="">2</a></li>
-						<li><a href="">3</a></li>
-						<li><a href="">4</a></li>
-						<li><a href="">...</a></li>
-						<li><a href="">12</a></li>
-						<li class="uk-pagination-next">
-							<a href="">
-								Следующая
-							</a>
-						 </li>
-					</ul>
+						</div><!-- end filter -->
+					</div>
+					<div class="uk-width-3-4@m">
 
-					<!-- begin seo-block -->
-					<div class="seo-block">
-						<h3 class="title-h3">Компания «МАЗКОМ»</h3>
-						<div class="text">
-							Тягачи МАЗ широко известен надежностью и безотказностью. Такой спецтранспорт используется при организации автопоездов, позволяющих осуществлять доставку различного вида грузов. Белорусский производитель выпускает спецтехнику различной грузоподъемности и предлагает разные комплектации. Поэтому выбрать для решения определенных задач оптимальный тягач несложно.
-						</div>
-					</div><!-- end seo-block -->
+						<!-- begin catalog-bar -->
+						<div class="catalog-bar">
+							
+							<!-- begin tags-list -->
+							<ul class="tags-list">
+								<li class="active"><a href="#">6х4</a></li>
+								<li><a href="#">4х2</a></li>
+								<li><a href="#">2х2</a></li>
+							</ul><!-- end tags-list -->
 
+							<!-- begin catalog-sort -->
+							<div class="catalog-sort">
+								<div class="custom-select">
+									<div class="custom-select__label uk-visible@l">Сортировать </div>
+									<select name="" id="" class="js__custom-select" data-theme="default">
+										<option value="">По умолчанию</option>
+										<option value="">По убыванию</option>
+										<option value="">По популярности</option>
+									</select>
+								</div>
+							</div><!-- begin catalog-sort -->
+
+						</div><!-- end catalog-bar -->
+						
+						<!-- begin catalog-body -->
+						<div class="catalog-body">
+							<div class="uk-grid uk-grid-match">
+							{% for tabInsert in 1..6 %}
+								<div class="uk-width-1-2@s uk-width-1-3@m">
+									<div class="card">
+										<div class="card__img">
+											<a href="">
+												<img class="lazy" data-src="img/catalog-img-{{tabInsert}}.png" alt="">
+											</a>
+										</div>
+										<div class="card__text">
+											<div class="card__product-name">
+												<a href="">МАЗ 5440A9-1320-031P1</a>
+											</div>
+											{% if tabInsert == 2 %}
+											<a href="" class="card-btn">
+												<span class="prices">
+													<span class="old-price">2 350 000 р.</span>
+													<span class="current-price">4 679 000 р.</span>
+												</span>
+												<span class="text">Купить</span>
+											</a>
+											{% elseif tabInsert == 3 %}
+											<a href="" class="card-btn card-btn--discount">
+												<span class="prices">
+													<span class="old-price">2 350 000 р.</span>
+													<span class="current-price">4 679 000 р.</span>
+												</span>
+												<span class="text">Заказать</span>
+											</a>
+											{% else %}
+											<a href="" class="card-btn card-btn--call">
+												<span class="prices">
+													<span class="old-price">2 350 000 р.</span>
+													<span class="current-price">4 679 000 р.</span>
+												</span>
+												<span class="text">Запросить цену</span>
+											</a>
+											{% endif %}
+											
+											<ul class="options-list">
+												<li>
+													<span class="options-list__type">Производитель</span>
+													<span class="separate"></span>
+													<span class="options-list__value">КАМАЗ</span>
+												</li>
+												<li>
+													<span class="options-list__type">Полная масса прицепа, кг </span>
+													<span class="separate"></span>
+													<span class="options-list__value">14000</span>
+												</li>
+												<li>
+													<span class="options-list__type">Габаритные размеры. Длина, мм</span>
+													<span class="separate"></span>
+													<span class="options-list__value">7920</span>
+												</li>
+												<li>
+													<span class="options-list__type">Мощность двигателя, л.с.</span>
+													<span class="separate"></span>
+													<span class="options-list__value">300</span>
+												</li>
+												<li>
+													<span class="options-list__type">Колесная формула</span>
+													<span class="separate"></span>
+													<span class="options-list__value">6х4</span>
+												</li>
+											</ul>
+										</div>
+										<div class="card__status">
+											<div class="product-availability icon-check">В наличии</div>
+											
+											<div class="product-compare">
+												<a href="" class="icon-compare" uk-tooltip="title:Добавить в сравнение; pos: right"></a>
+											</div>
+										</div>
+
+										<div class="stocks">
+											<div class="discount">-7%</div>
+											<div class="new">Новинка</div>
+										</div>
+
+									</div>
+								</div>
+							{% endfor %}
+							</div>
+						</div><!-- end catalog-body -->
+		
+						<ul class="uk-pagination uk-flex-center">
+							<li class="uk-pagination-prev">
+								<a href="">
+									Предыдущая
+								</a>
+							 </li>
+							<li class="uk-active"><span>1</span></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li><a href="">...</a></li>
+							<li><a href="">12</a></li>
+							<li class="uk-pagination-next">
+								<a href="">
+									Следующая
+								</a>
+							 </li>
+						</ul>
+
+						<!-- begin seo-block -->
+						<div class="seo-block">
+							<h3 class="title-h3">Компания «МАЗКОМ»</h3>
+							<div class="text">
+								Тягачи МАЗ широко известен надежностью и безотказностью. Такой спецтранспорт используется при организации автопоездов, позволяющих осуществлять доставку различного вида грузов. Белорусский производитель выпускает спецтехнику различной грузоподъемности и предлагает разные комплектации. Поэтому выбрать для решения определенных задач оптимальный тягач несложно.
+							</div>
+						</div><!-- end seo-block -->
+
+					</div>
 				</div>
 			</div>
-		</div>
-	</div><!-- end catalog -->
-
+		</div><!-- end catalog -->
+	</section>
 {% endblock %}

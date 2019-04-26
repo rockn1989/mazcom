@@ -1,0 +1,15 @@
+{% set sidebarNav = ["О компании", "Стоянки", "Лизинг", "Акции", "Сервис", "Новости", "Полезная информация", "Контакты"] %}
+{% block content %}
+	<!-- begin sidebar-nav -->
+	<ul class="sidebar-nav uk-visible@l">
+		{% for key, item in sidebarNav %}
+		    {% if loop.length != false %}
+					{% if key == activePosition %}
+						<li class="active"><a href="">{{item}}</a></li>
+						{% else %}
+						 <li><a href="">{{item}}</a></li>
+					{% endif %}
+		    {% endif %}
+		{% endfor %}
+	</ul><!-- end sidebar-nav -->    
+{% endblock %}

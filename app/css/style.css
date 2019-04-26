@@ -309,6 +309,7 @@ img[dara-src]:before {
 
 h1,
 .title-h1 {
+  margin-bottom: 40px;
   color: #272d37;
   font-size: 40px;
   font-weight: 700;
@@ -1591,6 +1592,10 @@ html.uk-touch body *.uk-invisible {
 
 /*______ Start Header ______*/
 
+.header {
+  background-color: #ffffff;
+}
+
 .header__top {
   border-bottom: 2px solid #d2d9df;
 }
@@ -2112,6 +2117,32 @@ html.uk-touch body *.uk-invisible {
 
 /*______ Start Main Content ______*/
 
+.content img {
+  display: inline;
+}
+
+.content-img-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.content-img-wrapper img {
+  display: inline !important;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.content-img-wrapper img + img {
+  margin-top: 15px;
+}
+
 .promo-catalog {
   padding: 46px 0 56px;
   background-color: #f4f8fa;
@@ -2194,6 +2225,14 @@ html.uk-touch body *.uk-invisible {
   -o-transition: color .3s ease-out;
   -moz-transition: color .3s ease-out;
   transition: color .3s ease-out;
+}
+
+.about-company-advantages-list li .text a {
+  color: #666666;
+}
+
+.about-company-advantages-list li .text a:hover {
+  color: #272d37;
 }
 
 .advantages-list {
@@ -2459,7 +2498,139 @@ html.uk-touch body *.uk-invisible {
 
 /*______ End SEO Block ______*/
 
+/*______ FAQ ______*/
+
+.faq {
+  padding: 36px;
+  background-color: #ffffff;
+}
+
+.doc-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.doc-list li {
+  margin-bottom: 46px !important;
+}
+
+.doc-list li .item a {
+  display: block;
+  color: #666666;
+}
+
+.doc-list li .item a::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.doc-list li .item a:hover .item__title {
+  color: #2e60b8;
+}
+
+.doc-list li .item__img {
+  position: relative;
+  margin-right: 20px;
+  width: 76px;
+  height: 76px;
+  float: left;
+  background-color: #f4f7fb;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.doc-list li .item__img i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 31px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.doc-list li .item__text {
+  overflow: hidden;
+}
+
+.doc-list li .item__title {
+  margin-bottom: 9px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: "TT";
+  -webkit-transition: color .3s ease-out;
+  -o-transition: color .3s ease-out;
+  -moz-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+}
+
+.doc-list li .item__subtitle {
+  color: #666666;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/*______ End FAQ ______*/
+
 /*______ End Main Content ______*/
+
+/*______ About Company detail ______*/
+
+.about-company-detail {
+  padding: 36px;
+  background-color: #ffffff;
+}
+
+.about-company-detail .blue-slogan {
+  margin: 0 -36px;
+}
+
+.blue-slogan {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.blue-slogan__text {
+  padding: 36px 36px 18px;
+  color: #ffffff;
+  background-color: rgba(46, 96, 184, 0.9);
+}
+
+.blue-slogan__bold-text {
+  margin-bottom: 34px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.about-company-section {
+  background-repeat: no-repeat;
+}
+
+.about-company-section.bg-left {
+  background-position: 0 0;
+}
+
+.about-company-section.bg-right {
+  background-position: 100% 0;
+}
+
+.lead-text {
+  margin: 60px 0 34px;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.lead-text:last-child {
+  margin-bottom: 0;
+}
+
+/*______ End About Company detail ______*/
 
 /*______ Detail Product ______*/
 
@@ -2631,6 +2802,7 @@ html.uk-touch body *.uk-invisible {
 }
 
 .scroll-nav li a {
+  position: relative;
   padding: 16px 17px;
   background-color: #ffffff;
   border-bottom: 1px solid #d2d9df;
@@ -2642,13 +2814,131 @@ html.uk-touch body *.uk-invisible {
   font-family: "TT";
 }
 
+.scroll-nav li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -12px;
+  display: block;
+  width: 12px;
+  height: 50%;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, transparent), color-stop(50%, #768b9c));
+  background: -webkit-linear-gradient(left top, transparent 50%, #768b9c 50%);
+  background: -moz-linear-gradient(left top, transparent 50%, #768b9c 50%);
+  background: -o-linear-gradient(left top, transparent 50%, #768b9c 50%);
+  background: linear-gradient(to right bottom, transparent 50%, #768b9c 50%);
+  opacity: 0;
+  -webkit-transition: opacity .35s ease-out;
+  -o-transition: opacity .35s ease-out;
+  -moz-transition: opacity .35s ease-out;
+  transition: opacity .35s ease-out;
+}
+
+.scroll-nav li a:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  display: block;
+  width: 12px;
+  height: 50%;
+  opacity: 0;
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(50%, transparent), color-stop(50%, #768b9c));
+  background: -webkit-linear-gradient(left bottom, transparent 50%, #768b9c 50%);
+  background: -moz-linear-gradient(left bottom, transparent 50%, #768b9c 50%);
+  background: -o-linear-gradient(left bottom, transparent 50%, #768b9c 50%);
+  background: linear-gradient(to right top, transparent 50%, #768b9c 50%);
+  -webkit-transition: opacity .35s ease-out;
+  -o-transition: opacity .35s ease-out;
+  -moz-transition: opacity .35s ease-out;
+  transition: opacity .35s ease-out;
+}
+
 .scroll-nav li:last-child a {
   border-bottom: none;
 }
 
 .scroll-nav li.active a {
-  background-color: #2e60b8;
+  background-color: #768b9c;
   color: #ffffff;
+}
+
+.scroll-nav li.active a:before,
+.scroll-nav li.active a:after {
+  opacity: 1;
+}
+
+.sidebar-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li a {
+  position: relative;
+  padding: 16px 17px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d2d9df;
+  display: block;
+  color: #666666;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: "TT";
+}
+
+.sidebar-nav li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -12px;
+  display: block;
+  width: 12px;
+  height: 50%;
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(50%, #768b9c), color-stop(50%, transparent));
+  background: -webkit-linear-gradient(left bottom, #768b9c 50%, transparent 50%);
+  background: -moz-linear-gradient(left bottom, #768b9c 50%, transparent 50%);
+  background: -o-linear-gradient(left bottom, #768b9c 50%, transparent 50%);
+  background: linear-gradient(to right top, #768b9c 50%, transparent 50%);
+  opacity: 0;
+  -webkit-transition: opacity .35s ease-out;
+  -o-transition: opacity .35s ease-out;
+  -moz-transition: opacity .35s ease-out;
+  transition: opacity .35s ease-out;
+}
+
+.sidebar-nav li a:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  display: block;
+  width: 12px;
+  height: 50%;
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #768b9c), color-stop(50%, transparent));
+  background: -webkit-linear-gradient(left top, #768b9c 50%, transparent 50%);
+  background: -moz-linear-gradient(left top, #768b9c 50%, transparent 50%);
+  background: -o-linear-gradient(left top, #768b9c 50%, transparent 50%);
+  background: linear-gradient(to right bottom, #768b9c 50%, transparent 50%);
+  -webkit-transition: opacity .35s ease-out;
+  -o-transition: opacity .35s ease-out;
+  -moz-transition: opacity .35s ease-out;
+  transition: opacity .35s ease-out;
+}
+
+.sidebar-nav li:last-child a {
+  border-bottom: none;
+}
+
+.sidebar-nav li.active a {
+  background-color: #768b9c;
+  color: #ffffff;
+}
+
+.sidebar-nav li.active a:before,
+.sidebar-nav li.active a:after {
+  opacity: 1;
 }
 
 .detail-section {
@@ -2675,7 +2965,6 @@ html.uk-touch body *.uk-invisible {
   -moz-box-pack: normal;
   -ms-flex-pack: normal;
   justify-content: normal;
-  overflow-x: auto;
 }
 
 .detail-section ul.tabs li {
@@ -2731,6 +3020,10 @@ html.uk-touch body *.uk-invisible {
 .modifi-list li a {
   color: #272d37;
   font-size: 20px;
+}
+
+.modifi-list li a:hover {
+  color: #666666;
 }
 
 /*______ End Detail Product ______*/
@@ -3701,6 +3994,15 @@ label.custom-label.font-label .custom-label {
     line-height: 36px;
   }
 
+  .about-company-section {
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  .about-company-section .text {
+    padding: 33px 15px 44px;
+  }
+
   .detail-card .detail-desc {
     margin-bottom: 40px;
   }
@@ -3712,6 +4014,10 @@ label.custom-label.font-label .custom-label {
   .right-sidebar {
     margin-top: 26px;
     padding: 30px 0;
+  }
+
+  .detail-section ul.tabs {
+    overflow-x: auto;
   }
 
   .white-wrapper {
@@ -3766,6 +4072,14 @@ label.custom-label.font-label .custom-label {
     margin-left: 10px;
   }
 
+  .content {
+    margin-bottom: 100px !important;
+  }
+
+  .about-company-section.bg-left .text {
+    margin-left: 45%;
+  }
+
   .detail-card__inner {
     padding: 35px 44px 0;
   }
@@ -3791,6 +4105,10 @@ label.custom-label.font-label .custom-label {
   .right-sidebar {
     margin-top: 0;
     padding: 0;
+  }
+
+  .detail-section ul.tabs {
+    overflow-x: visible;
   }
 
   .white-wrapper {
@@ -3834,6 +4152,20 @@ label.custom-label.font-label .custom-label {
     margin-bottom: 55px;
     font-size: 40px;
     line-height: 48px;
+  }
+
+  .blue-slogan__text {
+    width: 50%;
+  }
+
+  .about-company-section {
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+
+  .about-company-section .text {
+    padding: 53px 0 64px;
+    width: 55%;
   }
 }
 

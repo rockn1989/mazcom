@@ -1,0 +1,72 @@
+/*______ About Company detail ______*/
+
+.about-company-detail {
+	padding: 36px;
+	background-color: #ffffff;
+	.blue-slogan {
+		margin: 0 -36px;
+	}
+}
+
+.blue-slogan {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	&__text {
+		padding: 36px 36px 18px;
+		color: #ffffff;
+		background-color: rgba(46, 96, 184, .9);
+		@media (min-width: $desk-w) {
+			width: 50%;
+		};
+	}
+	&__bold-text {
+		margin-bottom: 34px;
+		font-size: 24px;
+		line-height: 32px;
+	}
+}
+
+.about-company-section {
+	background-repeat: no-repeat;
+	@media (min-width: $mob-xs) {
+		background-size: cover;
+	};
+	@media (min-width: $desk-w) {
+		
+		background-size: contain;
+	};
+	&.bg-left {
+		background-position: 0 0;
+		.text {
+			@media (min-width: $tablet-w) {
+				margin-left: 45%;
+			};
+		}
+	}
+	&.bg-right {
+		background-position: 100% 0;
+	}
+	.text {
+		@media (min-width: $mob-xs) {
+			padding: 33px 15px 44px;
+		};
+		@media (min-width: $desk-w) {
+			padding: 53px 0 64px;
+			width: 55%;
+		};
+	}
+}
+
+.lead-text {
+	margin: 60px 0 34px;
+	font-size: 24px;
+	line-height: 36px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+
+/*______ End About Company detail ______*/

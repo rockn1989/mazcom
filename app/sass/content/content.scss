@@ -1,5 +1,28 @@
 /*______ Start Main Content ______*/
 
+.content {
+	@media (min-width: $tablet-w) {
+		margin-bottom: 100px !important;
+	};
+	img {
+		display: inline;
+	}
+}
+
+.content-img-wrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	img {
+		display: inline !important;
+		max-width: 100%;
+		max-height: 100%;
+		&+img {
+			margin-top: 15px;
+		}
+	}
+}
+
 .promo-catalog {
 	padding: 46px 0 56px;
 	background-color: #f4f8fa;
@@ -48,6 +71,12 @@
 			font-weight: 500;
 			color: #666666;
 			transition: color .3s ease-out;
+			a {
+				color: #666666;
+				&:hover {
+					color: #272d37;
+				}
+			}
 		}
 	}
 }
@@ -273,5 +302,66 @@
 
 /*______ End SEO Block ______*/
 
+
+/*______ FAQ ______*/
+
+.faq {
+	padding: 36px;
+	background-color: #ffffff;
+}
+
+.doc-list {
+	@include list-reset;
+	li {
+		margin-bottom: 46px !important;
+		.item {
+			a {
+				display: block;
+				color: #666666;
+				@include clearfix;
+				&:hover {
+					.item__title {
+						color: #2e60b8;
+					}
+				}
+			}
+			&__img {
+				position: relative;
+				margin-right: 20px;
+				width: 76px;
+				height: 76px;
+				float: left;
+				background-color: #f4f7fb;
+				border-radius: 50%;
+				text-align: center;
+				i {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					font-size: 31px;
+					transform: translate(-50%, -50%);
+				}
+			}
+			&__text {
+				overflow: hidden;
+			}
+			&__title {
+				margin-bottom: 9px;
+				line-height: 24px;
+				font-weight: 500;
+				font-family: $secondFont;
+				transition: color .3s ease-out;
+			}	
+			&__subtitle {
+				color: #666666;
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+
+	}
+}
+
+/*______ End FAQ ______*/
 
 /*______ End Main Content ______*/

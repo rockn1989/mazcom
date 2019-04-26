@@ -1,0 +1,116 @@
+{% extends "layouts/default.twig" %}
+{% set title="О компании" %}
+{% set bread = ["Главная", "О Компании"] %}
+{% set activePosition = "0" %}
+{% block content %}
+	<div class="uk-container">
+		<div class="breadcrumbs-wrapper">
+			{% include "includes/breadcrumbs.twig" %}
+		</div>
+		<div class="uk-grid">
+			<div class="uk-width-1-6@m">
+				
+			{% include 'includes/sidebar-nav.twig' %}
+
+			</div>
+			<div class="uk-width-5-6@m">
+				<!-- begin content -->
+				<div class="content">
+					<!-- begin about-company-detail -->
+					<div class="about-company-detail">
+						<h1 class="title-h1">О компании</h1>
+						 
+						 <div class="blue-slogan lazy" data-src="img/slogan-img.png">
+						 	<div class="blue-slogan__text">
+						 		<div class="blue-slogan__bold-text">
+						 			Официальный дилер ОАО «МАЗ» по Москве и Московской области — компания «МАЗКОМ» является ведущим поставщиком автомобилей МАЗ различной комплектации и назначения.
+						 		</div>
+						 		<p>
+						 			Мы предлагаем грузовые автомобили, в том числе самосвалы, автофургоны, седельные тягачи, бортовые автомобили и шасси. Кроме того, наша ассортиментная линейка включает прицепную и специальную технику.
+						 		</p>
+						 	</div>
+						 </div>
+						 
+						 <div class="uk-grid">
+						 	<div class="uk-width-1-2@m">
+						 		<p class="uk-margin-medium-top">
+						 			По вашей заявке мы установим несерийное оборудование на базовые шасси. Многолетний опыт работы компании «МАЗКОМ» на рынке грузовой и специальной техники является подтверждением высокого класса обслуживания и качественного сервиса, предоставляемого нами.
+						 		</p>
+						 	</div>
+						 	<div class="uk-width-1-2@m">
+						 		<p class="uk-margin-medium-top">
+						 			Компания «МАЗКОМ», являясь официальным дилером Минского автомобильного завода, гарантирует соответствие техники европейским экологическим стандартам Евро2—Евро5.
+						 		</p>
+						 		<ul class="about-company-advantages-list uk-margin-remove">
+									<li>
+										<div class="img">
+											<svg width="80px" height="64px" class="">
+											  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#certificate"></use>
+											</svg>
+										</div>
+										<div class="text">
+											<a href="">Сертификат дилера</a>
+										</div>
+									</li>
+						 		</ul>
+						 	</div>
+						 </div>
+						
+							<div class="about-company-section bg-left lazy uk-margin-medium-top" data-src="img/company-map.png">
+								<div class="text">
+									<div class="title-h2">
+										Собственные <br> стоянки с техникой
+									</div>
+									<p>
+										Надежные партнерские связи с производителем обеспечивают постоянное наличие техники на стоянках компании в Москве — это позволит вам максимально оперативно приобрести технику.
+									</p>
+									<a href="" class="btn">Посмотреть адреса стоянок</a>
+								</div>
+							</div>
+
+							<div class="about-company-section bg-right lazy" data-src="img/company-truck.png">
+								<div class="text">
+									<div class="title-h2">
+										Собственный <br> сервисный центр
+									</div>
+									<p>
+										Специалисты сертифицированного сервисного центра компании «МАЗКОМ» осуществляют гарантийный и послегарантийный ремонт грузовой и прицепной техники, автомобилей и спецтехники МАЗ и ее высокопрофессиональное техническое обслуживание.
+									</p>
+									<p>
+										Компания «МАЗКОМ» неукоснительно соблюдает все взятые на себя обязательства, поэтому новые покупатели всегда становятся нашими постоянными клиентами.
+									</p>
+									<a href="" class="btn uk-margin-medium-top">Подробнее о сервисном центре</a>
+								</div>
+							</div>
+							
+							<div class="lead-text">
+								Наши автомобили работают в разных регионах России, и мы можем с уверенностью заявить, что приобретенная в компании «МАЗКОМ» техника МАЗ отлично справляется с поставленными перед ней задачами!
+							</div>
+							
+							<div class="content-img-wrapper">
+								<img class="lazy" data-src="img/company-truck-2.png" alt="">
+								<img class="lazy" data-src="img/company-truck-3.png" alt="">
+							</div>
+
+							<div class="about-company-section bg-left lazy uk-margin-medium-top" data-src="img/company-truck-4.png">
+								<div class="text">
+									<div class="title-h2">
+										Выгодные кредитные и лизинговые программы
+									</div>
+									<p>
+										Надежные партнерские связи с производителем обеспечивают постоянное наличие техники на стоянках компании в Москве — это позволит вам максимально оперативно приобрести технику.
+									</p>
+									<a href="" class="btn uk-margin-medium-top">узнать условия</a>
+								</div>
+							</div>
+
+							<div class="lead-text">
+								Индивидуальный поход к каждому клиенту, предоставление полного спектра услуг при покупке автомобиля, умеренные цены на технику МАЗ — вот конкурентные преимущества компании «МАЗКОМ». Менеджеры отдела сбыта помогут вам определиться с выбором необходимого автомобиля, подготовят наиболее выгодное коммерческое предложение, предоставят возможность выбора условий оплаты и поставки техники.
+							</div>
+
+					</div><!-- end about-company-detail -->
+				</div><!-- end content -->
+			</div>
+		</div> 
+	</div>
+{% endblock %}
