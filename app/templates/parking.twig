@@ -1,0 +1,22 @@
+{% extends "layouts/default.twig" %}
+{% set title="Стоянки" %}
+{% set bread = ["Главная", "Стоянки"] %}
+{% set activePosition = "1" %}
+{% block content %}
+  <div class="uk-container">
+		<div class="breadcrumbs-wrapper">
+			{% include "includes/breadcrumbs.twig" %}
+		</div>
+  	<div class="uk-grid">
+  		<div class="uk-width-1-6@m">
+  			{% include 'includes/sidebar-nav.twig' %}
+  		</div>
+  		<div class="uk-width-5-6@m">
+  			<!-- begin parking -->
+  			<div class="parking">
+  				<h1 class="title-h1 border-bottom">Стоянки</h1>
+  			</div><!-- end parking -->
+  		</div>
+  	</div>
+  </div>
+{% endblock %}

@@ -358,17 +358,21 @@ hr {
 
 ul.tabs {
 	display: flex;
-	justify-content: space-between;
+	
 	border-bottom: 1px solid #d2d9df;
 	@include list-reset;
 	padding-bottom: 20px;
 	li {
 		position: relative;
+		margin-right: 5.6%;
 		display: inline-block;
 		vertical-align: top;
 		filter: grayscale(100%);
 		opacity: .5;
 		transition: filter .3s, opacity .3s ease-out;
+		&:last-child {
+			margin-right: 0;
+		}
 		&:after {
 			content: '';
 			position: absolute;

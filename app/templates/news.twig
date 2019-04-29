@@ -1,0 +1,143 @@
+{% extends "layouts/default.twig" %}
+{% set title="Новости" %}
+{% set bread = ["Главная", "Новости"] %}
+{% set activePosition = "5" %}
+{% block content %}
+  <div class="uk-container">
+		<div class="breadcrumbs-wrapper">
+			{% include "includes/breadcrumbs.twig" %}
+		</div>
+		<div class="uk-grid">
+			<div class="uk-width-1-6@m">
+				{% include 'includes/sidebar-nav.twig' %}
+			</div>
+			<div class="uk-width-5-6@m">
+				<!-- begin page-news -->
+				<div class="page-news">
+					<h1 class="title-h1">Новости</h1>
+					
+					<div class="news-list">
+						<div class="uk-grid uk-grid-match">
+							<div class="uk-width-1-2@s">
+								<div class="news lazy" data-src="img/news-img.png">
+									<div class="news-inner">
+										<a href="">
+											<div class="news__date">
+												<div class="news__day">02</div>
+												<div class="news__month">Апреля 2019</div>
+											</div>
+											<div class="news__short-text">
+												Белорусские гонщики впервые примут участие в марокканском ралли-рейде Desert Challenge
+											</div>
+											<div class="read-more icon-arrow-right">Подробнее</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="uk-width-1-2@s">
+								<div class="news lazy" data-src="img/news-img.png">
+									<div class="news-inner">
+										<a href="">
+											<div class="news__date">
+												<div class="news__day">16</div>
+												<div class="news__month">марта 2019</div>
+											</div>
+											<div class="news__short-text">
+												Челябинское УФАС России выдало предупреждение ООО «Миравтотехники»
+											</div>
+											<div class="read-more icon-arrow-right">Подробнее</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="uk-width-1-2@s">
+								<div class="news lazy" data-src="img/news-img.png">
+									<div class="news-inner">
+										<a href="">
+											<div class="news__date">
+												<div class="news__day">31</div>
+												<div class="news__month">января 2019</div>
+											</div>
+											<div class="news__short-text">
+												Соглашение о намерениях подписано сегодня в Минске между компанией «Дана Астра» и Минским автомобильным заводом.
+											</div>
+											<div class="read-more icon-arrow-right">Подробнее</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="uk-width-1-2@s">
+								<div class="news lazy" data-src="img/news-img.png">
+									<div class="news-inner">
+										<a href="">
+											<div class="news__date">
+												<div class="news__day">4</div>
+												<div class="news__month">марта 2019</div>
+											</div>
+											<div class="news__short-text">
+												Соглашение о намерениях подписано сегодня в Минске между компанией «Дана Астра» и Минским автомобильным заводом.
+											</div>
+											<div class="read-more icon-arrow-right">Подробнее</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="uk-width-1-2@s">
+								<div class="news lazy" data-src="img/news-img.png">
+									<div class="news-inner">
+										<a href="">
+											<div class="news__date">
+												<div class="news__day">27</div>
+												<div class="news__month">февраля 2019</div>
+											</div>
+											<div class="news__short-text">
+												С 27 по 29 марта 2019 года в г.Ташкент проходит 11-я международная выставка UzTechTransExpo
+											</div>
+											<div class="read-more icon-arrow-right">Подробнее</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="uk-width-1-2@s">
+								<div class="news lazy" data-src="img/news-img.png">
+									<div class="news-inner">
+										<a href="">
+											<div class="news__date">
+												<div class="news__day">11</div>
+												<div class="news__month">февраля 2019</div>
+											</div>
+											<div class="news__short-text">
+												Новая рубильно-дробильная машина измельчает древесину с удивительной скоростью – производительность достигает 150 кубометров в час.
+											</div>
+											<div class="read-more icon-arrow-right">Подробнее</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<ul class="uk-pagination uk-flex-center">
+						<li class="uk-pagination-prev">
+							<a href="">
+								Предыдущая
+							</a>
+						 </li>
+						<li class="uk-active"><span>1</span></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">...</a></li>
+						<li><a href="">12</a></li>
+						<li class="uk-pagination-next">
+							<a href="">
+								Следующая
+							</a>
+						 </li>
+					</ul>
+
+				</div><!-- end page-news -->
+			</div>
+		</div>
+  </div>
+{% endblock %}

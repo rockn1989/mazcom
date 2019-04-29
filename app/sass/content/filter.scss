@@ -9,6 +9,9 @@
 		border: none;
 		padding: 23px 21px;
 		border-bottom: 1px solid #d2d9df;
+		&:last-child {
+			border-bottom: none;
+		}	
 	}
 	.group-title {
 		position: relative;
