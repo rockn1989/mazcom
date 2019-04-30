@@ -699,6 +699,64 @@
           <!-- begin parking -->
           <div class="parking">
             <h1 class="title-h1 border-bottom">Стоянки</h1>
+            <!-- begin sort-panel -->
+            <div class="sort-panel">
+              <div class="custom-select">
+                <div class="custom-select__label uk-visible@l">Выберите город </div>
+                <select name="" id="" class="js__custom-select" data-theme="default">
+                  <option value="">Москва</option>
+                  <option value="">Екатеринбург</option>
+                  <option value="">Тверь</option>
+                </select>
+              </div>
+            </div><!-- end sort-panel -->
+
+            <!-- begin parking-map -->
+            <div id="parking-map" class="parking-map">
+
+            </div><!-- end parking-map -->
+
+            <ul class="parking-list">
+              <li>
+                <div class="parking-item">
+                  <div class="parking-item__address icon-pin">
+                    Москва, ул.Полярная, 31В, стр.1
+                  </div>
+                  <div class="parking-item__contacts icon-phone">
+                    <div class="parking-item__title">Телефон:</div>
+                    <a href="tel:+74957486231">+7 (495) 748-62-31</a>
+                    <a href="tel:+74957486241">+7 (495) 748-62-41</a>
+                  </div>
+                  <div class="parking-item__timework icon-clock">
+                    <div class="parking-item__title">Режим работы:</div>
+                    Понедельник—воскресенье: с 9:00 до 21:00
+                  </div>
+                  <div class="parking-tooltip">
+                    <div class="open"></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="parking-item">
+                  <div class="parking-item__address icon-pin">
+                    Екатеринбург, пос. Большой Исток, ул. Свердлова, дом 42А, оф. 210
+                  </div>
+                  <div class="parking-item__contacts icon-phone">
+                    <div class="parking-item__title">Телефон:</div>
+                    <a href="tel:+73433288527">8 (343) 328-85-27</a>
+                    <a href="tel:+73433288417">8 (343) 328-84-17</a>
+                  </div>
+                  <div class="parking-item__timework icon-clock">
+                    <div class="parking-item__title">Режим работы:</div>
+                    Понедельник—воскресенье: с 9:00 до 21:00
+                  </div>
+                  <div class="parking-tooltip">
+                    <div class="open">Скоро открытие</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
           </div><!-- end parking -->
         </div>
       </div>
@@ -781,8 +839,39 @@
 
 
 
+  <div id="callback" class="default-modal callback-modal" uk-modal>
+    <div class="uk-modal-dialog">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <div class="uk-modal-header">
+        <h2 class="uk-modal-title">Задать вопрос</h2>
+      </div>
+      <div class="uk-modal-body">
+        <form action="" method="get" class="call-spec">
+          <fieldset>
+            <input id="name" type="text" placeholder="Ваше имя">
+          </fieldset>
+          <fieldset>
+            <input id="tel" name="tel" type="text" class="tel js__input-phone" placeholder="+7" required>
+          </fieldset>
+          <fieldset>
+            <input id="email" name="email" type="text" class="tel js__input-phone" placeholder="E-mail" required>
+          </fieldset>
+          <fieldset>
+            <textarea name="" id="" placeholder="Ваш вопрос"></textarea>
+          </fieldset>
+          <div class="alert"><sup>*</sup>— поля обязательные для заполнения</div>
+          <button class="btn btn--form" type="submit">Отправить сообщение</button>
+        </form>
+        <div class="politics">
+          Нажимая на кнопку Отправить, я даю согласие на обработку <a href="">персональных данных</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
   <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
   <script src="libs/uikit-3/js/uikit.min.js" defer></script>
   <script src="libs/slick/slick.min.js" defer></script>
@@ -794,6 +883,7 @@
   <script src="libs/ofi.min.js" defer></script>
   <script src="js/sliders.js" defer></script>
   <script src="js/catalog.js" defer></script>
+  <script src="js/map.js" defer></script>
   <script src="js/app.js" defer></script>
 
 </body>

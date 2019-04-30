@@ -471,6 +471,9 @@
 
 /*______ End Leasing ______*/
 
+
+/*______ Pathners page ______*/
+
 .pathners-list {
 	padding-bottom: 60px;
 	li {
@@ -494,5 +497,159 @@
 		}
 	}
 }
+
+/*______ End Pathners page ______*/
+
+
+/*______ Parking ______*/
+
+.parking {
+	.title-h1 {
+		margin-bottom: 0;
+		padding-bottom: 15px;
+	}
+}
+
+.parking-map {
+	margin-bottom: 27px;
+	width: 100%;
+	min-height: 300px;
+	@media (min-width: $tablet-w) {
+		min-height: 400px;
+	};
+	@media (min-width: $desk-w) {
+		min-height: 666px;
+	};
+}
+
+.parking-list {
+	@include list-reset;
+	.parking-item  {
+		margin-bottom: 27px;
+	}
+}
+
+.parking-item {
+	position: relative;
+	padding: 35px 34px 30px;
+	display: flex;
+	justify-content: space-between;
+	background-color: #ffffff;
+	transition: box-shadow .3s ease-out;
+	&:hover {
+		box-shadow: 0 5px 21px -2px rgba(0, 0, 0, 0.06);
+	}
+	&__title {
+		color: #666666;
+	}
+	&__address,&__contacts,&__timework {
+		position: relative;
+		padding-left: 35px;
+		font-family: $mainFont !important;
+		color: #272d37;
+		font-size: 18px;
+		line-height: 28px;
+		width: 30%;
+		a {
+			display: block;
+			color: #272d37;
+		}
+		&:before {
+			position: absolute;
+			top: 8px;
+			left: 0;
+			font-family: 'icomoon' !important;
+			color: #768b9c;
+			font-size: 18px;
+			line-height: 18px;
+			transition: color .3s ease-out;
+		}
+		&:hover {
+			&:before {
+				color: $blue;
+			}
+		}
+	}
+	&__address {
+		/* max-width: 278px; */
+	}
+	&__timework {
+		/* max-width: 300px; */
+	}
+	.parking-tooltip {
+		position: absolute;
+		top: -1px;
+		right: 0;
+		&>div {
+			margin-bottom: 5px;
+			padding: 7px;
+			display: inline-block;
+			color: #ffffff;
+			font-size: 12px;
+			line-height: 16px;
+			font-weight: 700;
+			font-family: $secondFont;
+			text-transform: uppercase;
+			&:empty {
+				display: none;
+			}
+			&.open {
+				background-image: linear-gradient(135deg, #f06570 0%, #dd353d 100%);
+			}
+		}
+	}
+}
+
+.parking-detail-desc {
+	padding: 25px 25px 0 35px;
+	background: #ffffff;
+}
+
+.parking-detail {
+	margin-bottom: 100px !important;
+	background: #ffffff;
+	.parking-item {
+		padding: 0;
+		flex-wrap: wrap;
+		&:hover {
+			box-shadow: none;
+		}
+		&>div {
+			margin-bottom: 30px;
+			padding: 0 0 40px 35px;
+			width: 100%;
+			border-bottom: 1px solid #d2d9df;
+			&:last-child {
+				margin-bottom: 0;
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+.detail-parking-map {
+	width: 100%;
+	height: 100%;
+}
+
+.theme-road {
+	position: relative;
+	margin-top: 20px;
+	display: inline-block !important;
+	vertical-align: top;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: #2e60b8;
+		opacity: .31;
+	}
+}
+
+/*______ End Parking ______*/
+
 
 /*______ End Main Content ______*/

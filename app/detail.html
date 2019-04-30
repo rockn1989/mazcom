@@ -683,8 +683,8 @@
           <li>МАЗ МК 3112-02</li>
         </ul>
       </div>
-      <!-- begin content -->
-      <div class="content">
+      <!-- begin detail -->
+      <div class="detail">
 
         <!-- begin detail-card -->
         <div class="detail-card">
@@ -1536,7 +1536,7 @@
           </div>
         </div><!-- end seo-block -->
 
-      </div><!-- end content -->
+      </div><!-- end detail -->
     </div>
   </section>
 
@@ -1616,8 +1616,39 @@
 
 
 
+  <div id="callback" class="default-modal callback-modal" uk-modal>
+    <div class="uk-modal-dialog">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <div class="uk-modal-header">
+        <h2 class="uk-modal-title">Задать вопрос</h2>
+      </div>
+      <div class="uk-modal-body">
+        <form action="" method="get" class="call-spec">
+          <fieldset>
+            <input id="name" type="text" placeholder="Ваше имя">
+          </fieldset>
+          <fieldset>
+            <input id="tel" name="tel" type="text" class="tel js__input-phone" placeholder="+7" required>
+          </fieldset>
+          <fieldset>
+            <input id="email" name="email" type="text" class="tel js__input-phone" placeholder="E-mail" required>
+          </fieldset>
+          <fieldset>
+            <textarea name="" id="" placeholder="Ваш вопрос"></textarea>
+          </fieldset>
+          <div class="alert"><sup>*</sup>— поля обязательные для заполнения</div>
+          <button class="btn btn--form" type="submit">Отправить сообщение</button>
+        </form>
+        <div class="politics">
+          Нажимая на кнопку Отправить, я даю согласие на обработку <a href="">персональных данных</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
   <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
   <script src="libs/uikit-3/js/uikit.min.js" defer></script>
   <script src="libs/slick/slick.min.js" defer></script>
@@ -1629,6 +1660,7 @@
   <script src="libs/ofi.min.js" defer></script>
   <script src="js/sliders.js" defer></script>
   <script src="js/catalog.js" defer></script>
+  <script src="js/map.js" defer></script>
   <script src="js/app.js" defer></script>
 
 </body>

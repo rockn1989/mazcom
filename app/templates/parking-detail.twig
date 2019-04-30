@@ -1,0 +1,49 @@
+{% extends "layouts/default.twig" %}
+{% set title="Стоянки" %}
+{% set bread = ["Главная", "О компании", "Стоянки", "Стоянка на Полярной"] %}
+{% set activePosition = "1" %}
+{% block content %}
+  <div class="uk-container">
+		<div class="breadcrumbs-wrapper">
+			{% include "includes/breadcrumbs.twig" %}
+		</div>
+		<div class="uk-grid">
+			<div class="uk-width-1-6@m">
+				{% include 'includes/sidebar-nav.twig' %}
+			</div>
+			<div class="uk-width-5-6@m">
+				<!-- begin parking-detail -->
+				<div class="parking-detail">
+					<div class="uk-grid">
+						<div class="uk-width-2-5">
+							<div class="parking-detail-desc">
+								<h1 class="title-h1">Стоянка на Полярной</h1>
+								<div class="parking-item">
+									<div class="parking-item__address icon-pin">
+										Москва, ул.Полярная, 31В, стр.1
+										<a href="" class="theme-road">Схема проезда</a>
+									</div>
+									<div class="parking-item__contacts icon-phone">
+										<div class="parking-item__title">Телефон:</div>
+										<a href="tel:+74957486231">+7 (495) 748-62-31</a>
+										<a href="tel:+74957486241">+7 (495) 748-62-41</a>
+									</div>
+									<div class="parking-item__timework icon-clock">
+										<div class="parking-item__title">Режим работы:</div>
+										Понедельник—воскресенье: с 9:00 до 21:00
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="uk-width-3-5">
+							<!-- begin detail-parking-map -->
+							<div id="detail-parking-map" class="detail-parking-map">
+								
+							</div><!-- end detail-parking-map -->
+						</div>
+					</div>
+				</div><!-- end parking-detail -->
+			</div>
+		</div>
+  </div>
+{% endblock %}
