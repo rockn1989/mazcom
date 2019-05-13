@@ -27,6 +27,23 @@
 	line-height: $line-height;
 }
 
+@mixin preloader ($width, $height) {
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: #ffffff url('../img/preloader.gif') center center no-repeat;
+		background-size: $width $height;
+		z-index: 999;
+		transition: background .3s, z-index .3s ease-out;
+	}
+}
+
 /* @mixin background-retina($filename, $fileformat) {
 	background-image: url("../img/${filename}$1x.${fileformat}");
 

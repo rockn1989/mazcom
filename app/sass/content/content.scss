@@ -365,10 +365,21 @@
 /*______ SEO Block ______*/
 
 .seo-block {
-	margin-bottom: 95px;
 	color: #666666;
 	font-size: 16px;
 	line-height: 24px;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 50px;
+		padding: 0 15px;
+	};
+	@media (min-width: $tablet-w) {
+		padding: 0 35px;
+	};
+	@media (min-width: $desk-w) {
+		padding: 0;
+		margin-bottom: 95px;
+	};
+
 }
 
 /*______ End SEO Block ______*/

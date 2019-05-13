@@ -32,31 +32,48 @@
 										</div>
 									</div>
 									
-									<!-- begin detail-slider -->
-									<div class="detail-slider">
-										<div class="slider">
-											<div class="slide" uk-lightbox>
-												<a href="img/detail-img-1-454x-402.png">
-													<img data-lazy="img/detail-img-1-454x-402.png" alt="">
-												</a>
-												<div class="stocks">
-													<div class="new">Новинка</div>
+									<div class="detail-sliders-wrapper">							
+										<!-- begin detail-slider -->
+										<div class="detail-slider">
+											<div class="slider" uk-lightbox>
+												<div class="slide">
+													<a href="img/detail-img-1-454x-402.png">
+														<img data-lazy="img/detail-img-1-454x-402.png" alt="">
+													</a>
+													<div class="stocks">
+														<div class="new">Новинка</div>
+													</div>
+												</div>
+												<div class="slide">
+													<a href="img/detail-img-1-454x-402.png">
+														<img data-lazy="img/detail-img-1-454x-402.png" alt="">
+													</a>
+													<div class="stocks">
+														<div class="discount">-7%</div>
+													</div>
 												</div>
 											</div>
-											<div class="slide" uk-lightbox>
-												<a href="img/detail-img-1-454x-402.png">
+										</div><!-- end detail-slider -->
+
+										<!-- begin detail-preview-slider -->
+										<div class="detail-preview-slider">
+											<div class="slider">
+												<div class="slide">
 													<img data-lazy="img/detail-img-1-454x-402.png" alt="">
-												</a>
-												<div class="stocks">
-													<div class="discount">-7%</div>
+												</div>
+												<div class="slide">
+													<img data-lazy="img/detail-img-1-454x-402.png" alt="">
+												</div>
+												<div class="slide">
+													<img data-lazy="img/detail-img-1-454x-402.png" alt="">
+												</div>
+												<div class="slide">
+													<img data-lazy="img/detail-img-1-454x-402.png" alt="">
 												</div>
 											</div>
-										</div>
-										<div class="slider__arrows slider__arrows--fill">
-											<div class="slide-prev"><i class="icon-arrow-left"></i></div>
-											<div class="slide-next"><i class="icon-arrow-right"></i></div>
-										</div>
-									</div><!-- end detail-slider -->
+										</div><!-- end detail-preview-slider -->
+
+									</div>
 
 									<!-- begin detail-desc -->
 									<div class="detail-desc">
@@ -116,7 +133,7 @@
 								</div><!-- end right-sidebar -->
 
 								<!-- begin scroll-nav -->
-								<ul class="scroll-nav uk-visible@l" uk-sticky="media: @m;bottom: .content">
+								<ul class="scroll-nav uk-visible@l" uk-sticky="media: @m; bottom: .detail">
 									<li class="active"><a href="#desc" uk-scroll>Описание</a></li>
 									<li><a href="#options" uk-scroll>Характеристики</a></li>
 									<li><a href="#modifi" uk-scroll>Модификации</a></li>
@@ -200,10 +217,12 @@
 												</div>
 											</div>
 										</li>
-										<li></li>
-										<li></li>
+										<li>Текст описания</li>
+										<li>Виды комплектации</li>
 										<li>
-											<iframe width="100%" height="500px" src="https://www.youtube.com/embed/H4IZ_3zqouo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+											<div class="youtube" data-embed="H4IZ_3zqouo">
+												<div class="play-btn icon-youtube"></div>
+											</div>
 										</li>
 									</ul>
 								</div>
@@ -858,6 +877,19 @@
 							</div>
 						</div>
 					</div><!-- end seo-block -->
+					
+					<!-- begin detail-contacts for print -->
+					<div class="detail-contacts">
+						<p>
+							<a href="tel:+78009214106" class="tel">8 800 921 41 06</a>
+						</p>
+						<p>
+							<a href="tel:+74959214106" class="tel">+7 (495) 921-41-06</a>
+						</p>
+						<p>
+							<a href="mailto:maz@mazcom.ru" class="mail"><span>maz@mazcom.ru</span></a>
+						</p>
+					</div><!-- end detail-contacts for print -->
 
 		 </div><!-- end detail --> 
 	</div>

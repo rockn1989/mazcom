@@ -106,7 +106,7 @@ $(function () {
 	/*______ Detail slider ______*/
 
 	$('.detail-slider .slider').slick({
-		arrows: true,
+		arrows: false,
 		dots: false,
 		infinity: true,
 		lazyLoad: 'ondemand',
@@ -116,10 +116,44 @@ $(function () {
 		speed: 400,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		prevArrow: $('.detail-slider').find('.slide-prev'),
-		nextArrow: $('.detail-slider').find('.slide-next'),
+		asNavFor: '.detail-preview-slider .slider'
 	});
 
+
+	$('.detail-preview-slider .slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.detail-slider .slider',
+		dots: false,
+		arrows: true,
+		infinity: true,
+		centerMode: false,
+		lazyLoad: 'ondemand',
+		focusOnSelect: true,
+		vertical: false,
+		prevArrow: '<div class="btn-slide slick-prev"><i class="icon-arrow-left"></i></div>',
+		nextArrow: '<div class="btn-slide slick-next"><i class="icon-arrow-right"></i></div>',
+		responsive: [
+		{
+			breakpoint: 1245,
+			settings: {
+				slidesToShow: 3,
+			}
+		},
+		{
+			breakpoint: 1244,
+			settings: {
+				slidesToShow: 3,
+		}
+		},
+		{
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+	]
+	});
 
 	/*______ Products slider ______*/
 
@@ -130,7 +164,7 @@ $(function () {
 			dots: false,
 			infinity: true,
 			lazyLoad: 'ondemand',
-			autoplay: true,
+			autoplay: false,
 			fade: false,
 			autoplaySpeed: 4000,
 			speed: 400,
@@ -142,7 +176,7 @@ $(function () {
 				{
 					breakpoint: 1025,
 					settings: {
-						slidesToShow: 3,
+						slidesToShow: 2,
 						slidesToScroll: 1,
 						infinite: true,
 					}
@@ -150,7 +184,7 @@ $(function () {
 				{
 					breakpoint: 768,
 					settings: {
-						slidesToShow: 2,
+						slidesToShow: 1,
 						slidesToScroll: 1
 					}
 				},
