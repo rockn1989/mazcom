@@ -608,12 +608,22 @@ ul.uk-switcher {
 	transition: box-shadow .3s ease-out;
 	&__img {
 		margin-bottom: 10px;
+<<<<<<< HEAD
 		a {
 			width: 100%;
 			height: 230px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+=======
+		height: 230px;
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+>>>>>>> 60cd7a425922c940dccc9a2b54209d91ebdf0578
 		}
 		img {
 			max-width: 100%;
