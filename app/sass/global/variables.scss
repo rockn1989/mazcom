@@ -1,7 +1,12 @@
-$mob-xs: 0px;
+/* $mob-xs: 0px;
 $mob-s: 480px;
 $tablet-w: 768px;
-$desk-w: 960px;
+$desk-w: 960px; */
+
+$mob-xs: 0px;
+$mob-s: 640px;
+$tablet-w: 960px;
+$desk-w: 1200px;
 
 $retina: (min-resolution: 144dpi), (min-resolution: 1.5dppx);
 
@@ -20,3 +25,7 @@ $red: #dd353d;
 $blue: #2e60b8;
 $gray: #768b9c;
 $lighten: #f4f8fa;
+
+.detail {
+	display: none;
+}

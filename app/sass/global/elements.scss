@@ -217,13 +217,13 @@ h3,.title-h3 {
 	padding: 8px 27px 8px 9px;
 	display: inline-block;
 	vertical-align: top;
-	color: #666666;
+	color: #ffffff;
 	font-size: 11px;
 	letter-spacing: .5px;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: $mainFont !important;
-	@include gradient(#f4f8fa, $blue);
+	@include gradient($blue, $red);
 	&:hover {
 		color: #ffffff;
 		text-decoration: none;
@@ -237,6 +237,7 @@ h3,.title-h3 {
 		right: 10px;
 		font-family: 'icomoon' !important;
 		transition: color .3s ease-out;
+		color: inherit;
 	}
 }
 
