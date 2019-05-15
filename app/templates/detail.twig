@@ -153,13 +153,15 @@
 						<div class="uk-grid">
 							<div class="uk-width-5-6@m">
 								<div class="white-wrapper">
-									<ul class="tabs" uk-switcher="swiping: false">
-										<li><a href="#"><span class="tab__title">Характеристики</span></a></li>
-										<li><a href="#"><span class="tab__title">Описание</span></a></li>
-										<li><a href="#"><span class="tab__title">Комплектация</span></a></li>
-										<li><a href="#"><span class="tab__title">Видео</span></a></li>
-									</ul>
-									<ul class="uk-switcher">
+									<div class="tabs-wrapper">
+										<ul class="tabs" uk-switcher="connect: #tabs;swiping: false">
+											<li><a href="#"><span class="tab__title">Характеристики</span></a></li>
+											<li><a href="#"><span class="tab__title">Описание</span></a></li>
+											<li><a href="#"><span class="tab__title">Комплектация</span></a></li>
+											<li><a href="#"><span class="tab__title">Видео</span></a></li>
+										</ul>
+									</div>
+									<ul id="tabs" class="uk-switcher">
 										<li>
 											<div class="uk-grid">
 												<div class="uk-width-1-2@m">

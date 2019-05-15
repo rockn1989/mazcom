@@ -35,7 +35,8 @@
 		<div class="uk-container">
 			<div class="small-title">Техника в наличии</div>
 			<div class="tab">
-				<ul class="tabs" uk-switcher="swiping: false">
+			<div class="tabs-wrapper">
+				<ul class="tabs" uk-switcher="connect: #tabs;swiping: false">
 					<li>
 						<a href="#">
 							<span class="tab__img">
@@ -93,7 +94,8 @@
 						</a>
 					</li>
 				</ul>
-			<ul class="uk-switcher"  uk-scrollspy="target: .card; cls:uk-animation-fade; delay: 0; repeat: false">
+			</div>
+			<ul id="tabs" class="uk-switcher"  uk-scrollspy="target: .card; cls:uk-animation-fade; delay: 0; repeat: false">
 					{% for i in 0..7 %}
 					    <li>
 					    	<div class="uk-grid uk-grid-match">
@@ -184,7 +186,7 @@
 					{% endfor %}
 				</ul>
 			</div>
-			<a href="/catalog" class="btn btn--catalog icon-menu">Перейти в каталог</a>
+			<a href="catalog.html" class="btn btn--catalog icon-menu">Перейти в каталог</a>
 		</div>
 	</div><!-- end promo-catalog -->
 	

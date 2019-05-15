@@ -20,6 +20,7 @@
 					<div class="logo-wrapper">
 						<a href="/" class="logo">
 							<img src="img/logo.png" alt="">
+							<span>Официальный дилер ОАО "МАЗ"</span>
 						</a>
 					</div>
 					<ul class="top-navbar">
@@ -244,9 +245,26 @@
 					<div class="uk-panel">
 						<ul class="offcanvas-nav">
 							{% for i in 0..4 %}
-							    <li>
-							    	<a href="" class="icon-arrow-right">{{menu[i]}}</a>
-							    	
+							    <li class="parent">
+							    	<a href="">{{menu[i]}} <i class="icon-small-arrow-down js__toggle-mobile-sublist"></i></a>
+							    	<ul class="mobile-sublist">
+							    		{% for item in 0..4 %}
+							    		<li class="parent">
+							    			<a href="#"><i class="icon-small-arrow-down js__toggle-mobile-sublist"></i>Седельные тягачи</a>
+							    			<ul class="mobile-sublist">
+							    				<li class="parent">
+							    					<a href="#"><i class="icon-small-arrow-down js__toggle-mobile-sublist"></i>2х осные</a>
+							    					<ul class="mobile-sublist">
+							    						<li><a href="#">С межколесным дифференциалом</a></li>
+							    						<li><a href="#">С вискомуфтой</a></li>
+							    					</ul>
+							    				</li>
+							    				<li><a href="">3х осные</a></li>
+							    				<li><a href="">4х осные</a></li>
+							    			</ul>
+							    		</li>
+							    		{% endfor %}
+							    	</ul>
 							    </li>
 							{% endfor %}
 						</ul>

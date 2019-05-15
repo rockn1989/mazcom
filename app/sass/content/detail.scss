@@ -354,10 +354,10 @@
 	ul.tabs {
 		justify-content: normal;
 		@media (min-width: $mob-xs) {
-			overflow-x: auto;	
+			min-width: 650px;
 		};
 		@media (min-width: $tablet-w) {
-			overflow-x: visible;
+			min-width: none;
 		};
 		li {
 			margin-right: 5.6%;

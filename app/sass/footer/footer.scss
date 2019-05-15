@@ -46,7 +46,7 @@
 			font-family: 'icomoon' !important;
 			opacity: 1;
 			color: #ffffff;
-			font-size: 14px;
+			font-size: 10px;
 			transition: transform .3s ease-out;
 			transform-origin: center center;
 			@media (min-width: $mob-s) {
@@ -58,8 +58,10 @@
 			margin-bottom: 20px;
 			text-transform: uppercase;
 			cursor: pointer;
+			font-size: 16px;
 		};
 		@media (min-width: $mob-s) {
+			font-size: 18px;
 			text-transform: none;
 			cursor: default;
 		};

@@ -155,6 +155,48 @@ $(function () {
 	});
 
 
+	/*______ Promo catalog скролл ______*/
+
+	if($(window).outerWidth() <= 1149) {
+		$('.tabs-wrapper').mCustomScrollbar({
+			axis:"x",
+			autoExpandScrollbar:true,
+			advanced:{autoExpandHorizontalScroll:true}
+		});
+	}
+
+
+	var lastTime = 0;
+	$(window).on('resize', function () {
+		if(Date.now() - lastTime >= 1000) {
+
+			if($(window).outerWidth() >= 1150) {
+				$(".tabs-wrapper").mCustomScrollbar("destroy");
+			} else {
+				$('.tabs-wrapper').mCustomScrollbar({
+					axis:"x",
+					autoExpandScrollbar:true,
+					advanced:{autoExpandHorizontalScroll:true}
+				});
+			};
+
+			lastTime = Date.now();
+		}
+	})
+
+
+	/*______ Переключение списков в левом меню на мобильном разрешении ______*/
+
+	$('.js__toggle-mobile-sublist').on('click', function (e) {
+		e.preventDefault();
+		$(this)
+			.toggleClass('open')
+			.parent('a')
+			.siblings('ul.mobile-sublist')
+			.stop(true, true)
+			.slideToggle('350');
+	});
+
 	/*______ Переключение списков в футере на мобильном разрешении ______*/
 
 	$('[data-toggle]').on('click', function (e) {
