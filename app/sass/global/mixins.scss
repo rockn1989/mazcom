@@ -73,7 +73,9 @@
 	background-size: 200%;
 	background-position: 100%;
 	&:hover {
-		background-position: 0 0;
+		@media (min-width: $desk-w) {
+			background-position: 0 0;
+		};
 	}
 }
 

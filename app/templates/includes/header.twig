@@ -41,9 +41,14 @@
 					<div class="basket">
 						<a href="/order">
 							<div class="basket__img">
-								<svg width="42px" height="45px" class="garage">
-									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite-svg.svg#garage"></use>
+								<svg viewBox="0 0 42 35" xmlns="http://www.w3.org/2000/svg" class="garage-inactive">
+									<path id="home" fill-rule="evenodd" clip-rule="evenodd" d="M10.167 15.187H31.823V34.446H39.054V11.719L40.924 12.653L42 10.5L21 0L0 10.5L1.07703 12.653L2.94604 11.718V34.446H10.167V15.187ZM21.005 2.691L5.35303 10.515V32.038H7.76099V12.78H34.249V32.038H36.657V10.515L21.005 2.691Z"/>
+									<path id="plank-1" d="M31.823 32.038H10.167V34.446H31.823V32.038Z"/>
+									<path id="plank-2" d="M31.823 27.214H10.167V29.631H31.823V27.214Z"/>
+									<path id="plank-3" d="M31.823 22.4091H10.167V24.8161H31.823V22.4091Z"/>
+									<path id="plank-4" d="M31.823 17.585H10.167V20.002H31.823V17.585Z"/>
 								</svg>
+
 							</div>
 							<div class="basket__value">0</div>
 						</a>
@@ -213,7 +218,7 @@
 				</div>
 			</div>
 			
-			<a href="#offcanvas-catalog" class="btn catalog-btn" uk-toggle>Каталог</a>
+			<a href="#offcanvas-catalog" class="btn btn--catalog btn--catalog-red icon-menu" uk-toggle>Каталог</a>
 
 			<!-- begin uk-offcanvas -->
 			<div id="offcanvas-menu" class="uk-offcanvas" uk-offcanvas>

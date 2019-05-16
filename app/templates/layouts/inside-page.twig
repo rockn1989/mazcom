@@ -1,0 +1,31 @@
+{% include "../includes/head.twig" %}
+<body class="{{preload}}">
+{% include "../includes/header.twig" %}
+	
+<section class="page-content">
+	<div class="uk-container">
+		<div class="breadcrumbs-wrapper">
+			{% include "../includes/breadcrumbs.twig" %}
+		</div>
+		<div class="uk-grid">
+			<div class="uk-width-1-6@l">
+				{% include '../includes/sidebar-nav.twig' %}
+			</div>
+			<div class="uk-width-5-6@l">
+				<!-- begin content -->
+				<div class="content">
+					{% block content %}{% endblock %}
+				</div><!-- end content -->
+			</div>
+		</div>
+	</div>
+</section>
+
+{% include "../includes/footer.twig" %}
+
+{% include "../includes/modals.twig" %}
+
+{% include "../includes/scripts.twig" %}
+
+</body>
+</html>

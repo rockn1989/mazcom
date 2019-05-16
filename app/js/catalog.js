@@ -68,5 +68,13 @@ $(function () {
 		}
 	})
 
+	/*______ Filter toggle ______*/
+
+	var filter = $('.filter-form-wrapper');
+
+	$('.js__toggle-filter').on('click', function (e) {
+		e.preventDefault();
+		filter.stop(true, true).slideToggle('350');
+	});
 
 });

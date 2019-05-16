@@ -1,6 +1,7 @@
 /*______ Filter ______*/
 
 .filter {
+	position: relative;
 	background-color: #ffffff;
 	box-shadow: 0 5px 21px -2px rgba(0, 0, 0, 0.06);
 	fieldset {
@@ -59,6 +60,22 @@
 			}
 		}
 	}
+}
+
+.filter-form-wrapper {
+	background-color: #ffffff;
+	@media (min-width: $mob-xs) {
+		position: absolute;
+		top: 101%;
+		left: 0;
+		width: 100%;
+		z-index: 850;
+		display: none;
+	};
+	@media (min-width: $desk-w) {
+		position: static;
+		display: block !important;
+	};
 }
 
 label.custom-label {
@@ -202,6 +219,13 @@ label.custom-label {
 			margin-left: 6px;
 			font-size: 12px;
 		}
+	}
+}
+
+.filter-btn {
+	margin-bottom: 24px;
+	.btn {
+		max-width: none;
 	}
 }
 

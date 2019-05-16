@@ -1,5 +1,8 @@
 {% set sidebarNav = ["О компании", "Стоянки", "Лизинг", "Акции", "Сервис", "Новости", "Полезная информация", "Контакты"] %}
 {% block content %}
+	<div class="sidebar-btn uk-hidden@l">
+		<a href="#offcanvas-sidebar-nav" class="btn btn--catalog icon-vertical-menu" uk-toggle>Меню раздела</a>
+	</div>
 	<!-- begin sidebar-nav -->
 	<ul class="sidebar-nav uk-visible@l">
 		{% for key, item in sidebarNav %}
@@ -11,5 +14,27 @@
 					{% endif %}
 		    {% endif %}
 		{% endfor %}
-	</ul><!-- end sidebar-nav -->    
+	</ul><!-- end sidebar-nav -->
+
+	<!-- begin uk-offcanvas -->
+	<div id="offcanvas-sidebar-nav" class="uk-offcanvas" uk-offcanvas>
+		<div class="uk-offcanvas-bar">
+			<div class="uk-panel">
+				<ul class="sidebar-nav">
+					{% for key, item in sidebarNav %}
+					    {% if loop.length != false %}
+								{% if key == activePosition %}
+									<li class="active"><a href="">{{item}}</a></li>
+									{% else %}
+									 <li><a href="">{{item}}</a></li>
+								{% endif %}
+					    {% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end uk-offcanvas -->
+
+
 {% endblock %}

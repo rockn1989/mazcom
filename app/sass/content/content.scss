@@ -3,8 +3,12 @@
 .content {
 	padding: 36px;
 	background: #ffffff;
-	@media (min-width: $tablet-w) {
+	@media (min-width: $mob-xs) {
 		margin-bottom: 100px !important;
+		padding: 36px 15px;
+	};
+	@media (min-width: $mob-s) {
+		padding: 36px;
 	};
 	img {
 		display: inline;
@@ -40,23 +44,12 @@
 .content-img-wrapper {
 	width: 100%;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
-	@media (min-width: $mob-xs) {
-		flex-wrap: wrap;
-	};
-	@media (min-width: $desk-w) {
-		flex-wrap: nowrap;
-	};
 	img {
 		display: inline !important;
-		max-width: 100%;
-		max-height: 100%;
-		&+img {
-			margin-top: 15px;
-			@media (min-width: $desk-w) {
-				margin-top: 0;
-			};
-		}
+		max-width: 50%;
+		max-height: 50%;
 	}
 }
 
@@ -450,11 +443,25 @@
 
 /*______ FAQ ______*/
 
+.faq {
+	.tabs {
+		@media (min-width: $mob-s) {
+			padding-bottom: 20px;
+			border-bottom: 1px solid #d2d9df;
+		};
+	}
+}
+
 .doc-list {
 	@include list-reset;
 	li {
-		margin-bottom: 46px !important;
 		padding-left: 0;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 20px !important;
+		};
+		@media (min-width: $mob-s) {
+			margin-bottom: 46px !important;
+		};
 		.item {
 			a {
 				display: block;
@@ -510,8 +517,16 @@
 
 .requisites {
 	margin-bottom: 30px;
-	padding: 40px 45px;
 	border: 10px solid #f4f8fa;
+	@media (min-width: $mob-xs) {
+		padding: 25px 15px;
+	};
+	@media (min-width: $mob-s) {
+		padding: 30px 20px;
+	};
+	@media (min-width: $tablet-w) {
+		padding: 40px 45px;
+	};
 	&:last-child {
 		margin-bottom: 30px;
 	}
@@ -605,11 +620,17 @@
 
 .parking-item {
 	position: relative;
-	padding: 35px 34px 30px;
 	display: flex;
 	justify-content: space-between;
 	background-color: #ffffff;
 	transition: box-shadow .3s ease-out;
+	@media (min-width: $mob-xs) {
+		padding: 30px 19px 20px;
+		flex-wrap: wrap;
+	};
+	@media (min-width: $desk-w) {
+		padding: 35px 34px 30px;
+	};
 	&:hover {
 		box-shadow: 0 5px 21px -2px rgba(0, 0, 0, 0.06);
 	}
@@ -624,6 +645,13 @@
 		font-size: 18px;
 		line-height: 28px;
 		width: 30%;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 15px;
+			width: 100%;
+		};
+		@media (min-width: $mob-s) {
+			width: 30%;
+		};
 		a {
 			display: block;
 			color: #272d37;
@@ -704,13 +732,24 @@
 .detail-parking-map {
 	width: 100%;
 	height: 100%;
+	@media (min-width: $mob-xs) {
+		height: 400px;
+	};
+	@media (min-width: $tablet-w) {
+		height: 100%;
+	};
+}
+
+.sidebar-btn {
+	margin-bottom: 30px !important;
 }
 
 .theme-road {
 	position: relative;
 	margin-top: 20px;
-	display: inline-block !important;
+	display: block !important;
 	vertical-align: top;
+	max-width: 132px;
 	&:after {
 		content: '';
 		position: absolute;

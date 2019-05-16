@@ -168,7 +168,7 @@ $(function () {
 
 	var lastTime = 0;
 	$(window).on('resize', function () {
-		if(Date.now() - lastTime >= 1000) {
+		if(Date.now() - lastTime >= 300) {
 
 			if($(window).outerWidth() >= 1150) {
 				$(".tabs-wrapper").mCustomScrollbar("destroy");
@@ -239,5 +239,13 @@ $(function () {
 							this.appendChild( iframe );
 				} );	
 	};
+
+
+	/*______ Basket ______*/
+
+	$('.basket a').on('click', function (e) {
+		e.preventDefault();
+		$(this).find('svg').toggleClass('adding');
+	})
 
 });

@@ -1,9 +1,20 @@
 /*______ Catalog ______*/
 
 .catalog {
-	padding-bottom: 95px;
+	@media (min-width: $mob-xs) {
+		padding-bottom: 60px;
+	};
+	@media (min-width: $tablet-w) {
+		padding-bottom: 95px;
+	};
 	.uk-pagination {
 		margin-bottom: 72px;
+		@media (min-width: $mob-xs) {
+			margin-bottom: 40px;
+		};
+		@media (min-width: $tablet-w) {
+			margin-bottom: 72px;
+		};
 	}
 }
 
@@ -22,15 +33,32 @@
 	&__title {
 		margin: 0 0 45px;
 		color: #ffffff;
-		font-size: 52px;
-		line-height: 58px;
+
 		font-weight: 700;
 		text-transform: uppercase;
 		font-family: $secondFont;
+		@media (min-width: $mob-xs) {
+			font-size: 40px;
+			line-height: 46px;
+		};
+		@media (min-width: $tablet-w) {
+			font-size: 52px;
+			line-height: 58px;
+		};
+
 	}
 	&__desc {
-		font-size: 21px;
-		line-height: 32px;
+		@media (min-width: $mob-xs) {
+			font-size: 16px;
+			line-height: 24px;
+		};
+		@media (min-width: $mob-s) {
+			font-size: 18px;
+		};
+		@media (min-width: $tablet-w) {
+			font-size: 21px;
+			line-height: 32px;
+		};
 	}
 	&:after {
 		content: '';
@@ -89,9 +117,19 @@
 }
 
 .catalog-body {
-	margin-bottom: 30px;
-	padding-bottom: 30px;
 	border-bottom: 1px solid #d2d9df;
+	@media (min-width: $mob-xs) {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+	};
+	@media (min-width: $mob-s) {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+	};
 }
 
 /*______ End Catalog ______*/

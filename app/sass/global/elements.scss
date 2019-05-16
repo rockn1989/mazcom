@@ -50,6 +50,9 @@
 	}
 }
 
+.lazy[data-src] {
+	background-size: 40px 40px !important;
+}
 
 .breadcrumbs {
 	@include list-reset;
@@ -187,6 +190,14 @@ h3,.title-h3 {
 		border-radius: 1px;
 		letter-spacing: 0;
 		@include gradient(#ffffff, $red);
+		&:hover {
+			@media (min-width: $mob-xs) {
+				color: #666666;
+			};
+			@media (min-width: $desk-w) {
+				color: #ffffff;
+			};
+		}
 		&:before {
 			margin-right: 25px;
 			font-family: 'icomoon' !important;
@@ -199,6 +210,16 @@ h3,.title-h3 {
 		@media (min-width: $mob-s) {
 			padding: 22px 52px;
 		};
+		&-red {
+			max-width: 300px;
+			color: #ffffff;
+			@include gradient($red, $blue);
+			&:hover {
+				@media (min-width: $mob-xs) {
+					color: #ffffff;
+				};
+			}
+		}
 	}
 }
 
@@ -357,6 +378,7 @@ ul.tabs {
 	@media (min-width: $mob-xs) {
 		border-bottom: none;
 		padding-bottom: 0;
+		min-width: 500px;
 	};
 	@media (min-width: $desk-w) {
 		padding-bottom: 20px;
@@ -736,6 +758,19 @@ ul.uk-switcher {
 
 .sort-panel {
 	padding: 20px 0;
+	.custom-select {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		&__label {
+			@media (min-width: $mob-xs) {
+				margin-bottom: 8px;
+			};
+			@media (min-width: $mob-s) {
+				margin-bottom: 0;
+			};
+		}
+	}
 }
 
 .border-bottom {
@@ -756,9 +791,6 @@ ul.uk-switcher {
 		line-height: 20px;
 		font-weight: 500;
 		font-family: $secondFont;
-		@media (min-width: $mob-xs) {
-			display: none;
-		};
 		@media (min-width: $tablet-w) {
 			display: inline-block;
 			margin-top: 6px;
@@ -963,7 +995,6 @@ ul.uk-switcher {
 /*______ Youtube ______*/
 
 .youtube {
-    /* background: url('../img/sliders-img/main-slider-img.png') center 0 no-repeat; */
     background-color: #000000;
     background-size: cover;
     margin-bottom: 30px;
