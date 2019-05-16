@@ -243,9 +243,38 @@ $(function () {
 
 	/*______ Basket ______*/
 
-	$('.basket a').on('click', function (e) {
+	$('.basket a').on('click', updateBasket);
+
+	function updateBasket (e) {
 		e.preventDefault();
-		$(this).find('svg').toggleClass('adding');
-	})
+		var svg = $('.basket').find('svg'),
+				lastPath = svg.find('path#plank-4'),
+				firstPath = svg.find('path#plank-1'),
+				truck = $('.basket .backwards-img');
+
+		svg.addClass('adding');
+
+		lastPath.on('transitionend', function () {
+
+			truck.addClass('show');
+
+			truck.on('transitionend', function () {
+				$(this).removeClass('show');
+				$(this).unbind('transitionend');
+
+				$(lastPath).unbind('transitionend');
+
+				svg.addClass('backwards');
+
+				firstPath.on('transitionend', function () {
+					svg.removeClass('backwards adding');
+					$(firstPath).unbind('transitionend');
+				});
+			});
+		});
+
+
+
+	};
 
 });

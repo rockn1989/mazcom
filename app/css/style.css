@@ -1947,6 +1947,25 @@ html.uk-touch body *.uk-invisible {
   align-items: center;
 }
 
+.basket__img {
+  position: relative;
+}
+
+.basket__img .backwards-img {
+  position: absolute;
+  top: 15px;
+  left: 11px;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  transition: opacity .5s ease-out;
+}
+
+.basket__img .backwards-img.show {
+  opacity: 1;
+}
+
 .basket__img svg {
   color: #2e60b8;
   -webkit-transition: all ease-out;
@@ -1956,14 +1975,22 @@ html.uk-touch body *.uk-invisible {
   overflow: hidden;
 }
 
-.basket__img svg path {
-  -webkit-transition: opacity .5s ease-out;
-  -o-transition: opacity .5s ease-out;
-  -moz-transition: opacity .5s ease-out;
-  transition: opacity .5s ease-out;
+.basket__img svg path[id] {
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  -moz-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: .35s;
+  -moz-transition-duration: .35s;
+  -o-transition-duration: .35s;
+  transition-duration: .35s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
-.basket__img svg path#home {
+.basket__img svg path[id]#home {
   overflow: hidden;
 }
 
@@ -1974,35 +2001,67 @@ html.uk-touch body *.uk-invisible {
 }
 
 .basket__img svg.garage-inactive.adding path#plank-4 {
-  -webkit-transition-delay: 3;
-  -moz-transition-delay: 3;
-  -o-transition-delay: 3;
-  transition-delay: 3;
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
   opacity: 0;
 }
 
 .basket__img svg.garage-inactive.adding path#plank-3 {
-  -webkit-transition-delay: 2;
-  -moz-transition-delay: 2;
-  -o-transition-delay: 2;
-  transition-delay: 2;
+  -webkit-transition-delay: .75s;
+  -moz-transition-delay: .75s;
+  -o-transition-delay: .75s;
+  transition-delay: .75s;
   opacity: 0;
 }
 
 .basket__img svg.garage-inactive.adding path#plank-2 {
-  -webkit-transition-delay: 1;
-  -moz-transition-delay: 1;
-  -o-transition-delay: 1;
-  transition-delay: 1;
+  -webkit-transition-delay: .50s;
+  -moz-transition-delay: .50s;
+  -o-transition-delay: .50s;
+  transition-delay: .50s;
   opacity: 0;
 }
 
 .basket__img svg.garage-inactive.adding path#plank-1 {
-  -webkit-transition-delay: 0;
-  -moz-transition-delay: 0;
-  -o-transition-delay: 0;
-  transition-delay: 0;
+  -webkit-transition-delay: .25s;
+  -moz-transition-delay: .25s;
+  -o-transition-delay: .25s;
+  transition-delay: .25s;
   opacity: 0;
+}
+
+.basket__img svg.garage-inactive.adding.backwards path#plank-4 {
+  -webkit-transition-delay: .25s;
+  -moz-transition-delay: .25s;
+  -o-transition-delay: .25s;
+  transition-delay: .25s;
+  opacity: 1;
+}
+
+.basket__img svg.garage-inactive.adding.backwards path#plank-3 {
+  -webkit-transition-delay: .50s;
+  -moz-transition-delay: .50s;
+  -o-transition-delay: .50s;
+  transition-delay: .50s;
+  opacity: 1;
+}
+
+.basket__img svg.garage-inactive.adding.backwards path#plank-2 {
+  -webkit-transition-delay: .75s;
+  -moz-transition-delay: .75s;
+  -o-transition-delay: .75s;
+  transition-delay: .75s;
+  opacity: 1;
+}
+
+.basket__img svg.garage-inactive.adding.backwards path#plank-1 {
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  -o-transition-delay: 1s;
+  transition-delay: 1s;
+  opacity: 1;
 }
 
 .basket__value {

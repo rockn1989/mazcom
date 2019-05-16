@@ -145,12 +145,25 @@
 		align-items: center;
 	}
 	&__img {
+		position: relative;
+		.backwards-img {
+			position: absolute;
+			top: 15px;
+			left: 11px;
+			opacity: 0;
+			transition: opacity .5s ease-out;
+			&.show {
+				opacity: 1;
+			}
+		}
 		svg {
 			color: $blue;
 			transition: all ease-out;
 			overflow: hidden;
-			path {
-				transition: opacity .5s ease-out;
+			path[id] {
+				transition-property: opacity;
+				transition-duration: .35s;
+				transition-timing-function: ease-out;
 				&#home {
 					overflow: hidden;
 				}
@@ -161,20 +174,38 @@
 				fill: $blue;
 				&.adding {
 					path#plank-4 {
-						transition-delay: 3;
+						transition-delay: 1s;
 						opacity: 0;
 					}
 					path#plank-3 {
-						transition-delay: 2;
+						transition-delay: .75s;
 						opacity: 0;
 					}
 					path#plank-2 {
-						transition-delay: 1;
+						transition-delay: .50s;
 						opacity: 0;
 					}
 					path#plank-1 {
-						transition-delay: 0;
+						transition-delay: .25s;
 						opacity: 0;
+					}
+					&.backwards {
+						path#plank-4 {
+							transition-delay: .25s;
+							opacity: 1;
+						}
+						path#plank-3 {
+							transition-delay: .50s;
+							opacity: 1;
+						}
+						path#plank-2 {
+							transition-delay: .75s;
+							opacity: 1;
+						}
+						path#plank-1 {
+							transition-delay: 1s;
+							opacity: 1;
+						}
 					}
 				}
 			}
