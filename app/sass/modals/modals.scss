@@ -12,16 +12,23 @@
 		border: none;
 		background-color: transparent;
 		.uk-modal-title {
-			font-size: 40px;
-			line-height: 52px;
 			font-weight: 700;
 			font-family: $secondFont;
+			@media (min-width: $mob-xs) {
+				font-size: 30px;
+				line-height: 40px;
+			};
+			@media (min-width: $tablet-w) {
+				font-size: 40px;
+				line-height: 52px;
+			};
 		}
 	}
 	.uk-modal-body {
 		padding: 0;
 	}
 	fieldset {
+		position: relative;
 		margin: 0;
 		padding: 0;
 		border: none;
@@ -38,6 +45,14 @@
 		border: none;
 		font-size: 14px;
 		font-family: $mainFont;
+		&.error {
+			background: #ffffff url('../img/form-invalid.png') right 20px top 50% no-repeat;
+			background-size: 20px 20px;
+		}
+		&.valid {
+			background: #ffffff url('../img/form-valid.png') right 20px top 50% no-repeat;
+			background-size: 20px 20px;
+		}
 	}
 	textarea {
 		padding: 20px 26px;
@@ -62,17 +77,53 @@
 		}
 	}
 	.uk-modal-close-default {
-		top: -35px;
-		right: -110px;
 		color: #d2d9df;
+		@media (min-width: $mob-xs) {
+			top: -10px;
+			right: -10px;
+		};
+		@media (min-width: $tablet-w) {
+			top: -35px;
+			right: -110px;
+		};
 		svg {
-			width: 55px;
-			height: 55px;
-			opacity: .95;
+			@media (min-width: $mob-xs) {
+				width: 20px;
+				height: 20px;
+				opacity: 1;
+				color: #000000;
+			};
+			@media (min-width: $tablet-w) {
+				width: 55px;
+				height: 55px;
+				opacity: .95;
+				color: currentColor;
+			};
 			&:hover {
 				opacity: 1;
 			}
 		}
+	}
+	label.error {
+		display: block;
+		width: 100%;
+		color: #dd353d;
+		font-size: 14px;
+		@media (min-width: $desk-w) {
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			margin-left: 13px;
+			transform:  translateY(-50%);
+		};
+	}
+	span.required {
+		position: absolute;
+		top: 2px;
+		left: 100%;
+		margin-left: 13px;
+		font-size: 14px;
+		color: #768b9c;
 	}
 }
 

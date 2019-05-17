@@ -3,10 +3,6 @@ $mob-s: 480px;
 $tablet-w: 768px;
 $desk-w: 960px; */
 
-.preload {
-  display: none !important;
-}
-
 /* @mixin background-retina($filename, $fileformat) {
 	background-image: url("../img/${filename}$1x.${fileformat}");
 
@@ -2950,12 +2946,14 @@ html.uk-touch body *.uk-invisible {
 }
 
 .news:hover .news__date,
+.news:hover .news__short-title,
 .news:hover .news__short-text,
 .news:hover .read-more {
   color: #ffffff;
 }
 
 .news:hover .news__date:before,
+.news:hover .news__short-title:before,
 .news:hover .news__short-text:before,
 .news:hover .read-more:before {
   color: #ffffff;
@@ -2991,6 +2989,19 @@ html.uk-touch body *.uk-invisible {
 
 .news__month {
   font-size: 18px;
+}
+
+.news__short-title {
+  margin-bottom: 15px;
+  color: #666666;
+  font-size: 40px;
+  line-height: 46px;
+  font-family: "TT";
+  font-weight: 700;
+  -webkit-transition: color .3s ease-out;
+  -o-transition: color .3s ease-out;
+  -moz-transition: color .3s ease-out;
+  transition: color .3s ease-out;
 }
 
 .news__short-text {
@@ -3384,6 +3395,77 @@ html.uk-touch body *.uk-invisible {
 }
 
 /*______ End Parking ______*/
+
+/*______ Compare ______*/
+
+.compare-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.compare-table {
+  min-width: 600px;
+}
+
+.compare-table a {
+  color: #666666;
+}
+
+.compare-table a.btn {
+  color: #ffffff;
+}
+
+.compare-table thead {
+  border-bottom: 1px solid #ededed;
+}
+
+.compare-table thead tr td {
+  padding: 25px 0;
+  min-width: 290px;
+  text-align: left;
+}
+
+.compare-table thead tr td:first-child {
+  padding: 10px;
+  min-width: 100px;
+  font-weight: 700;
+}
+
+.compare-table thead tr td a {
+  display: block;
+}
+
+.compare-table thead tr td a.compare-img {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.compare-table thead tr td a.btn {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.compare-table tbody tr:nth-child(odd) {
+  background-color: #ededed !important;
+}
+
+.compare-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.compare-table tbody tr td:first-child {
+  font-weight: 700;
+}
+
+.compare-table .btn {
+  padding: 10px 28px;
+}
+
+.delete-product {
+  font-weight: bold;
+}
+
+/*______ End Compare ______*/
 
 /*______ End Main Content ______*/
 
@@ -4575,6 +4657,11 @@ label.custom-label.font-label .custom-label {
   transform: translate(-50%, -50%);
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  border-width: 0;
+  -webkit-transition: all 1.3s ease-out;
+  -o-transition: all 1.3s ease-out;
+  -moz-transition: all 1.3s ease-out;
+  transition: all 1.3s ease-out;
 }
 
 .main-slider {
@@ -4908,8 +4995,6 @@ label.custom-label.font-label .custom-label {
 }
 
 .default-modal .uk-modal-header .uk-modal-title {
-  font-size: 40px;
-  line-height: 52px;
   font-weight: 700;
   font-family: "TT";
 }
@@ -4919,6 +5004,7 @@ label.custom-label.font-label .custom-label {
 }
 
 .default-modal fieldset {
+  position: relative;
   margin: 0;
   padding: 0;
   border: none;
@@ -4936,6 +5022,20 @@ label.custom-label.font-label .custom-label {
   border: none;
   font-size: 14px;
   font-family: "OpenSans";
+}
+
+.default-modal input[type="text"].error,
+.default-modal input[type="tel"].error {
+  background: #ffffff url("../img/form-invalid.png") right 20px top 50% no-repeat;
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px;
+}
+
+.default-modal input[type="text"].valid,
+.default-modal input[type="tel"].valid {
+  background: #ffffff url("../img/form-valid.png") right 20px top 50% no-repeat;
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px;
 }
 
 .default-modal textarea {
@@ -4965,19 +5065,27 @@ label.custom-label.font-label .custom-label {
 }
 
 .default-modal .uk-modal-close-default {
-  top: -35px;
-  right: -110px;
   color: #d2d9df;
-}
-
-.default-modal .uk-modal-close-default svg {
-  width: 55px;
-  height: 55px;
-  opacity: .95;
 }
 
 .default-modal .uk-modal-close-default svg:hover {
   opacity: 1;
+}
+
+.default-modal label.error {
+  display: block;
+  width: 100%;
+  color: #dd353d;
+  font-size: 14px;
+}
+
+.default-modal span.required {
+  position: absolute;
+  top: 2px;
+  left: 100%;
+  margin-left: 13px;
+  font-size: 14px;
+  color: #768b9c;
 }
 
 .uk-modal {
@@ -5300,6 +5408,23 @@ label.custom-label.font-label .custom-label {
   .products-slider .slider__arrows {
     top: -82px;
   }
+
+  .default-modal .uk-modal-header .uk-modal-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .default-modal .uk-modal-close-default {
+    top: -10px;
+    right: -10px;
+  }
+
+  .default-modal .uk-modal-close-default svg {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    color: #000000;
+  }
 }
 
 @media (min-width: 480px) {
@@ -5609,6 +5734,23 @@ label.custom-label.font-label .custom-label {
   .products-slider .slider__arrows {
     top: -112px;
   }
+
+  .default-modal .uk-modal-header .uk-modal-title {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .default-modal .uk-modal-close-default {
+    top: -35px;
+    right: -110px;
+  }
+
+  .default-modal .uk-modal-close-default svg {
+    width: 55px;
+    height: 55px;
+    opacity: .95;
+    color: currentColor;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -5772,6 +5914,17 @@ label.custom-label.font-label .custom-label {
 
   .detail-sliders-wrapper {
     width: 60%;
+  }
+
+  .default-modal label.error {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: 13px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 }
 

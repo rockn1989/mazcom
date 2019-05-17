@@ -1,0 +1,87 @@
+{% extends "layouts/inside-page.twig" %}
+{% set title="Сравнение" %}
+{% set bread = ["Главная", "Сравнение"] %}
+{% block content %}
+<!-- begin compare-page -->
+<div class="compare-page">
+		<div class="compare-table-wrapper">
+				<table class="compare-table">
+						<thead>
+							<tr>
+								<td>Название</td>
+								<td valign="top">
+									<a href="/products/lmd_1_bastion/" class="compare-img" style="text-align: left;"><img src="/img/card-img-1.png" width="65"></a>
+									<a href="/products/lmd_1_bastion/">ЛМД 1 Бастион</a>
+									<noindex>
+											<a href="/products/lmd_1_bastion/" class="btn">Купить</a>
+									</noindex>
+								</td>
+								<td valign="top">
+									<a href="/products/lmd_1_bastion/" class="compare-img" style="text-align: left;"><img src="/img/card-img-1.png" width="65"></a>
+									<a href="/products/lmd_1_bastion/">ЛМД 1 Бастион</a>
+									<noindex>
+											<a href="/products/lmd_1_bastion/" class="btn">Купить</a>
+									</noindex>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+								<tr>
+										<td>Цена</td>
+										<td>7 900 руб.</td>
+								</tr>
+								<tr>
+										<td>Класс прочности</td>
+										<td>М3 </td>
+								</tr>
+								<tr>
+										<td>Серия</td>
+										<td>ДС 4 </td>
+								</tr>
+								<tr>
+										<td>Толщина полотна мм.</td>
+										<td>50 </td>
+								</tr>
+								<tr>
+										<td>Толщина листа металла мм.</td>
+										<td>1 </td>
+								</tr>
+								<tr>
+										<td>Класс устойчивости к взлому</td>
+										<td>2 </td>
+								</tr>
+								<tr>
+										<td>Противосъемы</td>
+										<td>2 </td>
+								</tr>
+								<tr>
+										<td>Утеплитель</td>
+										<td>Пенополистирол высокой плотности </td>
+								</tr>
+								<tr>
+										<td>Усиление замковой зоны</td>
+										<td>0.8 </td>
+								</tr>
+								<tr>
+										<td>Ночная задвижка</td>
+										<td>нет </td>
+								</tr>
+								<tr>
+										<td>Цинкогрунт</td>
+										<td>нет </td>
+								</tr>
+								<tr>
+										<td>Производитель</td>
+										<td>VALBERG </td>
+								</tr>
+								<tr>
+										<td></td>
+										<td>
+												<a onclick="CatalogCompareObj.delete('/catalog/compare/?action_ccr=DELETE_FROM_COMPARE_RESULT&amp;ID=16793');" href="javascript:void(0)" class="delete-product">Удалить</a>
+										</td>
+								</tr>
+						</tbody>
+				</table>
+		</div>
+</div><!-- end compare-page -->
+{% endblock %}

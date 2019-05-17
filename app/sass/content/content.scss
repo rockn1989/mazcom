@@ -360,6 +360,7 @@
 			background-color: rgba(46%, 55%, 61%, .52);
 		}
 		.news__date,
+		.news__short-title,
 		.news__short-text,
 		.read-more {
 			color: #ffffff;
@@ -391,6 +392,15 @@
 	}
 	&__month {
 		font-size: 18px;
+	}
+	&__short-title {
+		margin-bottom: 15px;
+		color: #666666;
+		font-size: 40px;
+		line-height: 46px;
+		font-family: $secondFont;
+		font-weight: 700;
+		transition: color .3s ease-out;
 	}
 	&__short-text {
 		margin-bottom: 50px;
@@ -763,6 +773,74 @@
 }
 
 /*______ End Parking ______*/
+
+/*______ Compare ______*/
+
+.compare-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.compare-table {
+  min-width: 600px;
+}
+.compare-table a {
+	color: #666666;
+	&.btn {
+		color: #ffffff;
+	}
+}
+.compare-table thead {
+  border-bottom: 1px solid #ededed;
+}
+
+.compare-table thead tr td {
+  padding: 25px 0;
+  min-width: 290px;
+  text-align: left;
+}
+
+.compare-table thead tr td:first-child {
+	padding: 10px;
+  min-width: 100px;
+  font-weight: 700;
+}
+
+.compare-table thead tr td a {
+  display: block;
+}
+
+.compare-table thead tr td a.compare-img {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.compare-table thead tr td a.btn {
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.compare-table tbody tr:nth-child(odd) {
+  background-color: #ededed !important;
+}
+
+.compare-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.compare-table tbody tr td:first-child {
+  font-weight: 700;
+}
+
+.compare-table .btn {
+  padding: 10px 28px;
+}
+
+.delete-product {
+	font-weight: bold;
+}
+
+/*______ End Compare ______*/
 
 
 /*______ End Main Content ______*/

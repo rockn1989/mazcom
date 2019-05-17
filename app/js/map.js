@@ -16,7 +16,7 @@ $(function () {
 				balloonContent: ''
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/map-pin.png',
+				iconImageHref: '../img/icon-svg/flags.svg',
 				iconImageSize: [32,32],
 				iconImageOffset:[0, 0]
 			});
@@ -39,7 +39,7 @@ $(function () {
 				balloonContent: ''
 			}, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/map-pin.png',
+				iconImageHref: '../img/icon-svg/flags.svg',
 				iconImageSize: [32,32],
 				iconImageOffset:[0, 0]
 			});
