@@ -238,6 +238,21 @@ h3,.title-h3 {
 	}
 }
 
+svg.btn-circle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	stroke-dasharray: 500;
+	stroke-dashoffset: 500;
+	stroke: $blue;
+	transform: rotate(-135deg);
+	transition: stroke-dasharray .45s, stroke-dashoffset .45s linear;
+	z-index: 80;
+}
+
+
 .product-link {
 	position: relative;
 	padding: 8px 27px 8px 9px;

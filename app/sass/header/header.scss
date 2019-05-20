@@ -85,7 +85,6 @@
 		font-size: 10px;
 		text-transform: uppercase;
 		letter-spacing: .5px;
-		color: $red;
 		font-weight: bold;
 		font-family: $secondFont;
 		white-space: nowrap;
@@ -459,6 +458,15 @@
 	@media (min-width: $mob-s) {
 		padding: 15px 0;
 	};
+}
+
+.mobile-logo {
+	a {
+		display: block;
+	}
+	img {
+		max-width: 180px;
+	}
 }
 
 .mobile-toolbar {

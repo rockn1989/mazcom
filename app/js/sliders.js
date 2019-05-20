@@ -16,6 +16,9 @@ $(function () {
 		slidesToScroll: 1,
 		prevArrow: $('.main-slider').find('.slide-prev'),
 		nextArrow: $('.main-slider').find('.slide-next'),
+		customPaging: function(slider, i) {
+        return '<button><svg viewBox="0 0 120 120" version="1.1"xmlns="http://www.w3.org/2000/svg" class="btn-circle"><circle style="fill: none; stroke: #2e60b8; stroke-width: 6px;" cx="60" cy="60" r="50"/></svg></button>';
+    },
 		responsive: [
 			{
 				breakpoint: 1025,

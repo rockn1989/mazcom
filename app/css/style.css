@@ -507,6 +507,26 @@ h3,
   color: #2e60b8;
 }
 
+svg.btn-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke: #2e60b8;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  -webkit-transition: stroke-dasharray .45s, stroke-dashoffset .45s linear;
+  -o-transition: stroke-dasharray .45s, stroke-dashoffset .45s linear;
+  -moz-transition: stroke-dasharray .45s, stroke-dashoffset .45s linear;
+  transition: stroke-dasharray .45s, stroke-dashoffset .45s linear;
+  z-index: 80;
+}
+
 .product-link {
   position: relative;
   padding: 8px 27px 8px 9px;
@@ -1835,7 +1855,6 @@ html.uk-touch body *.uk-invisible {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: .5px;
-  color: #dd353d;
   font-weight: bold;
   font-family: "TT";
   white-space: nowrap;
@@ -2368,6 +2387,14 @@ html.uk-touch body *.uk-invisible {
 }
 
 /*______ Mobile Header ______*/
+
+.mobile-logo a {
+  display: block;
+}
+
+.mobile-logo img {
+  max-width: 180px;
+}
 
 .mobile-toolbar {
   padding-right: 10px;
@@ -4600,23 +4627,21 @@ label.custom-label.font-label .custom-label {
 }
 
 .slick-dots li {
-  width: 16px;
-  height: 16px;
-}
-
-.slick-dots li.slick-active button {
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-color: #2e60b8;
-  border-left-color: transparent;
+  width: 20px;
+  height: 20px;
 }
 
 .slick-dots li.slick-active button:before {
   opacity: 1;
 }
 
+.slick-dots li.slick-active button svg {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 240;
+}
+
 .slick-dots li button {
+  position: relative;
   padding: 3px;
   width: 100%;
   height: 100%;
