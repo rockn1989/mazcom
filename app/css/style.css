@@ -1124,11 +1124,11 @@ ul.uk-switcher {
   align-items: center;
   color: #ffffff;
   text-transform: uppercase;
-  background: -webkit-gradient(linear, right top, left top, from(#768b9c), color-stop(50%, #768b9c), color-stop(50%, #2e60b8), to(#2e60b8));
-  background: -webkit-linear-gradient(right, #768b9c 0%, #768b9c 50%, #2e60b8 50%, #2e60b8 100%);
-  background: -moz-linear-gradient(right, #768b9c 0%, #768b9c 50%, #2e60b8 50%, #2e60b8 100%);
-  background: -o-linear-gradient(right, #768b9c 0%, #768b9c 50%, #2e60b8 50%, #2e60b8 100%);
-  background: linear-gradient(to left, #768b9c 0%, #768b9c 50%, #2e60b8 50%, #2e60b8 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#dd353d), color-stop(50%, #dd353d), color-stop(50%, #2e60b8), to(#2e60b8));
+  background: -webkit-linear-gradient(right, #dd353d 0%, #dd353d 50%, #2e60b8 50%, #2e60b8 100%);
+  background: -moz-linear-gradient(right, #dd353d 0%, #dd353d 50%, #2e60b8 50%, #2e60b8 100%);
+  background: -o-linear-gradient(right, #dd353d 0%, #dd353d 50%, #2e60b8 50%, #2e60b8 100%);
+  background: linear-gradient(to left, #dd353d 0%, #dd353d 50%, #2e60b8 50%, #2e60b8 100%);
   -webkit-background-size: 200% 200%;
   background-size: 200%;
   background-position: 100%;
@@ -1188,6 +1188,17 @@ ul.uk-switcher {
   text-align: right;
 }
 
+.card .card-btn--call {
+  background: -webkit-gradient(linear, right top, left top, from(#768b9c), color-stop(50%, #768b9c), color-stop(50%, #2e60b8), to(#2e60b8));
+  background: -webkit-linear-gradient(right, #768b9c 0%, #768b9c 50%, #2e60b8 50%, #2e60b8 100%);
+  background: -moz-linear-gradient(right, #768b9c 0%, #768b9c 50%, #2e60b8 50%, #2e60b8 100%);
+  background: -o-linear-gradient(right, #768b9c 0%, #768b9c 50%, #2e60b8 50%, #2e60b8 100%);
+  background: linear-gradient(to left, #768b9c 0%, #768b9c 50%, #2e60b8 50%, #2e60b8 100%);
+  -webkit-background-size: 200% 200%;
+  background-size: 200%;
+  background-position: 100%;
+}
+
 .card .card-btn--call .prices {
   display: none;
 }
@@ -1195,6 +1206,23 @@ ul.uk-switcher {
 .card .card-btn--call .text {
   width: 100%;
   text-align: center;
+}
+
+.card .card-btn.in-cart {
+  -webkit-box-pack: center !important;
+  -webkit-justify-content: center !important;
+  -moz-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.card .card-btn.in-cart span {
+  font-size: 12px;
+}
+
+.card .card-btn.in-cart:hover,
+.card .card-btn.in-cart:focus {
+  text-decoration: none;
 }
 
 .card__status {
@@ -1779,17 +1807,9 @@ html.uk-touch body *.uk-invisible {
 
 .header__bottom > .uk-container .search-form {
   position: absolute;
-  top: 0;
   left: 100%;
-  padding: 20px 0;
-  background-color: #ffffff;
-  z-index: 500;
   width: 0;
   opacity: 0;
-  -webkit-transition: all .45s ease-out;
-  -o-transition: all .45s ease-out;
-  -moz-transition: all .45s ease-out;
-  transition: all .45s ease-out;
   z-index: -1;
 }
 
@@ -1798,37 +1818,6 @@ html.uk-touch body *.uk-invisible {
   width: 100%;
   opacity: 1;
   z-index: 120;
-}
-
-.header__bottom > .uk-container .search-form input[type="text"] {
-  padding: 2px 0 2px 10px;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  outline: none;
-}
-
-.header__bottom > .uk-container .search-form__btn {
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  padding: 3px;
-  width: 24px;
-  height: 24px;
-  font-size: 18px;
-  border: none;
-  background-color: #ffffff;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  cursor: pointer;
-  outline: none;
-}
-
-.header__bottom > .uk-container .search-form__btn:hover:before {
-  color: #2e60b8;
 }
 
 .header .uk-dropdown {
@@ -5128,6 +5117,42 @@ label.custom-label.font-label .custom-label {
 
 /*______ Start Forms ______*/
 
+.search-form {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  background-color: #ffffff;
+  z-index: 500;
+  -webkit-transition: all .45s ease-out;
+  -o-transition: all .45s ease-out;
+  -moz-transition: all .45s ease-out;
+  transition: all .45s ease-out;
+}
+
+.search-form input[type="text"] {
+  width: 100%;
+  font-weight: 600;
+  font-family: "OpenSans";
+  border: none;
+  outline: none;
+}
+
+.search-form__btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  outline: none;
+}
+
+.search-form__btn:hover:before {
+  color: #2e60b8;
+}
+
 .mobile-search-form {
   position: relative;
   margin: 20px 0 !important;
@@ -5137,17 +5162,19 @@ label.custom-label.font-label .custom-label {
   padding: 9px 30px 9px 15px;
   width: 100%;
   font-size: 12px;
+  line-height: 12px;
   border: 1px solid #95a4b0;
   background-color: #f4f8fa;
+  font-family: "OpenSans";
 }
 
 .mobile-search-form .btn-send {
   position: absolute;
   top: 0;
   right: 0;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
   outline: none;
   text-align: center;
   background: #232a37;
@@ -5449,6 +5476,32 @@ label.custom-label.font-label .custom-label {
     height: 20px;
     opacity: 1;
     color: #000000;
+  }
+
+  .search-form {
+    padding: 0;
+  }
+
+  .search-form input[type="text"] {
+    padding: 9px 30px 9px 15px;
+    font-size: 12px;
+    line-height: 12px;
+    border: 1px solid #95a4b0;
+  }
+
+  .search-form__btn {
+    padding: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    background: #232a37;
+    border: none;
+  }
+
+  .search-form__btn:before {
+    font-size: 16px;
+    color: #ffffff;
   }
 }
 
@@ -5835,6 +5888,10 @@ label.custom-label.font-label .custom-label {
     background-position: 0 0;
   }
 
+  .card .card-btn--call:hover {
+    background-position: 0 0;
+  }
+
   .promo-catalog ul.tabs {
     padding-bottom: 20px;
     border-bottom: 1px solid #d2d9df;
@@ -5950,6 +6007,33 @@ label.custom-label.font-label .custom-label {
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+  }
+
+  .search-form {
+    padding: 20px 0;
+  }
+
+  .search-form input[type="text"] {
+    padding: 2px 0 2px 10px;
+    font-size: 16px;
+    line-height: 16px;
+    border: none;
+  }
+
+  .search-form__btn {
+    right: 12px;
+    padding: 3px;
+    width: 24px;
+    height: 24px;
+    line-height: 18px;
+    font-size: 18px;
+    border: none;
+    background-color: #ffffff;
+  }
+
+  .search-form__btn:before {
+    font-size: 18px;
+    color: #768b9c;
   }
 }
 
