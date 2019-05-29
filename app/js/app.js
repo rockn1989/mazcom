@@ -277,4 +277,22 @@ $(function () {
 		});
 	};
 
+	if($('form').is('.order-form')) {
+
+		$('.order-form').validate({
+			rules: {
+				["order-user-name"]: {
+					required: true
+				},
+				["order-user-tel"]: {
+					required: true
+				}
+			},
+			messages: {
+				["order-user-name"]: "Неправильно заполнено поле",
+				["order-user-tel"]: "Неправильно заполнено поле"
+			},
+		});
+	};
+
 });

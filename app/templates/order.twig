@@ -1,0 +1,25 @@
+{% extends "layouts/default.twig" %}
+{% set title="Оформление заказа" %}
+{% set bread=["Главная", "Оформление"] %}
+{% block content %}
+  <div class="uk-container">
+		<div class="breadcrumbs-wrapper">
+			{% include "includes/breadcrumbs.twig" %}
+		</div> 
+
+		<!-- begin order -->
+		<div class="order">
+			<div class="uk-grid">
+				<div class="uk-width-1-2@m">
+					<div class="title-h2">Корзина</div>
+					{% include 'includes/basket-list.twig' %}
+				</div>
+				<div class="uk-width-1-2@m">
+					<div class="title-h2">Личные данные</div>
+					{% include 'includes/basket-form.twig' %}
+				</div>
+			</div>
+		</div><!-- end order -->
+
+  </div>
+{% endblock %}

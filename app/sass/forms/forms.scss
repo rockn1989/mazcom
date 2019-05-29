@@ -104,4 +104,77 @@
 	}
 }
 
+.default-form {
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: none;
+		margin-bottom: 15px !important;
+	}
+
+	label {
+		margin-bottom: 8px;
+		display: block;
+		font-size: 14px;
+		line-height: 16px;
+		&.error {
+			margin-top: 5px;
+			color: #dd353d;
+		}
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+		padding: 26px;
+		width: 100%;
+		height: 62px;
+		line-height: 62px;
+		background-color: #ffffff;
+		font-size: 14px;
+		font-family: $mainFont;
+		border: 1px solid #d2d9df;
+		&.error {
+			background: #ffffff url('../img/form-invalid.png') right 20px top 50% no-repeat;
+			background-size: 20px 20px;
+		}
+		&.valid {
+			background: #ffffff url('../img/form-valid.png') right 20px top 50% no-repeat;
+			background-size: 20px 20px;
+		}
+	}
+}
+
+.order-form {
+	.total-section {
+		margin-bottom: 30px;
+		padding: 20px 0;
+		border-top: 1px solid #d2d9df;
+		border-bottom: 1px solid #d2d9df;
+		&__label {
+			font-size: 16px;
+			font-weight: 500;
+		}
+		&__value {
+			font-size: 20px;
+			line-height: 28px;
+			font-weight: 700;
+			font-family: $secondFont;
+		}
+	}
+	.btn {
+		margin: 0 auto;
+		display: block;
+		max-width: 320px;
+	}
+	.alert {
+		text-align: left;
+	}
+	input[type="email"] {
+		&.error,&.valid {
+			background: none;
+		}
+	}
+}
+
 /*______ End Forms ______*/

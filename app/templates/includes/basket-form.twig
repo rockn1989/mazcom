@@ -1,0 +1,32 @@
+<form action="" class="default-form order-form">
+
+	<div class="uk-grid">
+		<div class="uk-width-1-1">
+			<fieldset>
+				<label for="order-user-name">Ф.И.О<sup>*</sup></label>
+				<input type="text" name="order-user-name" required>
+			</fieldset>
+		</div>
+		<div class="uk-width-1-2@s">
+			<fieldset>
+				<label for="order-user-email">E-Mail</label>
+				<input type="email" name="order-user-email" novalidate>
+			</fieldset>
+		</div>
+		<div class="uk-width-1-2@s">
+			<fieldset>
+				<label for="order-user-tel">Телефон<sup>*</sup></label>
+				<input type="text" name="order-user-tel" class="js__input-phone" required>
+			</fieldset>
+		</div>
+	</div>
+
+	<div class="alert"><sup>*</sup>— поля обязательные для заполнения</div>
+
+	<div class="total-section">
+		<div class="total-section__label">Итого к оплате</div>
+		<div class="total-section__value">2 345 455р.</div>
+	</div>
+
+	<button type="submit" class="btn btn--form">Подтвердите заказ</button>
+</form>
