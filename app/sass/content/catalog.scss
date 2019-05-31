@@ -78,6 +78,50 @@
 	}
 }
 
+.catalog-section {
+	margin-bottom: 25px !important;
+	background-color: #ffffff;
+	&__img {
+		margin-bottom: 25px;
+		a {
+			display: flex;
+			width: 100%;
+			height: 230px;
+			justify-content: center;
+			align-items: center;
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+	}
+	&__text {
+		padding: 0 20px 20px;
+	}
+	&__title {
+		margin-bottom: 20px;
+		display: block;
+		font-size: 20px;
+		line-height: 26px;
+	}
+	&__list {
+		@include list-reset;
+		li {
+			margin-bottom: 8px;
+			font-size: 14px;
+			line-height: 16px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		a {
+
+		}
+	}
+	a {
+		color: #272d37;
+	}
+}
 
 .tags-list {
 	@include list-reset;
