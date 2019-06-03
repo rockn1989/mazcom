@@ -262,6 +262,52 @@ h3,.title-h3 {
 	}
 }
 
+.btn-page-scroll {
+	position: fixed;
+	top: 50%;
+	right: 0;
+	text-align: center;
+	z-index: 800;
+	transform: translateY(-50%);
+	border: 1px solid $blue;
+	color: $blue;
+	background-color: #ffffff;
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+	&:hover {
+		text-decoration: none;
+		i {
+			&:before {
+				color: $blue;
+			}
+		}
+	}
+	@media (min-width: $mob-xs) {
+		right: 20px;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 14px;
+	};
+	@media (min-width: $desk-w) {
+		right: 100px;
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		font-size: 18px;
+	};
+	i {
+		display: inline-block;
+		transform: rotate(90deg);
+	}
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+		z-index: 801;
+	}
+}
+
 svg.btn-circle {
 	position: absolute;
 	top: 0;
@@ -675,7 +721,6 @@ ul.uk-switcher {
 .card {
 	position: relative;
 	margin-bottom: 25px !important;
-	/* padding: 16px 16px 20px; */
 	background-color: #ffffff;
 	transition: box-shadow .3s ease-out;
 	&__img {
@@ -794,6 +839,11 @@ ul.uk-switcher {
 			display: block;
 			text-align: right;
 			&:hover {
+				&:before {
+					color: $blue;
+				}
+			}
+			&.active {
 				&:before {
 					color: $blue;
 				}

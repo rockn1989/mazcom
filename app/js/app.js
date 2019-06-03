@@ -193,6 +193,23 @@ $(function () {
 			}
 	});
 
+  /*______ Page scroll up btn ______*/
+
+  var lastTime = 0;
+
+  $(window).on('scroll', function () {
+
+  	if(Date.now() - lastTime >= 300) {
+  		$(document).scrollTop() >= 800 ? $('.btn-page-scroll').addClass('visible') : $('.btn-page-scroll').removeClass('visible');
+  		lastTime = new Date();
+  	};
+
+  });
+
+  $('.btn-page-scroll').on('click', function (e) {
+  	e.preventDefault();
+  	$('html, body').animate({scrollTop: 0}, 450);
+  });
 
 	/*______ Youtube ______*/
 
