@@ -695,39 +695,42 @@
 			}
 		}
 	}
-	&__address {
-		/* max-width: 278px; */
-	}
-	&__timework {
-		/* max-width: 300px; */
-	}
-	.parking-tooltip {
-		position: absolute;
-		top: -1px;
-		right: 0;
-		&>div {
-			margin-bottom: 5px;
-			padding: 7px;
-			display: inline-block;
-			color: #ffffff;
-			font-size: 12px;
-			line-height: 16px;
-			font-weight: 700;
-			font-family: $secondFont;
-			text-transform: uppercase;
-			&:empty {
-				display: none;
-			}
-			&.open {
-				background-image: linear-gradient(135deg, #f06570 0%, #dd353d 100%);
-			}
+}
+
+.parking-tooltip {
+	position: absolute;
+	top: -1px;
+	right: 0;
+	&>div {
+		margin-bottom: 5px;
+		padding: 7px;
+		display: inline-block;
+		color: #ffffff;
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: 700;
+		font-family: $secondFont;
+		text-transform: uppercase;
+		&:empty {
+			display: none;
+		}
+		&.open {
+			background-image: linear-gradient(135deg, #f06570 0%, #dd353d 100%);
 		}
 	}
 }
 
 .parking-detail-desc {
-	padding: 25px 25px 0 35px;
+	position: relative;
+	padding: 30px 25px 0 35px;
 	background: #ffffff;
+	.parking-item {
+		position: static;
+	}
+	.parking-tooltip {
+		right: auto;
+		left: -35px;
+	}
 }
 
 .parking-detail {
@@ -761,6 +764,93 @@
 	@media (min-width: $tablet-w) {
 		height: 100%;
 	};
+}
+
+.parking-balloon, .parking-balloon a {
+ color: #272d37;
+ font-size: 14px;
+}
+
+.ymaps-2-1-73-balloon__content {
+	padding: 40px 20px !important;
+}
+
+.ymaps-2-1-73-balloon__close {
+	position: absolute;
+	top: 17px;
+	right: 17px;
+}
+
+.ymaps-2-1-73-balloon__close-button {
+	width: 24px !important;
+	height: 24px !important;
+	background-size: cover !important;
+}
+
+.parking-balloon {
+	.balloon-section {
+		position: relative;
+		margin-bottom: 20px;
+		padding-left: 25px;
+		font-family: $mainFont !important;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&:hover {
+			color: $blue;
+			&:before {
+				color: $blue;
+			}
+			.balloon-item-title {
+				color: $blue;
+			}
+		}
+		&:before {
+			position: absolute;
+			top: 1px;
+			left: 0;
+			font-family: 'icomoon' !important;
+			color: #768b9c;
+			font-size: 14px;
+		}
+		&>div:not([class]) {
+			margin-bottom: 3px;
+			line-height: 18px;
+		}
+	}
+}
+
+.balloon-item-title {
+	margin-bottom: 10px;
+	color: #666666;
+}
+
+.balloon-title a {
+ color: #666;
+ font-size: 14px;
+ font-family: $mainFont !important;
+}
+
+.balloon-title a:hover {
+ color: #2e60b8;
+}
+
+.balloon-tooltip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	.open {
+    margin-bottom: 5px;
+    padding: 7px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    font-family: "TT";
+    text-transform: uppercase;
+    background-image: linear-gradient(135deg, #f06570 0%, #dd353d 100%);
+	}
 }
 
 .sidebar-btn {

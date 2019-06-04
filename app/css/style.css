@@ -3419,21 +3419,13 @@ html.uk-touch body *.uk-invisible {
   color: #2e60b8;
 }
 
-.parking-item__address {
-  /* max-width: 278px; */
-}
-
-.parking-item__timework {
-  /* max-width: 300px; */
-}
-
-.parking-item .parking-tooltip {
+.parking-tooltip {
   position: absolute;
   top: -1px;
   right: 0;
 }
 
-.parking-item .parking-tooltip > div {
+.parking-tooltip > div {
   margin-bottom: 5px;
   padding: 7px;
   display: inline-block;
@@ -3445,11 +3437,11 @@ html.uk-touch body *.uk-invisible {
   text-transform: uppercase;
 }
 
-.parking-item .parking-tooltip > div:empty {
+.parking-tooltip > div:empty {
   display: none;
 }
 
-.parking-item .parking-tooltip > div.open {
+.parking-tooltip > div.open {
   background-image: -webkit-linear-gradient(315deg, #f06570 0%, #dd353d 100%);
   background-image: -moz-linear-gradient(315deg, #f06570 0%, #dd353d 100%);
   background-image: -o-linear-gradient(315deg, #f06570 0%, #dd353d 100%);
@@ -3457,8 +3449,18 @@ html.uk-touch body *.uk-invisible {
 }
 
 .parking-detail-desc {
-  padding: 25px 25px 0 35px;
+  position: relative;
+  padding: 30px 25px 0 35px;
   background: #ffffff;
+}
+
+.parking-detail-desc .parking-item {
+  position: static;
+}
+
+.parking-detail-desc .parking-tooltip {
+  right: auto;
+  left: -35px;
 }
 
 .parking-detail {
@@ -3493,6 +3495,103 @@ html.uk-touch body *.uk-invisible {
 .detail-parking-map {
   width: 100%;
   height: 100%;
+}
+
+.parking-balloon,
+.parking-balloon a {
+  color: #272d37;
+  font-size: 14px;
+}
+
+.ymaps-2-1-73-balloon__content {
+  padding: 40px 20px !important;
+}
+
+.ymaps-2-1-73-balloon__close {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+}
+
+.ymaps-2-1-73-balloon__close-button {
+  width: 24px !important;
+  height: 24px !important;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+}
+
+.parking-balloon .balloon-section {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  font-family: "OpenSans" !important;
+}
+
+.parking-balloon .balloon-section:last-child {
+  margin-bottom: 0;
+}
+
+.parking-balloon .balloon-section:hover {
+  color: #2e60b8;
+}
+
+.parking-balloon .balloon-section:hover:before {
+  color: #2e60b8;
+}
+
+.parking-balloon .balloon-section:hover .balloon-item-title {
+  color: #2e60b8;
+}
+
+.parking-balloon .balloon-section:before {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  font-family: 'icomoon' !important;
+  color: #768b9c;
+  font-size: 14px;
+}
+
+.parking-balloon .balloon-section > div:not([class]) {
+  margin-bottom: 3px;
+  line-height: 18px;
+}
+
+.balloon-item-title {
+  margin-bottom: 10px;
+  color: #666666;
+}
+
+.balloon-title a {
+  color: #666;
+  font-size: 14px;
+  font-family: "OpenSans" !important;
+}
+
+.balloon-title a:hover {
+  color: #2e60b8;
+}
+
+.balloon-tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.balloon-tooltip .open {
+  margin-bottom: 5px;
+  padding: 7px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  font-family: "TT";
+  text-transform: uppercase;
+  background-image: -webkit-linear-gradient(315deg, #f06570 0%, #dd353d 100%);
+  background-image: -moz-linear-gradient(315deg, #f06570 0%, #dd353d 100%);
+  background-image: -o-linear-gradient(315deg, #f06570 0%, #dd353d 100%);
+  background-image: linear-gradient(135deg, #f06570 0%, #dd353d 100%);
 }
 
 .sidebar-btn {
@@ -4884,11 +4983,11 @@ label.custom-label.font-label .custom-label {
 
 .ae-logo svg {
   position: absolute;
-  top: 7px;
+  top: 4px;
   left: 0;
   fill: #fa7f4c;
-  width: 12px;
-  height: 13px;
+  width: 17px;
+  height: 22px;
 }
 
 .ae-logo:hover span {
