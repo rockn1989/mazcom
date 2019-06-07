@@ -2748,6 +2748,36 @@ html.uk-touch body *.uk-invisible {
   max-height: 50%;
 }
 
+.error-404 {
+  text-align: center;
+  font-size: 120px;
+  display: block;
+  color: #2e60b8;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.content-404 {
+  text-align: left;
+}
+
+.content-404 .error-text {
+  font-size: 24px;
+  padding-top: 10px;
+  margin-top: 55px;
+}
+
+.content-404 .error-bold {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2e60b8;
+}
+
+.content-404 .error-h2 {
+  margin-bottom: 20px !important;
+  font-weight: bold;
+}
+
 .promo-catalog {
   padding: 46px 0 56px;
   background-color: #f4f8fa;
@@ -6127,6 +6157,12 @@ label.custom-label.font-label .custom-label {
     font-size: 20px;
   }
 
+  .page-content {
+    min-height: -webkit-calc(100vh - 531px);
+    min-height: -moz-calc(100vh - 531px);
+    min-height: calc(100vh - 531px);
+  }
+
   .content {
     padding: 36px;
   }
@@ -6252,6 +6288,12 @@ label.custom-label.font-label .custom-label {
 
   .uk-pagination li.uk-pagination-next {
     margin-left: 10px;
+  }
+
+  .error-404 {
+    text-align: left;
+    font-size: 150px;
+    margin-top: 40px;
   }
 
   .advantages-list .list li {
