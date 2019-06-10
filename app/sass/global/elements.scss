@@ -172,7 +172,7 @@ h3,.title-h3 {
 	transition: background .35s ease-out;
 	border: none;
 	cursor: pointer;
-	&:hover {
+	&:hover,&:focus,&:focus {
 		color: #ffffff;
 		text-decoration: none;
 		outline: none;
@@ -660,10 +660,15 @@ ul.uk-switcher {
 	}
 	.current-price {
 		display: block;
-		font-size: 20px;
 		line-height: 26px;
 		font-weight: 700;
 		font-family: $secondFont;
+		@media (min-width: $mob-xs) {
+			font-size: 18px;
+		};
+		@media (min-width: $mob-s) {
+			font-size: 20px;
+		};
 	}
 }
 
