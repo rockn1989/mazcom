@@ -115,18 +115,6 @@ $(function () {
 	});
 
 
-	/*______ Right sidebar Nav ______*/
-
-	$('.scroll-nav').on('click', 'li', function (e) {
-		e.preventDefault();
-		$(this)
-			.siblings('li')
-			.removeClass('active')
-			.end()
-			.addClass('active');
-	});
-
-
 	/*______ Form Mask ______*/
 
 	$('.js__input-phone').mask('+7 999 999-99-99', {clearIfNotMatch: true}).focus(function (e) {

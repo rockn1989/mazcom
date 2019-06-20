@@ -77,4 +77,53 @@ $(function () {
 		filter.stop(true, true).slideToggle('350');
 	});
 
+	/*______ Right sidebar Nav ______*/
+
+	$('.scroll-nav').on('click', 'li', function (e) {
+/*		e.preventDefault();
+		$(this)
+			.siblings('li')
+			.removeClass('active')
+			.end()
+			.addClass('active');*/
+	});
+
+	/*______ Detail page, show active section with scroll ______*/
+
+	if($('div').hasClass('detail')) {
+
+		var sections = $('.detail').find('div[id]');
+
+		function getWindowScrollVal () {
+			for(var i = 0; i < sections.length; i++) {
+
+				if(parseInt($(sections[i]).offset().top, 10) - $(window).scrollTop() <= 0) {
+					fillingItem($(sections[i]).attr('id'));
+				};
+
+			};
+		};
+
+		function fillingItem (item) {
+			var currentLink;
+			$('.scroll-nav li').removeClass('active');
+
+			currentLink = $('.scroll-nav a[href="#'+item+'"]')[0];
+			
+			$(currentLink).parent('li').addClass('active')
+		};
+
+		var lastTime = 0;
+		
+		$(window).on('scroll', function () {
+
+			if(Date.now() - lastTime > 100) {
+				getWindowScrollVal();
+				lastTime = Date.now();
+			};
+
+		});
+
+	};
+
 });
