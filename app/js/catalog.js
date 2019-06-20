@@ -90,11 +90,11 @@ $(function () {
 
 	/*______ Detail page, show active section with scroll ______*/
 
-	if($('div').hasClass('detail')) {
+	if($('div').hasClass('detail-card') && $(window).outerWidth() >= 960) {
 
 		var sections = $('.detail').find('div[id]');
 
-		function getWindowScrollVal () {
+		function getSectionPos () {
 			for(var i = 0; i < sections.length; i++) {
 
 				if(parseInt($(sections[i]).offset().top, 10) - $(window).scrollTop() <= 0) {
@@ -112,17 +112,8 @@ $(function () {
 			
 			$(currentLink).parent('li').addClass('active')
 		};
-
-		var lastTime = 0;
 		
-		$(window).on('scroll', function () {
-
-			if(Date.now() - lastTime > 100) {
-				getWindowScrollVal();
-				lastTime = Date.now();
-			};
-
-		});
+		$(window).on('scroll', getSectionPos);
 
 	};
 
