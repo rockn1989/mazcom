@@ -67,6 +67,10 @@ $(function () {
 
 	/*______ Offers slider ______*/
 
+	$('.offers-slider .slider').on('init', function(event, slick) {
+		$(this).trigger('resize');
+	});	
+
 	$('.offers-slider .slider').slick({
 		arrows: true,
 		dots: false,

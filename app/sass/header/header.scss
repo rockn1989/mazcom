@@ -32,6 +32,12 @@
 			}
 		}
 	}
+	.dropdown-menu {
+		display: none;
+		&.uk-open {
+			display: block;
+		}
+	}
 	.uk-dropdown {
 		padding: 0;
 		z-index: 400;

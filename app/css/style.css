@@ -19,6 +19,7 @@ $desk-w: 960px; */
   src: url("../fonts/main-font/OpenSans-Regular.woff2"), url("../fonts/main-font/OpenSans-Regular.ttf");
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -26,6 +27,7 @@ $desk-w: 960px; */
   src: url("../fonts/main-font/OpenSans-SemiBold.woff2"), url("../fonts/main-font/OpenSans-SemiBold.ttf");
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
@@ -33,6 +35,7 @@ $desk-w: 960px; */
   src: url("../fonts/main-font/TTNorms-Medium.woff2"), url("../fonts/main-font/TTNorms-Medium.woff");
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
@@ -40,6 +43,7 @@ $desk-w: 960px; */
   src: url("../fonts/main-font/TTNorms-ExtraBold.woff2"), url("../fonts/main-font/TTNorms-ExtraBold.woff");
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
 }
 
 /*______ Icomoon ______*/
@@ -991,6 +995,7 @@ ul.uk-switcher {
   line-height: 26px;
   font-weight: 700;
   font-family: "TT";
+  white-space: nowrap;
 }
 
 .options-list {
@@ -1910,6 +1915,14 @@ html.uk-touch body *.uk-invisible {
   width: 100%;
   opacity: 1;
   z-index: 120;
+}
+
+.header .dropdown-menu {
+  display: none;
+}
+
+.header .dropdown-menu.uk-open {
+  display: block;
 }
 
 .header .uk-dropdown {
@@ -2966,7 +2979,6 @@ html.uk-touch body *.uk-invisible {
 
 .offer a {
   position: relative;
-  padding: 50px 10px 55px 45px;
   display: block;
   width: 100%;
   height: 100%;
@@ -2975,7 +2987,6 @@ html.uk-touch body *.uk-invisible {
 }
 
 .offer__title {
-  max-width: 80%;
   font-weight: 700;
   font-family: "TT";
 }
@@ -2988,7 +2999,6 @@ html.uk-touch body *.uk-invisible {
 
 .offer .read-more {
   position: absolute;
-  left: 45px;
   bottom: 45px;
 }
 
@@ -3121,7 +3131,6 @@ html.uk-touch body *.uk-invisible {
 .news-inner a {
   position: relative;
   display: block;
-  padding: 45px;
   height: 100%;
   z-index: 35;
 }
@@ -3161,10 +3170,7 @@ html.uk-touch body *.uk-invisible {
 
 .news__short-text {
   margin-bottom: 50px;
-  /* max-height: 175px; */
   color: #666666;
-  font-size: 24px;
-  line-height: 30px;
   font-weight: 500;
   font-family: "TT";
   overflow: hidden;
@@ -4709,6 +4715,10 @@ label.custom-label.font-label .custom-label {
   margin-bottom: 72px;
 }
 
+.catalog-bar .search-form {
+  z-index: 200;
+}
+
 .catalog-header {
   position: relative;
   margin-bottom: 30px;
@@ -5467,7 +5477,6 @@ label.custom-label.font-label .custom-label {
 
 .offers-slider {
   position: relative;
-  margin-top: 60px;
 }
 
 .offers-slider .slider {
@@ -5963,6 +5972,76 @@ label.custom-label.font-label .custom-label {
 
 /*______ End Forms ______*/
 
+/* .table-price {
+	border-color: transparent;
+	border-spacing: 4px;
+  border-collapse: unset;
+	thead {
+		th {
+			padding: 20px 12px;
+			border: 2px solid transparent;
+			background-color: #ffffff;
+			picture {
+				display: block;
+				text-align: center;
+			}
+		}	
+	}
+	tbody {
+		td {
+			padding: 10px 12px;
+			color: #242424;
+			text-align: center;
+			font-size: 14px;
+			line-height: 20px;
+			border: 4px solid transparent;
+			background-color: #ffffff;
+		}
+	}
+}
+
+.bold {
+	font-weight: bold;
+}
+.pink {
+	background: #F2DCDB !important;
+}
+.light-orange {
+	background: #FDE9D9 !important;
+}
+.light-blue {
+	background: #DCE6F1 !important;
+}
+.light-green {
+	background: #D8E4BC !important;
+}
+
+.table-price-mobile {
+	tr {
+		td {
+			padding: 10px 5px;
+			color: #242424;
+			text-align: center;
+			font-size: 14px;
+			line-height: 20px;
+			border: 4px solid transparent;
+			background-color: #ffffff;
+		}
+		td:first-child {
+			width: 50%;
+		}
+	}
+}
+
+.hidden-mobile {
+	display: none !important;
+}
+
+.hidden-large {
+	display: none !important;
+}
+ */
+
 @media (min-width: 0px) {
   h1,
   .title-h1 {
@@ -6092,14 +6171,40 @@ label.custom-label.font-label .custom-label {
     margin-bottom: 10px;
   }
 
+  .offers .small-title {
+    max-width: 65%;
+  }
+
+  .offer a {
+    padding: 30px 15px;
+  }
+
   .offer__title {
     margin-bottom: 30px;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 30px;
+    max-width: 100%;
+  }
+
+  .offer .read-more {
+    left: 15px;
   }
 
   .news-list .news {
     margin-bottom: 30px !important;
+  }
+
+  .news-inner a {
+    padding: 25px;
+  }
+
+  .news__short-text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .news .read-more {
+    left: 25px;
   }
 
   .seo-block {
@@ -6267,8 +6372,13 @@ label.custom-label.font-label .custom-label {
     display: none;
   }
 
+  .offers-slider {
+    margin-top: 45px;
+  }
+
   .offers-slider .slider__arrows {
     top: -82px;
+    background-color: #f4f8fa;
   }
 
   .products-slider .slider__arrows {
@@ -6418,6 +6528,19 @@ label.custom-label.font-label .custom-label {
     margin-bottom: 30px;
   }
 
+  .offer a {
+    padding: 30px;
+  }
+
+  .offer .read-more {
+    left: 30px;
+  }
+
+  .news__short-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   .faq .tabs {
     padding-bottom: 20px;
     border-bottom: 1px solid #d2d9df;
@@ -6548,6 +6671,32 @@ label.custom-label.font-label .custom-label {
 
   .advantages-list .list li {
     width: 21%;
+  }
+
+  .offer a {
+    padding: 50px 10px 55px 45px;
+  }
+
+  .offer__title {
+    max-width: 80%;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .offer .read-more {
+    left: 45px;
+  }
+
+  .news-inner a {
+    padding: 45px;
+  }
+
+  .news__short-text {
+    font-size: 24px;
+  }
+
+  .news .read-more {
+    left: 45px;
   }
 
   .seo-block {
@@ -6683,8 +6832,13 @@ label.custom-label.font-label .custom-label {
     display: block;
   }
 
+  .offers-slider {
+    margin-top: 60px;
+  }
+
   .offers-slider .slider__arrows {
     top: -112px;
+    background-color: transparent;
   }
 
   .detail-slider .slider {

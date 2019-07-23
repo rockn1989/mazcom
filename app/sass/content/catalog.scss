@@ -16,6 +16,11 @@
 			margin-bottom: 72px;
 		};
 	}
+	&-bar {
+		.search-form {
+			z-index: 200;
+		}
+	}
 }
 
 .catalog-header {

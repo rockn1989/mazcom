@@ -212,7 +212,12 @@
 
 .offers-slider {
 	position: relative;
-	margin-top: 60px;
+	@media (min-width: $mob-xs) {
+		margin-top: 45px;
+	};
+	@media (min-width: $tablet-w) {
+		margin-top: 60px;
+	};
 	.slider {
 		height: 400px;
 		overflow: hidden;
@@ -232,9 +237,11 @@
 		right: 0;
 		@media (min-width: $mob-xs) {
 			top: -82px;
+			background-color: #f4f8fa;
 		};
 		@media (min-width: $tablet-w) {
 			top: -112px;
+			background-color: transparent;
 		};
 	}
 }

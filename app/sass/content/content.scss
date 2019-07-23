@@ -269,6 +269,11 @@
 .offers {
 	padding-bottom: 70px;
 	background-color: #ffffff;
+	.small-title {
+		@media (min-width: $mob-xs) {
+			max-width: 65%;
+		};
+	}
 }
 
 .offer {
@@ -288,19 +293,32 @@
 	}
 	a {
 		position: relative;
-		padding: 50px 10px 55px 45px;
 		display: block;
 		width: 100%;
 		height: 100%;
 		color: #ffffff;
 		z-index: 120;
+		@media (min-width: $mob-xs) {
+			padding: 30px 15px;
+		};
+		@media (min-width: $mob-s) {
+			padding: 30px;
+		};
+		@media (min-width: $tablet-w) {
+			padding: 50px 10px 55px 45px;
+		};
 	}
 	&__title {
-		max-width: 80%;
 		font-weight: 700;
 		font-family: $secondFont;
 		@media (min-width: $mob-xs) {
 			margin-bottom: 30px;
+			font-size: 24px;
+			line-height: 30px;
+			max-width: 100%;
+		};
+		@media (min-width: $tablet-w) {
+			max-width: 80%;
 			font-size: 30px;
 			line-height: 36px;
 		};
@@ -317,8 +335,16 @@
 	}
 	.read-more {
 		position: absolute;
-		left: 45px;
 		bottom: 45px;
+		@media (min-width: $mob-xs) {
+			left: 15px;
+		};
+		@media (min-width: $mob-s) {
+			left: 30px;
+		};
+		@media (min-width: $tablet-w) {
+			left: 45px;
+		};
 	}
 }
 
@@ -428,9 +454,14 @@
 		a {
 			position: relative;
 			display: block;
-			padding: 45px;
 			height: 100%;
 			z-index: 35;
+			@media (min-width: $mob-xs) {
+				padding: 25px;
+			};
+			@media (min-width: $tablet-w) {
+				padding: 45px;
+			};
 		}
 	}
 	&__date {
@@ -458,14 +489,22 @@
 	}
 	&__short-text {
 		margin-bottom: 50px;
-		/* max-height: 175px; */
 		color: #666666;
-		font-size: 24px;
-		line-height: 30px;
 		font-weight: 500;
 		font-family: $secondFont;
 		overflow: hidden;
 		transition: color .3s ease-out;
+		@media (min-width: $mob-xs) {
+			font-size: 18px;
+			line-height: 26px;
+		};
+		@media (min-width: $mob-s) {
+			font-size: 20px;
+			line-height: 30px;
+		};
+		@media (min-width: $tablet-w) {
+			font-size: 24px;
+		};
 	}
 	.read-more {
 		position: absolute;
@@ -475,6 +514,12 @@
 		font-weight: 600;
 		z-index: 125;
 		transition: color .3s ease-out;
+		@media (min-width: $mob-xs) {
+			left: 25px;
+		};
+		@media (min-width: $tablet-w) {
+			left: 45px;
+		};
 	}
 }
 

@@ -1,0 +1,149 @@
+{% extends "layouts/default.twig" %}
+
+{% block content %}
+
+	<div class="uk-container">
+
+		<table class="table-price" cellspacing="4" style="display: none;">
+			<thead>
+				<tr>
+					<th colspan="9">
+						<picture>
+							<!-- <source srcset="img/table/coast-11-lg.png" type="image/png" media="(min-width: 960px)"> -->
+							<source srcset="img/table/coast-11-md.png" type="image/png" media="(min-width: 768px)">
+							<source srcset="img/table/coast-11-sm.png" type="image/png" media="(min-width: 0)">
+							<img src="img/table/coast-11-lg.png" alt="">
+						</picture>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan="2">Диаметры очищаемых воздуховодов</td>
+					<td rowspan="2">Сечения очищаемых воздуховодов</td>
+					<td colspan="3" class="pink">Стоимость</td>
+					<td rowspan="2" colspan="3" class="light-orange">
+						<span style="font-size: 18px">Примерный объем</span> очистки системы вытяжной вентиляции кухни кафе, ресторана или столовой за одну рабочую смену
+					</td>
+					<td rowspan="2" colspan="3" class="light-blue">Примечание</td>
+				</tr>
+
+				<tr>
+					<td>мин. Заказ</td>
+					<td>рабочая смена*</td>
+					<td>цена за 1 м<sup>2</sup></td>
+				</tr>
+			
+				<tr>
+					<td class="bold">100 - 1000мм</td>
+					<td class="bold">100 х 100 мм - 1000 х 1000 мм</td>
+					<td>одна рабочая смена</td>
+					<td class="bold">35 000 ₽</td>
+					<td class="bold">800-2000 ₽</td>
+
+					<td>1 - 2 вентзонта размером 1 м х 1,5 м</td>
+					<td>10 - 15 погонных метров воздуховодов</td>
+					<td>1 вытяжной вентилятор</td>
+					<td>
+						Количество очищенных за одну рабочую смену м2 зависит от сложности доступа к воздуховодам и объема работ для проникновения внутрь к очищаемой поверхности путем устройства смотровых люков или демонтажа части воздуховодов.
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="9" class="light-green">
+						Определить техническую возможность производства работ по очистке Вашей системы вентиляции и точную стоимость работ именно на Вашем объекте возможно только после выезда к Вам на объект опытного инженера для осмотра и консультации. 
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="6">
+						Выезд на осмотр и консультация опытного инженера
+					</td>
+					<td colspan="3" class="bold">3000 ₽</td>
+				</tr>
+				
+				<tr>
+					<td colspan="9">
+						Для получения расчета ориентировочной стоимости работ по очистке вентиляции отправьте на электронную почту <a href="mailto:9958257@mail.ru">9958257@mail.ru</a> техническое задание, схему и фотографии системы вентиляции.
+					</td>
+				</tr>
+
+			</tbody>
+		</table>	
+		
+		<table class="table-price-mobile hidden-large" cellspacing="4">
+			<thead>
+				<tr>
+					<th colspan="9">
+						<picture>
+							<!-- <source srcset="img/table/coast-11-lg.png" type="image/png" media="(min-width: 960px)"> -->
+							<source srcset="img/table/coast-11-md.png" type="image/png" media="(min-width: 768px)">
+							<source srcset="img/table/coast-11-sm.png" type="image/png" media="(min-width: 0)">
+							<img src="img/table/coast-11-lg.png" alt="">
+						</picture>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="pink">Диаметры очищаемых воздуховодов</td>
+					<td class="bold" colspan="2">100 - 1000мм</td>
+				</tr>
+				<tr>
+					<td class="pink">Сечения очищаемых воздуховодов</td>
+					<td class="bold" colspan="2">100 х 100 мм - 1000 х 1000 мм</td>
+				</tr>
+				<tr>
+					<td rowspan="3" class="pink">Стоимость</td>
+					<td colspan="1">мин. Заказ</td>
+					<td colspan="1">одна рабочая смена</td>
+				</tr>
+				<tr>
+					<td>рабочая смена* (7+1ч)</td>
+					<td class="bold">35 000 ₽</td>
+				</tr>
+				<tr>
+					<td>цена за 1 м<sup>2</sup></td>
+					<td class="bold">800-2000 ₽</td>
+				</tr>
+				<tr>
+					<td rowspan="3" colspan="1">
+						<span style="font-size: 18px">Примерный объем</span> очистки системы вытяжной вентиляции кухни кафе, ресторана или столовой за одну рабочую смену
+					</td>
+					<td colspan="2">1 - 2 вентзонта размером 1 м х 1,5 м</td>
+				</tr>
+				<tr>
+					<td colspan="2">10 - 15 погонных метров воздуховодов</td>
+				</tr>
+				<tr>
+					<td colspan="2">1 вытяжной вентилятор</td>
+				</tr>
+
+				<tr>
+					<td class="pink">Примечание</td>
+					<td colspan="2">
+						Количество очищенных за одну рабочую смену м2 зависит от сложности доступа к воздуховодам и объема работ для проникновения внутрь к очищаемой поверхности путем устройства смотровых люков или демонтажа части воздуховодов.
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="3">
+						Определить техническую возможность производства работ по очистке Вашей системы вентиляции и точную стоимость работ именно на Вашем объекте возможно только после выезда к Вам на объект опытного инженера для осмотра и консультации.
+					</td>
+				</tr>
+				<tr>
+					<td>Выезд на осмотр и консультация опытного инженера</td>
+					<td colspan="2" class="bold">3000 ₽</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						Для получения расчета ориентировочной стоимости работ по очистке вентиляции отправьте на электронную почту 
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+{% endblock %}
+

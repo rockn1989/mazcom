@@ -663,6 +663,7 @@ ul.uk-switcher {
 		line-height: 26px;
 		font-weight: 700;
 		font-family: $secondFont;
+		white-space: nowrap;
 		@media (min-width: $mob-xs) {
 			font-size: 18px;
 		};
